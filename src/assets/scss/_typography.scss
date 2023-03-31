@@ -1,0 +1,145 @@
+$panambi-font: 'Raleway', sans-serif !default;
+
+.text-display,
+.text-headline,
+.text-title,
+.text-label,
+.text-body,
+.text-body2
+.text-button {
+  letter-spacing: 0.5px;
+}
+
+
+.text-display {
+  // Display Large
+  font-weight: bold;
+  font-size: 60px;
+  line-height: 72px;
+
+  // Display Medium
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  // Display Small
+  @media (max-width: 575.98px) {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}
+
+
+.text-headline {
+  // Headline Large
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+
+  // Headline Medium
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  // Headline Small
+  @media (max-width: 575.98px) {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+
+
+.text-title {
+  // Title Large
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 42px;
+
+  // Title Medium
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  // Title Small
+  @media (max-width: 575.98px) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+
+.text-label {
+  // Label Large
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+
+  // Label Medium
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  // Label Small
+  @media (max-width: 575.98px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+
+.text-body, 
+.text-body2 {
+  font-weight: 400;
+}
+
+
+.text-body {
+  // Body Large  
+  font-size: 20px;
+  line-height: 24px;
+
+  // Body Medium
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  // Body Small
+  @media (max-width: 575.98px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+
+.text-body2 {
+  // Body2 Large
+  font-size: 16px;
+  line-height: 24px;
+
+  // Body2 Medium
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  // Body2 Small
+  @media (max-width: 575.98px) {
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+
+
+.text-button {
+  // Button
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}

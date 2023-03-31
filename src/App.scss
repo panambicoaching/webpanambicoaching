@@ -1,0 +1,47 @@
+@use 'sass:meta';
+@import 'assets/scss/_colors.scss';
+@import 'assets/scss/_typography.scss';
+
+:root {  
+  --primary: #{meta.inspect($primary)};
+  --primary-pressed: #{meta.inspect($primary-pressed)};
+  --secondary: #{meta.inspect($secondary)};
+
+  // Accent Color
+  --accent: #{meta.inspect($accent)};
+  --accent-2: #{meta.inspect($accent-2)};
+  --accent-pressed: #{meta.inspect($accent-pressed)};
+    
+  // Neutrals
+  --text: #{meta.inspect($text)};
+  --text-light: #{meta.inspect($text-light)};
+  --white: #{meta.inspect($white)};
+  --surface: #{meta.inspect($surface)};
+  --background-01: #{meta.inspect($background-01)};
+  --background-02: #{meta.inspect($background-02)};
+  --header-01: #{meta.inspect($header-01)};
+  --borders: #{meta.inspect($borders)};
+  --shadow-on-surface: #{meta.inspect($shadow-on-surface)};
+  --error: #{meta.inspect($error)};
+  --secondary-button-pressed: #{meta.inspect($secondary-button-pressed)};
+}
+
+body {
+  font-family: $panambi-font;
+}
+
+h1 {
+  @extend .text-display;
+}
+
+h2 {
+  @extend .text-headline;
+}
+
+h3 {
+  @extend .text-title;
+}
+
+h4 {
+  @extend .text-label;
+}
