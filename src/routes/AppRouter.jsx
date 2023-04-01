@@ -4,10 +4,10 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 // import Footer from "../components/Footer/Footer";
 
 import HomePage from "../pages/HomePage";
-import AboutUsPage from "../pages/AboutUsPage";
+import AboutPage from "../pages/AboutPage";
 import CoursesPage from "../pages/CoursesPage";
 import WorkshopsPage from "../pages/WorkshopsPage";
-import ConferencesPage from "../pages/AboutUsPage";
+import ConferencesPage from "../pages/ConferencesPage";
 import ContactPage from "../pages/ContactPage";
 import CourseContactPage from "../pages/CoursesContactPage";
 
@@ -20,7 +20,7 @@ function AppRouter() {
       {/* <NavBar /> */}
         <Routes>
           <Route element={<HomePage />} path="/" />
-          <Route element={<AboutUsPage />} path="/about_us" />
+          <Route element={<AboutPage />} path="/about" />
           <Route element={<CoursesPage />} path="/courses" />
           <Route element={<WorkshopsPage />} path="/workshops" />
           <Route element={<ConferencesPage />} path="/conferences" />
