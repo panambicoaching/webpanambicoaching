@@ -1,4 +1,4 @@
-// import AboutPageComponent from "../components/AboutPageComponent/AboutPageComponent";
+// import AboutPageComponent from "../components/AboutPageComponent";
 
 const AboutPage = () => {
 		return (

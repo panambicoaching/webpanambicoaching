@@ -1,4 +1,4 @@
-// import AConferencesPageComponent from "../components/AConferencesPageComponent/AConferencesPageComponent";
+// import AConferencesPageComponent from "../components/AConferencesPageComponent";
 
 const ConferencesPage = () => {
 		return (

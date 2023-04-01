@@ -1,4 +1,4 @@
-// import CoursesContact from "../components/CoursesContact/CoursesContact";
+// import CoursesContact from "../components/CoursesContact";
 
 const CoursesContactPage = () => {
     return (
