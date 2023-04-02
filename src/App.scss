@@ -30,6 +30,10 @@ body {
   font-family: $panambi-font;
 }
 
+button {
+  border: initial;
+}
+
 h1 {
   @extend .text-display;
 }

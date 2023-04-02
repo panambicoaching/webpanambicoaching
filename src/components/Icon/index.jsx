@@ -22,8 +22,12 @@ import material from '../../assets/icons/material.svg'
 import entrepreneur from '../../assets/icons/entrepreneur.svg'
 import motivational from '../../assets/icons/motivational.svg'
 import author from '../../assets/icons/author.svg'
-import spotify from '../../assets/icons/spotify.svg'
 import send from '../../assets/icons/send.svg'  
+import spotify from '../../assets/icons/spotify.svg'
+import spotify_a from '../../assets/icons/spotify_a.svg'
+import instagram from '../../assets/icons/instagram.svg'
+import tiktok from '../../assets/icons/tiktok.svg'
+import youtube from '../../assets/icons/youtube.svg'
 
 const iconStorage = {
   courses, // Home
@@ -48,15 +52,19 @@ const iconStorage = {
   entrepreneur, // conferences
   motivational,
   author,
-  spotify, // buttons
-  send
+  send, // buttons
+  spotify,
+  spotify_a, 
+  instagram,
+  tiktok,
+  youtube
 }
 
-// design prop available values -> "none" ; "transparent" ; "white-rounded" ; "blue-rounded" ; "benefit" 
+// design prop available values -> "transparent" ; "white-rounded" ; "blue-rounded" ; "benefit" 
 const Icon = ({ design, name }) => {
   return (
-    <div className={`panambi-icon ${design !== "none" ? `${design}-icon` : ""}`}>
-      <img src={iconStorage[name]} alt={name} />
+    <div className={`panambi-icon ${design ? `${design}-icon` : ""}`}>
+      <img src={iconStorage[name]} alt={name} style={{color: "red"}}/>
     </div>
   )
 }
