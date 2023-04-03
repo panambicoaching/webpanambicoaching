@@ -1,11 +1,11 @@
-// import ACoursesPageComponent from "../components/ACoursesPageComponent";
+import CoursesContainer from "../components/CoursesContainer";
 
 const CoursesPage = () => {
 		return (
-			<div>
-				CoursesPage components
-			</div>
-			// <ACoursesPageComponent />
+			<>
+				<CoursesContainer status={"done"}/>
+				<CoursesContainer status={"next"}/>
+			</>
 		)
 }
 

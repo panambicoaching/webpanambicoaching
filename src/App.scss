@@ -27,11 +27,16 @@
 }
 
 body {
+  @extend .text-body;
   font-family: $panambi-font;
 }
 
 button {
   border: initial;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
 }
 
 h1 {

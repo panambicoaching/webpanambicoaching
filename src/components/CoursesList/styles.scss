@@ -1,0 +1,31 @@
+
+section.panambi-done-courses,
+section.panambi-next-courses {
+	background-color: var(--background-01);
+	padding-bottom: 200px;
+
+	h2 {
+		margin-bottom: 40px;
+	}
+
+	p {
+		margin-bottom: 80px;
+	}
+
+	.courses-list {
+		row-gap: 80px;
+	}
+
+	.courses-cta-btn {
+		display: flex;
+		justify-content: center;
+
+		.panambi-btn {
+			margin-top: 120px;
+		}
+	}
+}
+
+.panambi-done-courses {
+	padding-top: 160px;
+}

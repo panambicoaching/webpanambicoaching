@@ -28,6 +28,7 @@ import spotify_a from '../../assets/icons/spotify_a.svg'
 import instagram from '../../assets/icons/instagram.svg'
 import tiktok from '../../assets/icons/tiktok.svg'
 import youtube from '../../assets/icons/youtube.svg'
+import duration from '../../assets/icons/duration.svg'
 
 const iconStorage = {
   courses, // Home
@@ -57,7 +58,8 @@ const iconStorage = {
   spotify_a, 
   instagram,
   tiktok,
-  youtube
+  youtube,
+  duration
 }
 
 // design prop available values -> "transparent" ; "white-rounded" ; "blue-rounded" ; "benefit" 

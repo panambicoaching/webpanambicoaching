@@ -1,0 +1,45 @@
+
+.panambi-paid-card {
+	display: flex;
+	background-color: var(--white);
+	border-radius: 8px;
+	
+	a {
+		color: inherit;
+		text-decoration: none;
+
+		&:hover,
+		&:visited {
+			color: inherit;
+		}
+	}
+
+	.card-img {
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		width: 100%;
+	}
+
+	.card-body {
+		display: flex;
+		flex-direction: column;
+		padding: 24px 16px;
+		text-align: center;
+
+		.card-name {
+			height: 56px;
+			margin-bottom: 48px;
+			text-align: center;
+		}
+
+		.card-details {
+			display: inline-flex;
+			justify-content: center;
+			
+			.panambi-icon {
+				padding-left: 16px;
+				padding-right: 8px;
+			}
+		}
+	}
+}
