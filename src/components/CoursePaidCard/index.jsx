@@ -14,12 +14,21 @@ const CoursePaidCard = ({ item, status }) => {
     <Col className="col-6 col-sm-4">
       <div className="panambi-paid-card">
         <Link to={link}>
-          <Card.Img
-            className="card-img"
-            variant="top"
-            src={item.img_large}
-            alt={`Foto del curso ${item.name}}`}
-          />
+          <figure>
+            <picture>
+              <source media="(min-width: 576px) and (max-width: 991.98px)"
+                      srcset={item.img_medium} />
+              <source media="(max-width: 575.98px)"
+                      srcset={item.img_small} />
+
+              <img 
+                srcset={item.img_large}
+                className="card-img"
+                title={`Foto del curso ${item.name}`}
+                alt={`Foto del curso ${item.name}`} loading="lazy"
+              />
+            </picture>
+          </figure>
 
           <Card.Body>
             <h4 className="card-name">{item.name}</h4>
