@@ -33,7 +33,7 @@ const CoursePaidCard = ({ item, status }) => {
           <Card.Body>
             <h4 className="card-name">{item.name}</h4>
             <div className="card-details">
-              <div>{item.modules} clases online</div>
+              <div>{item.modules} clases</div>
               <Icon name={"duration"} />
               <div>{item.duration} hs</div>
             </div> 

@@ -1,6 +1,5 @@
 
 .panambi-paid-card {
-	display: flex;
 	background-color: var(--white);
 	border-radius: 8px;
 	
@@ -38,6 +37,7 @@
 
 		.card-details {
 			display: inline-flex;
+			align-items: center;
 			justify-content: center;
 			
 			.panambi-icon {
