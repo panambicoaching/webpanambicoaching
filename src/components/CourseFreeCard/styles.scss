@@ -3,6 +3,7 @@
 	display: flex;
 	background-color: var(--white);
 	border-radius: 8px;
+	//position: absolute;
 
 	.card-body {
 		display: flex;
@@ -32,5 +33,11 @@
 		@media (max-width: 575.98px) {
 			padding-top: 16px;
 		}
+	}
+
+	.panambi-flag {
+		position: relative;
+		top: 0;
+		right: 0;
 	}
 }

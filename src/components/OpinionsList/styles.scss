@@ -17,7 +17,7 @@ section.panambi-opinions {
 		padding-right: 0;
 
 		@media (max-width: 575.98px) {
-			width: calc(100vw - (var(--bs-gutter-x) * 0.5));
+			width: calc(100% - (var(--bs-gutter-x) * 0.5));
 		}
 	}
 

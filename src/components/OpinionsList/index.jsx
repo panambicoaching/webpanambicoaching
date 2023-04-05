@@ -2,9 +2,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Keyboard } from 'swiper'
 import Alert from 'react-bootstrap/Alert'
 
-//import soon from '../../assets/soon.png'
-//import MediaCard from '../MediaCard'
-
 import 'swiper/css'
 import 'swiper/css/pagination'
 import './styles.scss'
