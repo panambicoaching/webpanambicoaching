@@ -8,13 +8,12 @@
     justify-content: center;
     user-select: none;
 
-    &.primary-btn,
-    &.secondary-btn {
-        border-radius: 50px;
-        padding: 16px 20px;
-        text-decoration: none;
-        width: 196px;
-        height: 56px;
+  &.primary-btn,
+  &.secondary-btn {
+    border-radius: 50px;
+    min-width: 196px;
+    padding: 16px 20px;
+    text-decoration: none;
 
         &:active {
             background: map-get($gradients, primary-button-pressed);
@@ -37,18 +36,18 @@
             box-shadow: map-get($shadows, btn-primary);
         }
 
-        @media (max-width: 991.98px) {
-            padding: 12px 20px;
-            width: 177px;
-            height: 48px;
-        }
-
-        @media (max-width: 575.98px) {
-            width: 328px;
-            height: 48px;
-        }
-
+    @media (max-width: 991.98px) {
+      padding: 12px 20px;
     }
+    
+    @media (min-width: 576px) and (max-width: 991.98px) {
+      min-width: 177px;
+    }
+
+    @media (max-width: 575.98px) {
+      min-width: 100%;
+    }
+  }
 
     &.primary-btn {
         background: map-get($gradients, primary-button);
