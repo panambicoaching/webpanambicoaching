@@ -17,12 +17,12 @@ const CoursePaidCard = ({ item, status }) => {
           <figure>
             <picture>
               <source media="(min-width: 576px) and (max-width: 991.98px)"
-                      srcset={item.img_medium} />
+                      srcSet={item.img_medium} />
               <source media="(max-width: 575.98px)"
-                      srcset={item.img_small} />
+                      srcSet={item.img_small} />
 
               <img 
-                srcset={item.img_large}
+                srcSet={item.img_large}
                 className="card-img"
                 title={`Foto del curso ${item.name}`}
                 alt={`Foto del curso ${item.name}`} loading="lazy"
