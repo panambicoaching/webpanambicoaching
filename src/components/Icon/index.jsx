@@ -2,7 +2,7 @@ import './styles.scss'
 
 import courses from '../../assets/icons/courses.svg'
 import conferences from '../../assets/icons/conferences.svg'
-import workshop from '../../assets/icons/workshop.svg'
+import workshops from '../../assets/icons/workshop.svg'
 import mental from '../../assets/icons/mental.svg'
 import physical_therapy from '../../assets/icons/physical_therapy.svg'
 import mood from '../../assets/icons/mood.svg'
@@ -33,7 +33,7 @@ import duration from '../../assets/icons/duration.svg'
 const iconStorage = {
   courses, // Home
   conferences,
-  workshop,
+  workshops,
   mental, // About
   physical_therapy,
   mood,

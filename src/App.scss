@@ -31,6 +31,18 @@ body {
   font-family: $panambi-font;
 }
 
+section {
+  padding: 160px 156px;
+
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    padding: 120px 40px;
+  }
+
+  @media (max-width: 575.98px) {
+    padding: 80px 16px;
+  }
+}
+
 button {
   border: initial;
 }

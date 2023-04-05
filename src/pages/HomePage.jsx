@@ -1,5 +1,7 @@
 import AppButton from "../components/AppButton";
 import Icon from "../components/Icon";
+import HomeCover from "../components/HomeCover";
+import Services from "../components/Services";
 
 const HomePage = () => {
 		const instagramIcon = <Icon name={"instagram"} />	
@@ -7,20 +9,15 @@ const HomePage = () => {
 	
 		return (
 			<div>
-				HomePage components
+                <HomeCover />
+                <Services cardsNames={["courses", "workshops", "conferences"]} cardsAreLinks={true}/>
 
 				<Icon design={"blue-rounded"} name={"responsability"} />
 				<Icon design={"blue-rounded"} name={"confidentiality"} />
-				<Icon design={"transparent"} name={"workshop"} />
+				<Icon design={"transparent"} name={"workshops"} />
 				<Icon name={"spotify_a"} />
 
-				<AppButton 
-					variant={"regular"}
-					as={"link"}
-					design={"primary"}
-					to={"https://google.com.ar"}
-					text={"Comencemos"}
-				/>
+
 
 				<AppButton 
 					variant={"regular"}
