@@ -13,9 +13,8 @@ import OpinionCard from '../OpinionCard'
 const OpinionsList = ({ items }) => {
   return (
     <section className={`container-fluid panambi-opinions`}>
-				<div className="container">
-          <h2>Lo que dicen mis estudiantes</h2>
-          
+        <h2>Lo que dicen mis estudiantes</h2>
+				<div className="container-fluid"> 
           <Swiper
             className="panambi-swiper"
             keyboard={{
@@ -28,7 +27,6 @@ const OpinionsList = ({ items }) => {
             {items.length > 0 ? (
               items.map((item) => (
                 <SwiperSlide key={`opinion-${item.id}`}>
-                  {/* <MediaCard {...item} categoria={category.nombre} tipo={category.tipo} /> */}
                   <OpinionCard item={item} />
                 </SwiperSlide>
               ))

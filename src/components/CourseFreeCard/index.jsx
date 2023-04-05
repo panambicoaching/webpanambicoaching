@@ -20,7 +20,7 @@ const CourseFreeCard = ({ item }) => {
             ></iframe>
           </Card.Body>
         </Col>
-        <Col className="col-2">Flag Component</Col>
+        <Col className="col-2">FC</Col>
       </div>
     </Col>
   );

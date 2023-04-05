@@ -29,6 +29,10 @@
 body {
   @extend .text-body;
   font-family: $panambi-font;
+
+  @media (max-width: 575.98px) {
+    overflow-x: hidden;
+  }
 }
 
 section {
