@@ -3,17 +3,34 @@
 	display: flex;
 	background-color: var(--white);
 	border-radius: 8px;
-	padding-bottom: 80px;
 
 	.card-body {
 		display: flex;
 		flex-direction: column;
-		padding: 24px 16px;
+		padding-top: 80px;
+		padding-bottom: 80px;
 		text-align: center;
 
 		.card-name {
-			margin-bottom: 40px;
 			text-align: center;
+		}
+
+		iframe {
+			height: 405px;
+			width: 100%;
+
+			@media (max-width: 575.98px) {
+				height: 207px;
+			}
+		}
+
+		@media (max-width: 991.98px) {
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
+		@media (max-width: 575.98px) {
+			padding-top: 16px;
 		}
 	}
 }

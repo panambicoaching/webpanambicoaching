@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import Alert from 'react-bootstrap/Alert'
 import AppButton from "../AppButton"
 import CourseFreeCard from "../CourseFreeCard"

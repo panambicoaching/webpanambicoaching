@@ -7,14 +7,12 @@ const CourseFreeCard = ({ item }) => {
   return (
     <Col className="col-12">
       <div className='panambi-free-card'>
-        <Col className="offset-2 col-8">
+        <Col className="offset-1 col-10 offset-lg-2 col-lg-8">
           <Card.Body>
             <h4 className="card-name text-title">{item.name}</h4>
             <p>{item.description}</p>
 
             <iframe
-              width="708"
-              height="405"
               src={item.link}
               title="YouTube video player"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
