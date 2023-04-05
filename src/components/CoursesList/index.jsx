@@ -1,11 +1,11 @@
 // import { useState } from 'react'
-import dates from "../../utils/dates"
 import Alert from 'react-bootstrap/Alert'
 import AppButton from "../AppButton"
 import CourseFreeCard from "../CourseFreeCard"
 import CoursePaidCard from "../CoursePaidCard"
 import Row from 'react-bootstrap/Row'
 
+import dates from "../../utils/dates"
 import './styles.scss'
 
 const courseType = {
@@ -47,8 +47,8 @@ const CoursesList = ({ items, status }) => {
 											items
 												.filter(statusFilterFn)
 												.map((item) => item.id === 1
-														? <CourseFreeCard item={item} />
-														: <CoursePaidCard item={item} status={status}/>
+														? <CourseFreeCard key={`course-${item.id}`} item={item} />
+														: <CoursePaidCard key={`course-${item.id}`} item={item} status={status}/>
 												)
 										}
 									</>)

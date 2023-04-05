@@ -1,0 +1,45 @@
+@import "../../App.scss";
+
+.panambi-opinion-card {
+	background-color: var(--white);
+	border-radius: 8px;
+	cursor: pointer;
+	height: 274px;
+	padding: 24px 32px;
+	user-select: none;
+	width: 468px;
+
+	.card-header {
+		display: inline-flex;
+		margin-bottom: 24px;
+
+		.card-user-avatar {
+			@extend .rounded;
+			display: flex;
+			align-items: center;
+			background-color: var(--primary);
+			color: var(--white);
+			line-height: initial;
+			padding: 14px;
+		}
+
+		.card-user-detail {
+			padding-left: 16px;
+		}
+	}
+	
+	.card-body {
+		.card-opinion {
+				p {
+					margin: 0;
+				}
+
+				&::before {
+					content: '"';
+				}
+				&::after {
+					content: '"';
+				}
+		}
+	}
+}

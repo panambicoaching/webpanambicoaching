@@ -1,0 +1,19 @@
+
+section.panambi-opinions {
+	background-color: var(--background-01);
+	padding-top: 200px;
+	padding-bottom: 200px;
+
+	h2 {
+		margin-bottom: 80px;
+	}
+
+	.panambi-swiper {
+		margin: 0;
+		padding-bottom: 24px;
+
+		.swiper-slide {
+			max-width: 468px;
+		}
+	}
+}
