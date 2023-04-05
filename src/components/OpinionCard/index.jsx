@@ -13,16 +13,19 @@ const OpinionCard = ({ item }) => {
     return stars;
   }
 
-  const createUserImg = (author) => {
-    let userImgContent = author.split(" ").reduce((acc, current) => acc + (current[0].toUpperCase()), "");
+  const createUserAvatar = (item) => {
+    let userAvatarContent = item.author_first_name[0].toUpperCase();
+    userAvatarContent += item.author_last_name[0].toUpperCase();
 
-    return userImgContent;
+    return userAvatarContent;
   }
 
   return (
     <div className="panambi-opinion-card">
       <div className="card-header">
-        <div className="card-user-avatar text-label" title={item.author}>{createUserImg(item.author)}</div>
+        <div className="card-user-avatar text-label" title={`${item.author_first_name} ${item.author_last_name}`}>
+          {createUserAvatar(item)}
+        </div>
         <div className="card-user-detail">
           <h4>{item.job}</h4>
           <div className="card-stars">{createStars(item)}
