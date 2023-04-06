@@ -9,8 +9,20 @@
 	user-select: none;
 	width: 468px;
 
+	@media (min-width: 576px) and (max-width: 991.98px) {
+		height: 288px;
+		width: 360px;	
+	}
+			
+	@media (max-width: 575.98px) {
+		height: 216px;
+		padding: 16px 16px;
+		width: 242px;
+	}
+
 	.card-header {
 		display: inline-flex;
+		align-items: flex-start;
 		margin-bottom: 24px;
 
 		.card-user-avatar {
@@ -20,25 +32,52 @@
 			background-color: var(--primary);
 			color: var(--white);
 			line-height: initial;
-			padding: 14px;
+			padding: 10px;
 		}
 
 		.card-user-detail {
 			padding-left: 16px;
+
+			@media (max-width: 575.98px) {
+				padding-left: 8px;
+
+				h4 {
+					font-size: 15px;
+				}
+			}
+		}
+
+		.card-stars {
+			.panambi-icon {
+				img {
+					@media (max-width: 575.98px) {
+						height: 16px;
+						width: 16px;
+					}
+				}
+			}
+		}
+
+		@media (max-width: 575.98px) {
+			margin-bottom: 16px;
 		}
 	}
 	
 	.card-body {
 		.card-opinion {
-				p {
-					margin: 0;
-				}
+				height: 149px;
+				margin: 0;
+				text-overflow: ellipsis;
 
 				&::before {
 					content: '"';
 				}
 				&::after {
 					content: '"';
+				}
+
+				@media (max-width: 991.98px) {
+					height: 126px;
 				}
 		}
 	}

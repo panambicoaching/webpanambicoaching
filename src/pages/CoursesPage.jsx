@@ -1,12 +1,12 @@
 import CoursesContainer from "../components/CoursesContainer";
-import OpinionsList from "../components/OpinionsList";
+import OpinionsContainer from "../components/OpinionsContainer";
 
 const CoursesPage = () => {
 		return (
 			<>
 				<CoursesContainer status={"done"}/>
 				<CoursesContainer status={"next"}/>
-				<OpinionsList />
+				<OpinionsContainer />
 			</>
 		)
 }

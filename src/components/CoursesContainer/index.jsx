@@ -1,6 +1,8 @@
 // import { useEffect, useState } from 'react'
 import CoursesList from '../CoursesList'
 
+// import getDocsFirestore from '../../services/getDocsFirestore'
+
 const items = [
   {
     "id": 1,
@@ -76,8 +78,6 @@ const items = [
     "link": "https://lu.ma/unlink_vigente_id7"
   }
 ];
-
-// import getDocsFirestore from '../../services/getDocsFirestore'
 
 const CoursesContainer = ({ status }) => {
     /* const [items, setItems] = useState([]);

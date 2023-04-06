@@ -33,6 +33,14 @@
 			height: 56px;
 			margin-bottom: 48px;
 			text-align: center;
+
+			@media (min-width: 576px) and (max-width: 991.98px) {
+				margin-bottom: 32px;
+			}
+	
+			@media (max-width: 575.98px) {
+				margin-bottom: 8px;
+			}
 		}
 
 		.card-details {
@@ -44,6 +52,10 @@
 				padding-left: 16px;
 				padding-right: 8px;
 			}
+		}
+
+		@media (max-width: 575.98px) {
+			padding: 8px 8px;
 		}
 	}
 }
