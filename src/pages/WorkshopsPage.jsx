@@ -1,11 +1,8 @@
-// import AWorkshopsPageComponent from "../components/AWorkshopsPageComponent";
+import GradientCover from "../components/GradientCover";
 
 const WorkshopsPage = () => {
 		return (
-			<div>
-				WorkshopsPage components
-			</div>
-			// <AWorkshopsPageComponent />
+			<GradientCover variant={"workshops"}/>
 		)
 }
 

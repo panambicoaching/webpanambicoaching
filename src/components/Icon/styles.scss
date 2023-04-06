@@ -3,6 +3,7 @@
 .panambi-icon {
   display: inline-flex;
     align-items: center;
+    flex-shrink: 0;
     justify-content: center;
   user-select: none;
 

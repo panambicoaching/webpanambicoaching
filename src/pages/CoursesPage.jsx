@@ -1,6 +1,7 @@
 import AppButton from "../components/AppButton";
 import Banner from "../components/Banner";
 import CoursesContainer from "../components/CoursesContainer";
+import GradientCover from "../components/GradientCover";
 import Icon from "../components/Icon";
 import OpinionsContainer from "../components/OpinionsContainer";
 
@@ -19,6 +20,7 @@ const CoursesPage = () => {
 
 		return (
 			<>
+				<GradientCover variant={"courses"}/>
 				<CoursesContainer status={"done"}/>
 				<CoursesContainer status={"next"}/>
 				<OpinionsContainer />
