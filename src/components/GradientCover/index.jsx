@@ -1,7 +1,7 @@
 import BenefitsList from '../BenefitsList';
+
 import './styles.scss'
 
-// variant prop available values -> "courses" ; "workshops"
 const gradientCoverType = {
 	courses: {
 		header: "Desarrollá tus soft skills",
@@ -15,6 +15,7 @@ const gradientCoverType = {
 	}
 }
 
+// variant prop available values -> "courses" ; "workshops"
 const GradientCover = ({ variant }) => {
   return (
     <section className={`container-fluid panambi-gradient-cover`}>
