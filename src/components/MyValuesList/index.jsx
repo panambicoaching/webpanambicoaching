@@ -44,16 +44,16 @@ const MyValuesList = () => {
         <h2>Mis valores</h2>
         <Row className="courses-list">
           {
-							items.length > 0
-								? (<>
-										{
-											items.map((item) => <MyValuesItem key={`my-value-${item.icon}`} {...item} />)
-										}
-									</>)
-								: <div className="col-12">
-										<Alert variant="secondary" className="text-center fw-bold">{`No hay valores cargados disponibles en la API`}</Alert>
-									</div>
-						}
+						items.length > 0
+							? (<>
+									{
+										items.map((item) => <MyValuesItem key={`my-value-${item.icon}`} {...item} />)
+									}
+								</>)
+							: <div className="col-12">
+									<Alert variant="secondary" className="text-center fw-bold">No hay valores cargados disponibles en la API</Alert>
+								</div>
+					}
         </Row>
       </div>
     </section>
