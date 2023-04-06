@@ -1,12 +1,13 @@
-import AppButton from "../AppButton";
-const CallToAction = ({title, titleStyle, text, buttonText}) => {
+// title and text take strings
+// titleStyle prop format => {typo: text-headline, color: "primary"}
+const CallToAction = ({title, titleStyle, text, buttonComp}) => {
     return (
         <section>
             <h2 className={`${titleStyle.typo} ${titleStyle.color}-text`}>
                 {title}
             </h2>
             {text ? <p>{text}</p> : null}
-            {buttonText ? <AppButton variant={"regular"} as={"link"} design={"primary"} text={"Volemos juntos"} /> : null}
+            {buttonComp}
         </section>
     )
 }

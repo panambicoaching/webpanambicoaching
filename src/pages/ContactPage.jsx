@@ -6,7 +6,7 @@ const ContactPage = () => {
     return (
 			<div>
                 <ContactUs />
-                <CallToAction title={ctaTitle} titleStyle={{typo:"text-display", color: "primary"}}/>
+                <CallToAction title={ctaTitle} titleStyle={ {typo:"text-display", color: "primary"} }/>
 			</div>
 
     )
