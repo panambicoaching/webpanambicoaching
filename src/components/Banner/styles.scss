@@ -1,0 +1,97 @@
+@import '../../assets/scss/_extends.scss';
+@import "../../assets/scss/_gradients.scss";
+
+section.panambi-newsletter-banner,
+section.panambi-spotify-banner {
+	padding: 0;
+	position: relative;
+
+	.container-fluid {
+		@extend .container-fluid-left-gap;
+		position: absolute;
+
+		@media (max-width: 575.98px) {
+			padding: 0;
+			width: 100%;
+		}
+	}
+
+	.banner-content {
+		@extend .left-gap;
+		display: flex;
+		position: absolute;
+
+		.banner-col-left {
+			padding: 56px 0;
+
+			.text-display {
+				color: white;
+
+				@media (max-width: 575.98px) {
+					text-align: center;
+				}
+			}
+
+			@media (max-width: 575.98px) {
+				order: 1;
+			}
+		}
+
+		.banner-col-right {
+			.banner-img {
+				user-select: none;
+				
+				@media (max-width: 575.98px) {
+					width: 100%;
+				}
+			}
+		}
+
+		@media (max-width: 575.98px) {
+			flex-direction: column;
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	.banner-background {
+		object-fit: fill;
+		position: absolute;
+		user-select: none;
+		width: 100%;
+	}
+}
+
+section.panambi-newsletter-banner,
+.banner-background {
+	height: 334px;
+	
+	@media (min-width: 576px) and (max-width: 991.98px) {
+		height: 264px;
+	}
+
+	@media (max-width: 575.98px) {
+		height: 737px;
+	}
+}
+
+section.panambi-spotify-banner, 
+.banner-background {
+	height: 360px;
+
+	@media (min-width: 576px) and (max-width: 991.98px) {
+		height: 264px;
+	}
+
+	@media (max-width: 575.98px) {
+		height: 759px;
+	}
+}
+
+section.panambi-spotify-banner {
+	.banner-content {
+		.panambi-btn {
+			margin-top: 48px;
+		}
+	}	
+}

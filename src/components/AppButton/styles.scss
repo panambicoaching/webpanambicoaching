@@ -55,7 +55,8 @@
     }
 
     &.secondary-btn {
-        background: map-get($gradients, primary-button);
+        background: initial;
+        background-color: var(--white);
         border: 1px solid var(--accent-2);
         color: var(--accent);
     }

@@ -67,8 +67,8 @@ const iconStorage = {
 // design prop available values -> "transparent" ; "white-rounded" ; "blue-rounded" ; "benefit" 
 const Icon = ({ design, name }) => {
   return (
-    <div className={`panambi-icon ${design ? `${design}-icon` : ""}`}>
-      <img src={iconStorage[name]} alt={name} style={{color: "red"}}/>
+    <div className={`panambi-icon${design ? ` ${design}-icon` : ""}`}>
+      <img src={iconStorage[name]} alt={name}/>
     </div>
   )
 }
