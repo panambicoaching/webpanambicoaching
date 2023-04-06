@@ -20,7 +20,7 @@ const HomeCover = () => {
                         <br />
                         de volar juntos
                     </h1>
-                    <p className=".text-body">
+                    <p className="text-body">
                         Animate a superar tus propias barreras,
                         <br />
                         desarrollarte en lo que te gusta e ir tras tus sueños.
