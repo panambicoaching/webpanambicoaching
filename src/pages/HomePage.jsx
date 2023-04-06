@@ -1,52 +1,20 @@
-import AppButton from "../components/AppButton";
-import Icon from "../components/Icon";
 import HomeCover from "../components/HomeCover";
 import Services from "../components/Services";
+import Hello from "../components/Hello";
+import CallToAction from "../components/CallToAction";
+
+const ctaTitle = "¿Te has puesto a pensar cuántas emociones te llevas a tu hogar luego de un día de trabajo?";
 
 const HomePage = () => {
-		const instagramIcon = <Icon name={"instagram"} />	
-		const sendIcon = <Icon name={"send"} />
-	
-		return (
-			<div>
-                <HomeCover />
-                <Services cardsNames={["courses", "workshops", "conferences"]} cardsAreLinks={true}/>
 
-				<Icon design={"blue-rounded"} name={"responsability"} />
-				<Icon design={"blue-rounded"} name={"confidentiality"} />
-				<Icon design={"transparent"} name={"workshops"} />
-				<Icon name={"spotify_a"} />
-
-
-
-				<AppButton 
-					variant={"regular"}
-					as={"link"}
-					design={"primary"}
-					to={"https://google.com.ar"}
-					text={"Disabled"}
-					disabled={true}
-				/>
-
-				<AppButton 
-					variant={"regular"}
-					as={"handler"}
-					design={"primary"}
-					text={"Enviar"}
-					EndIcon={sendIcon}
-					onClickFn={()=>{}}
-				/>
-
-				<AppButton 
-					variant={"icon"}
-					as={"link"}
-					design={"social"}
-					to={"https://instagram.com"}
-					target={"_blank"}
-					StartIcon={instagramIcon}
-				/>
-			</div>
-		)
+    return (
+        <div>
+            <HomeCover />
+            <Services cardsNames={["courses", "workshops", "conferences"]} cardsAreLinks={true} />
+            <Hello />
+            <CallToAction title={ctaTitle} titleStyle={{typo:"text-headline", color: "primary"}} buttonText={"Volemos juntos"} />
+        </div>
+    );
 }
 
 export default HomePage;

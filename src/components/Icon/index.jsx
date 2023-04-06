@@ -30,39 +30,45 @@ import tiktok from '../../assets/icons/tiktok.svg'
 import youtube from '../../assets/icons/youtube.svg'
 import duration from '../../assets/icons/duration.svg'
 import star from '../../assets/icons/star.svg'
+import access_consciousness from '../../assets/icons/access-consciousness.svg'
+import acta_cba_noa from '../../assets/icons/acta-cba-noa.svg'
+import international_coaching from '../../assets/icons/international-coaching.svg'
 
 const iconStorage = {
-  courses, // Home
-  conferences,
-  workshops,
-  mental, // About
-  physical_therapy,
-  mood,
-  spiritual,
-  responsability,
-  excellence,
-  confidentiality,
-  active_listening,
-  resolution,
-  loyalty,
-  online, //courses
-  access,
-  update,
-  certificate,
-  personalized, // workshops
-  material,
-  entrepreneur, // conferences
-  motivational,
-  author,
-  send, // buttons
-  spotify,
-  spotify_a, 
-  instagram,
-  tiktok,
-  youtube,
-  duration, // others
-  star
-}
+    courses, // Home
+    conferences,
+    workshops,
+    mental, // About
+    physical_therapy,
+    mood,
+    spiritual,
+    responsability,
+    excellence,
+    confidentiality,
+    active_listening,
+    resolution,
+    loyalty,
+    online, //courses
+    access,
+    update,
+    certificate,
+    personalized, // workshops
+    material,
+    entrepreneur, // conferences
+    motivational,
+    author,
+    send, // buttons
+    spotify,
+    spotify_a,
+    instagram,
+    tiktok,
+    youtube,
+    duration, // others
+    star,
+    access_consciousness,
+    acta_cba_noa,
+    international_coaching,
+};
 
 // design prop available values -> "transparent" ; "white-rounded" ; "blue-rounded" ; "benefit" 
 const Icon = ({ design, name }) => {

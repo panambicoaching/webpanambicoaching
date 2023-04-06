@@ -1,12 +1,12 @@
-// import CoursesContact from "../components/CoursesContact";
+import CoursesContact from "../components/CoursesContact";
 
 const CoursesContactPage = () => {
     return (
-			<div>
-				CoursesContact component
-			</div>
-			// <CoursesContact />
-    )
+        <div>
+            <CoursesContact />
+        </div>
+        
+    );
 }
 
 export default CoursesContactPage;

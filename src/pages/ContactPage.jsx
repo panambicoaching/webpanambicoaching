@@ -1,11 +1,14 @@
-// import ContactUs from "../components/ContactUs";
+import ContactUs from "../components/ContactUs";
+import CallToAction from "../components/CallToAction";
 
 const ContactPage = () => {
+    const ctaTitle = "Permíteme guiarte hacia tu destino, de manera segura, confiable y con excelencia.";
     return (
 			<div>
-				Contact component
+                <ContactUs />
+                <CallToAction title={ctaTitle} titleStyle={{typo:"text-display", color: "primary"}}/>
 			</div>
-			// <ContactUs />
+
     )
 }
 
