@@ -5,34 +5,40 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { Link } from "react-router-dom";
 import navBarLogoSm from "../../assets/img/navbar/navbar-logo-small.svg";
 import navBarLogoL from "../../assets/img/navbar/navbar-logo-large.svg";
+import "./styles.scss";
 
 const NavBar = () => {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar expand="sm" className="sticky-top">
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <picture>
-                        <img src={navBarLogoL} alt="" />
+                        <source media="(min-width: 576px)" srcSet={navBarLogoL} />
+                        <img srcSet={navBarLogoSm} alt="" />
                     </picture>
                 </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Toggle aria-controls="basic-navbar-nav">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link as={Link} to="/about">
+                        <Nav.Link className="text-button" as={Link} to="/about">
                             Acerca de
                         </Nav.Link>
-                        <NavDropdown title="Servicios" id="basic-nav-dropdown">
-                            <NavDropdown.Item as={Link} to="/courses">
+                        <NavDropdown className="text-button" title="Servicios" id="basic-nav-dropdown">
+                            <NavDropdown.Item className="text-button" as={Link} to="/courses">
                                 Cursos
                             </NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/workshops">
+                            <NavDropdown.Item className="text-button" as={Link} to="/workshops">
                                 Talleres
                             </NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/conferences">
+                            <NavDropdown.Item className="text-button" as={Link} to="/conferences">
                                 Conferencias
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link as={Link} to="/contact">
+                        <Nav.Link className="text-button" as={Link} to="/contact">
                             Contactame
                         </Nav.Link>
                     </Nav>
