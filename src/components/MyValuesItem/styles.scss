@@ -1,0 +1,51 @@
+@import "../../assets/scss/_gradients.scss";
+
+.panambi-value-item {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 64px auto;
+  grid-template-areas: 
+    "value_icon value_col_2";
+  column-gap: 40px;
+
+  .value-icon {
+    grid-area: value_icon;
+  }
+
+  .value-header {
+    grid-area: value_col_2;
+
+    @media (max-width: 991.98px) {
+      align-self: center;
+      grid-area: value_header;
+    }
+  }
+
+  .value-text {
+    grid-area: value_col_2;
+    margin: 0;
+    margin-top: 50px;
+
+    @media (max-width: 991.98px) {
+      margin: 0;
+      grid-area: value_text;
+    }
+  }
+
+  @media (max-width: 991.98px) {
+    column-gap: 16px;
+    grid-template-areas: 
+      "value_icon value_header"
+      "value_text value_text";
+  }
+
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    grid-template-columns: 48px auto;
+    row-gap: 16px;
+  }
+
+  @media (max-width: 575.98px) {
+    grid-template-columns: 32px auto;
+    row-gap: 8px;
+  }
+}

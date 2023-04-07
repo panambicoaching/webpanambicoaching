@@ -1,11 +1,14 @@
-// import AboutPageComponent from "../components/AboutPageComponent";
+import AboutMe from "../components/AboutMe";
+import Manual from "../components/Manual";
+import MyValuesList from "../components/MyValuesList";
 
 const AboutPage = () => {
 		return (
-			<div>
-				AboutPage components
-			</div>
-			// <AboutPageComponent />
+			<>
+				<MyValuesList />
+				<AboutMe />
+				<Manual />
+			</>
 		)
 }
 

@@ -52,7 +52,7 @@ const CoursesList = ({ items, status }) => {
 										}
 									</>)
 								: <div className="col-12">
-										<Alert variant="secondary" className="text-center fw-bold">{`No hay  ${courseType[status].emptyString} disponibles en la API`}</Alert>
+										<Alert variant="secondary" className="text-center fw-bold">{`No hay ${courseType[status].emptyString} disponibles en la API`}</Alert>
 									</div>
 						}
 					</Row>

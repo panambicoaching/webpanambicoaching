@@ -4,27 +4,6 @@
   display: block;
   flex-direction: column;
   
-  .benefit-item {
-    display: flex;
-    align-items: center;
-    column-gap: 16px;
-    margin-bottom: 40px;
-    width: 360px;
-
-    span {
-      display: block;
-    }
-
-    @media (min-width: 576px) and (max-width: 991.98px) {
-      max-width: 300px;
-      width: 100%;
-    }
-  
-    @media (max-width: 575.98px) {
-      width: 100%;
-    }
-  }
-  
   @media (min-width: 576px) and (max-width: 991.98px) {
     row-gap: 32px;
   }

@@ -1,0 +1,35 @@
+
+section.panambi-manual {
+  padding-top: 160px;
+  padding-bottom: 160px;
+
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  @media (max-width: 575.98px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+
+    @media (min-width: 576px) and (max-width: 991.98px) {
+      margin-bottom: 32px;
+    }
+  
+    @media (max-width: 575.98px) {
+      margin-bottom: 24px;
+    }
+  }
+
+  .about-me-msj {
+    margin-bottom: 16px;
+
+    @media (max-width: 991.98px) {
+      margin-bottom: 8px;
+    }
+  }
+}
