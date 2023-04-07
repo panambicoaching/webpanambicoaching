@@ -10,9 +10,9 @@ import "./styles.scss";
 const Manual = () => {
   return (
     <section className={`container-fluid panambi-manual`}>
-      <div className="container">
+      <div className="container-md">
         <Row>
-          <Col className="col-12 col-sm-5 col-lg-6 order-2 order-sm-1 d-flex justify-content-center">
+          <Col className="col-12 col-sm-5 col-lg-6 order-2 order-sm-1 d-flex justify-content-center justify-sm-content-start">
             <figure>
               <picture>
                 <source media="(min-width: 576px) and (max-width: 991.98px)"
@@ -28,7 +28,7 @@ const Manual = () => {
             </figure>
           </Col>
           <Col className="col-12 col-sm-7 col-lg-6 order-1 order-sm-2 d-flex justify-content-center flex-column">
-            <div className="about-me-msj text-label">Próximamente</div>
+            <div className="manual-msj text-label">Próximamente</div>
             <h2>Mi manual</h2>
             <article>
               <p>Las vivencias adquiridas a lo largo de 10 años de desempeñarme como controladora de tránsito aéreo, me llevaron a escribir un manual que publicaré en breve, detallando este nuevo aspecto de coaching en aviación, donde remarco todas aquellas técnicas que se pueden aplicar al capital humano de todas las organizaciones de la aviación y del ambiente en general.</p>

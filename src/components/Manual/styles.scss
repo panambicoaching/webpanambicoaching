@@ -25,7 +25,17 @@ section.panambi-manual {
     }
   }
 
-  .about-me-msj {
+  img {
+    @media (max-width: 575.98px) {
+      margin-top: 40px;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .manual-msj {
     margin-bottom: 16px;
 
     @media (max-width: 991.98px) {
