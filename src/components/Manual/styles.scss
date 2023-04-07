@@ -1,6 +1,5 @@
 
-section.panambi-about-me {
-  background-color: var(--background-02);
+section.panambi-manual {
   padding-top: 160px;
   padding-bottom: 160px;
 
@@ -31,18 +30,6 @@ section.panambi-about-me {
 
     @media (max-width: 991.98px) {
       margin-bottom: 8px;
-    }
-  }
-
-  .panambi-btn {
-    margin-top: 120px;
-
-    @media (min-width: 576px) and (max-width: 991.98px) {
-      margin-top: 80px;
-    }
-  
-    @media (max-width: 575.98px) {
-      margin-top: 32px;
     }
   }
 }

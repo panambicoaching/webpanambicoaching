@@ -13,7 +13,7 @@ const AboutMe = () => {
     <section className={`container-fluid panambi-about-me`}>
       <div className="container">
         <Row>
-          <Col className="col-12 col-sm-5 col-lg-6 order-2 order-sm-1 d-flex justify-content-center d-sm-block">
+          <Col className="col-12 col-sm-5 col-lg-6 order-2 order-sm-1 d-flex justify-content-center align-items-center">
             <figure>
               <picture>
                 <source media="(min-width: 576px) and (max-width: 991.98px)"
@@ -23,8 +23,7 @@ const AboutMe = () => {
 
                 <img 
                   srcSet={img_large}
-                  className="about-me-img img-fluid"
-                  alt={`Foto de Carla, de la seccion quien soy`} loading="lazy"
+                  alt={`Imagen de Carla, de la sección quien soy`} loading="lazy"
                 />
               </picture>
             </figure>
@@ -33,7 +32,7 @@ const AboutMe = () => {
             <div className="about-me-msj text-label">Evolucionemos juntos</div>
             <h2>¿Quién soy?</h2>
             <article>
-              <p>Soy Carla Paola González Lillo, Controladora de tránsito aéreo desde el año 2008, y cuento con la certificación de Coach profesional  desde el año 2018. Soy amante de la naturaleza, la aeronáutica y la espiritualidad. </p>
+              <p>Soy Carla Paola González Lillo, Controladora de tránsito aéreo desde el año 2008, y cuento con la certificación de Coach profesional  desde el año 2018. Soy amante de la naturaleza, la aeronáutica y la espiritualidad.</p>
               <p>Actualmente trabajo en la creación del Coaching en Aviación o Coaching Aeronáutico. Soy mamá, esposa, tía, hija, sobrina, amiga, en fin, una mujer como todas las demás, con sueños, desafíos y metas.</p>
               <p>La esencia de mi trabajo es facilitar el crecimiento personal y profesional, ayudándote a poder con todo: tu trabajo, familia y estudios, aportándote seguridad y determinación, brindándote herramientas necesarias para acompañarte en tu camino y que puedas lograr tus metas, con objetivos a corto, mediano y largo plazo.</p>
               <p>Juntos, armaremos un plan especializado, acorde a tu vida y reavivando la llama de fuego que vive en ti. </p>
