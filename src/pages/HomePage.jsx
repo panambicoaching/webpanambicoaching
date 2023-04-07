@@ -1,5 +1,5 @@
 import HomeCover from "../components/HomeCover";
-import Services from "../components/Services";
+import PanambiServices from "../components/PanambiServices";
 import Hello from "../components/Hello";
 import CallToAction from "../components/CallToAction";
 import AppButton from "../components/AppButton";
@@ -11,7 +11,7 @@ const HomePage = () => {
     return (
         <div>
             <HomeCover />
-            <Services cardsNames={["courses", "workshops", "conferences"]} cardsAreLinks={true} />
+            <PanambiServices cardsNames={["courses", "workshops", "conferences"]} cardsAreLinks={true} />
             <Hello />
             <CallToAction title={ctaTitle} titleStyle={{ typo: "text-headline", color: "primary" }} buttonComp={ctaButton} />
         </div>

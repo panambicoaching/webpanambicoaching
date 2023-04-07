@@ -1,9 +1,9 @@
-import CoursesContact from "../components/CoursesContact";
+import ServicesContact from "../components/ServicesContact";
 
 const CoursesContactPage = () => {
     return (
         <div>
-            <CoursesContact />
+            <ServicesContact variant={"courses"}/>
         </div>
         
     );
