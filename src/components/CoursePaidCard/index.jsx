@@ -24,7 +24,6 @@ const CoursePaidCard = ({ item, status }) => {
               <img 
                 srcSet={item.img_large}
                 className="card-img"
-                title={`Foto del curso ${item.name}`}
                 alt={`Foto del curso ${item.name}`} loading="lazy"
               />
             </picture>

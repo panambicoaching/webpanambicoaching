@@ -42,7 +42,7 @@ const MyValuesList = () => {
     <section className={`container-fluid panambi-my-values`}>
       <div className="container">
         <h2>Mis valores</h2>
-        <Row className="courses-list">
+        <Row>
           {
 						items.length > 0
 							? (<>

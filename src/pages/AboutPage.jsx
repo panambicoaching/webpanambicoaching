@@ -1,8 +1,12 @@
-import MyValuesList from "../components/MyValuesList"
+import AboutMe from "../components/AboutMe";
+import MyValuesList from "../components/MyValuesList";
 
 const AboutPage = () => {
 		return (
-			<MyValuesList />
+			<>
+				<MyValuesList />
+				<AboutMe />
+			</>
 		)
 }
 
