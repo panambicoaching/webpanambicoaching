@@ -1,7 +1,9 @@
+@import "../../assets/scss/_shadows.scss";
 
 .panambi-paid-card {
 	background-color: var(--white);
 	border-radius: 8px;
+	box-shadow: map-get($shadows, card-on-white-1);
 	
 	a {
 		color: inherit;
