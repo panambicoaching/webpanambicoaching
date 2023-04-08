@@ -33,7 +33,6 @@ const Banner = ({ variant, component }) => {
                   />
             </picture>
           </div>
-          
         </div>
       </div>
     </section>

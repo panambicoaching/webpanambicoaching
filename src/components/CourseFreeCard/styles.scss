@@ -1,9 +1,10 @@
+@import "../../assets/scss/_shadows.scss";
 
 .panambi-free-card {
 	display: flex;
 	background-color: var(--white);
 	border-radius: 8px;
-	//position: absolute;
+	box-shadow: map-get($shadows, card-on-white-1);
 
 	.card-body {
 		display: flex;

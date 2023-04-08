@@ -40,6 +40,19 @@ section.panambi-spotify-banner {
 	.banner-content {
 		@extend .left-gap;
 		display: flex;
+		justify-content: space-between;
+		column-gap: 60px;
+		
+		@media (min-width: 576px) and (max-width: 991.98px) {
+			column-gap: 32px;
+		}
+
+		@media (max-width: 575.98px) {
+			flex-direction: column;
+			column-gap: initial;
+			margin: 0;
+			padding: 0;
+		}
 
 		.banner-col-left {
 			padding: 56px 0;
@@ -79,12 +92,6 @@ section.panambi-spotify-banner {
 					width: 100%;
 				}
 			}
-		}
-
-		@media (max-width: 575.98px) {
-			flex-direction: column;
-			margin: 0;
-			padding: 0;
 		}
 	}
 }

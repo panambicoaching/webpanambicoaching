@@ -35,7 +35,7 @@ const AboutUsCover = () => {
 
                 <img 
                   srcSet={img_large}
-                  alt={`Imagen de Carla, de la sección historia de Panambi coaching`} loading="lazy"
+                  alt={`Imagen de Carla, de la sección historia de Panambí coaching`} loading="lazy"
                 />
               </picture>
             </figure>
