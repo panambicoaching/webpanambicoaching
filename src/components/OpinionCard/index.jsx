@@ -3,23 +3,23 @@ import Icon from "../Icon";
 
 import './styles.scss'
 
+const createStars = (item) => {
+  const stars = [];
+  for (let index = 1; index <= item.stars; index++) {
+    stars.push(<Icon key={`star-${index}-of-opinion-${item.id}`} name={"star"} />);
+  }
+  
+  return stars;
+}
+
+const createUserAvatar = (item) => {
+  let userAvatarContent = item.author_first_name[0].toUpperCase();
+  userAvatarContent += item.author_last_name[0].toUpperCase();
+
+  return userAvatarContent;
+}
+
 const OpinionCard = ({ item }) => {
-  const createStars = (item) => {
-    const stars = [];
-    for (let index = 1; index <= item.stars; index++) {
-      stars.push(<Icon key={`star-${index}-of-opinion-${item.id}`} name={"star"} />);
-    }
-    
-    return stars;
-  }
-
-  const createUserAvatar = (item) => {
-    let userAvatarContent = item.author_first_name[0].toUpperCase();
-    userAvatarContent += item.author_last_name[0].toUpperCase();
-
-    return userAvatarContent;
-  }
-
   return (
     <div className="panambi-opinion-card">
       <div className="card-header">

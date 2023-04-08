@@ -5,26 +5,26 @@ import GradientCover from "../components/GradientCover";
 import Icon from "../components/Icon";
 import OpinionsContainer from "../components/OpinionsContainer";
 
+const BannerBtn = (
+  <AppButton
+    variant={"regular"}
+    as={"link"}
+    design={"secondary"}
+    to={"https://spotify.com"}
+    text={"Escuchar ahora"}
+    target={"_blank"}
+    StartIcon={<Icon name={"spotify_a"} />}
+  />
+);
+
 const CoursesPage = () => {
-		const SpotifyIcon = <Icon name={"spotify_a"} />
-
-		const Btn = <AppButton 
-						variant={"regular"}
-						as={"link"}
-						design={"secondary"}
-						to={"https://spotify.com"}
-						text={"Escuchar ahora"}
-						target={"_blank"}
-						StartIcon={SpotifyIcon}
-		/>
-
 		return (
 			<>
 				<GradientCover variant={"courses"}/>
 				<CoursesContainer status={"done"}/>
 				<CoursesContainer status={"next"}/>
 				<OpinionsContainer />
-				<Banner variant="spotify" component={Btn}/>
+				<Banner variant="spotify" component={BannerBtn}/>
 			</>
 		)
 }

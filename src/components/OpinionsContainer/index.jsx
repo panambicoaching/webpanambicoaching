@@ -40,7 +40,7 @@ const opinions = [
     "id": 5,
     "author_first_name": "Camila",
     "author_last_name": "Silva",
-    "job": "-",
+    "job": "Estudiante",
     "stars": 5,
     "opinion": "Gracias por la hermosa experiencia, por abrirnos camino y ayudarnos a ver lo que valemos. Lo mejor para vos, y que sigas siendo y ayudando a inspirar"
   },
@@ -48,7 +48,7 @@ const opinions = [
     "id": 6,
     "author_first_name": "Taton",
     "author_last_name": "Dandi",
-    "job": "-",
+    "job": "Estudiante",
     "stars": 5,
     "opinion": "Gracias por la amabilidad y la buena onda, creo que nos sirvió a todos, a ver de lo que somos capaces, y la importancia de saber trabajar en grupo. Espero que lo hayas disfrutado y que sigas motivando. ¡Gracias por tanto!"
   }

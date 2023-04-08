@@ -10,7 +10,7 @@ const AboutPage = () => {
 		return (
 			<> 
 				<AboutUsCover />
-                <FourBodies />
+        <FourBodies />
 				<MyValuesList />
 				<AboutMe />
 				<Manual />

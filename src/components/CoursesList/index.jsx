@@ -34,7 +34,7 @@ const CoursesList = ({ items, status }) => {
 
   return (
 			<section className={`container-fluid panambi-${status}-courses`}>
-				<div className="container">
+				<div className="container-lg">
 					<h2>{courseType[status].header}</h2>
 					<p>{courseType[status].text}</p>
 					

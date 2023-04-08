@@ -1,4 +1,4 @@
-@import "../../assets/scss/_gradients.scss";
+@import "../../assets/scss/gradients";
 
 section.panambi-gradient-cover {
   background: map-get($gradients, header-02);
@@ -16,7 +16,7 @@ section.panambi-gradient-cover {
     padding-bottom: 80px;
   }
 
-  .container {
+  .container-lg {
     display: flex;
     column-gap: 80px;
 

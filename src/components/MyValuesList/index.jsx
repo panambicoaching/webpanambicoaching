@@ -40,9 +40,9 @@ const items = [
 const MyValuesList = () => {
   return (
     <section className={`container-fluid panambi-my-values`} id="values">
-      <div className="container-md">
+      <div className="container-lg">
         <h2>Mis valores</h2>
-        <Row>
+        <Row className="values-list">
           {
 						items.length > 0
 							? (<>

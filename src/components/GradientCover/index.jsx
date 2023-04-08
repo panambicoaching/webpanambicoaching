@@ -19,7 +19,7 @@ const gradientCoverType = {
 const GradientCover = ({ variant }) => {
   return (
     <section className={`container-fluid panambi-gradient-cover`}>
-      <div className="container">
+      <div className="container-lg">
         <div className="gradient-cover-details">
           <h1>{gradientCoverType[variant].header}</h1>
           <p>{gradientCoverType[variant].text_p1}</p>

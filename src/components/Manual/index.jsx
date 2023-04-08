@@ -10,7 +10,7 @@ import "./styles.scss";
 const Manual = () => {
   return (
     <section className={`container-fluid panambi-manual`}>
-      <div className="container-md">
+      <div className="container-lg">
         <Row>
           <Col className="col-12 col-sm-5 col-lg-6 order-2 order-sm-1 d-flex justify-content-center justify-sm-content-start">
             <figure>

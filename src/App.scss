@@ -1,6 +1,6 @@
 @use 'sass:meta';
-@import 'assets/scss/_colors.scss';
-@import 'assets/scss/_typography.scss';
+@import 'assets/scss/colors.scss';
+@import 'assets/scss/typography.scss';
 
 :root {  
   --primary: #{meta.inspect($primary)};
@@ -54,8 +54,4 @@ h3 {
 
 h4 {
   @extend .text-label;
-}
-
-.rounded {
-  border-radius: 50%;
 }

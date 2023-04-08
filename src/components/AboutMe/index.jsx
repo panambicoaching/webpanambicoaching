@@ -11,7 +11,7 @@ import "./styles.scss";
 const AboutMe = () => {
   return (
     <section className={`container-fluid panambi-about-me`} id="about-me">
-      <div className="container-md">
+      <div className="container-lg">
         <Row>
           <Col className="col-12 col-sm-5 col-lg-6 order-2 order-sm-1 d-flex justify-content-center justify-sm-content-start align-items-center">
             <figure>

@@ -1,4 +1,4 @@
-@import "../../assets/scss/_gradients.scss";
+@import "../../assets/scss/gradients";
 
 section.panambi-my-values {
   padding-top: 160px;
@@ -14,7 +14,7 @@ section.panambi-my-values {
     padding-bottom: 80px;
   }
 
-  .row {
+  .values-list {
     row-gap: 40px;
 
     @media (min-width: 576px) and (max-width: 991.98px) {
