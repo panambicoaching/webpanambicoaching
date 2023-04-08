@@ -1,7 +1,7 @@
 import Alert from 'react-bootstrap/Alert'
+import BenefitsItem from '../BenefistItem';
 
 import './styles.scss'
-import BenefitsItem from '../BenefistItem';
 
 // variant prop available values -> "courses" ; "workshops"
 const items = [

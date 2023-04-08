@@ -3,24 +3,43 @@
 
 section.panambi-newsletter-banner,
 section.panambi-spotify-banner {
-	padding: 0;
 	position: relative;
+	padding: 0;
 
+	&::before {
+		background: url("https://i.postimg.cc/1z8VBmjG/banner-bg-large.webp");
+		background-color: #C93F6B;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		@media (min-width: 576px) and (max-width: 991.98px) {
+			background-image: url("https://i.postimg.cc/52NCHq5k/banner-bg-medium.webp");
+		}
+	
+		@media (max-width: 575.98px) {
+			background-image: url("https://i.postimg.cc/vHy9yd4y/banner-bg-small.webp");
+		}
+	}
+	
 	.container-fluid {
 		@extend .container-fluid-left-gap;
-		height: 100%;
-		position: absolute;
+		position: relative;
 
 		@media (max-width: 575.98px) {
 			padding: 0;
-			width: 100%;
 		}
 	}
 
 	.banner-content {
 		@extend .left-gap;
 		display: flex;
-		position: absolute;
 
 		.banner-col-left {
 			padding: 56px 0;
@@ -67,39 +86,6 @@ section.panambi-spotify-banner {
 			margin: 0;
 			padding: 0;
 		}
-	}
-
-	.banner-background {
-		object-fit: fill;
-		position: absolute;
-		user-select: none;
-		width: 100%;
-	}
-}
-
-section.panambi-newsletter-banner,
-.banner-background {
-	min-height: 334px;
-	
-	@media (min-width: 576px) and (max-width: 991.98px) {
-		min-height: 264px;
-	}
-
-	@media (max-width: 575.98px) {
-		min-height: 737px;
-	}
-}
-
-section.panambi-spotify-banner, 
-.banner-background {
-	min-height: 360px;
-
-	@media (min-width: 576px) and (max-width: 991.98px) {
-		min-height: 264px;
-	}
-
-	@media (max-width: 575.98px) {
-		min-height: 700px;
 	}
 }
 
