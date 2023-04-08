@@ -1,10 +1,11 @@
 import { React } from "react";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Row, Col } from "react-bootstrap";
 import "./styles.scss";
 import footerLogo from "../../assets/img/footer/footer-logo.webp";
 
 const Footer = () => {
+
     return (
         <footer className="container-fluid">
             <Row>
@@ -12,19 +13,19 @@ const Footer = () => {
                     <h4 className="text-label">Inicio</h4>
                     <ul className="list-unstyled text-body2">
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" to="/#home-cover">
                                 Panambí
-                            </Link>
+                            </HashLink>
                         </li>
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" to="/#features-home">
                                 Mis servicios
-                            </Link>
+                            </HashLink>
                         </li>
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" to="/#hello">
                                 Quién soy
-                            </Link>
+                            </HashLink>
                         </li>
                     </ul>
                 </Col>
@@ -32,24 +33,24 @@ const Footer = () => {
                     <h4 className="text-label">Acerca de</h4>
                     <ul className="list-unstyled text-body2">
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" to="/about/#about-cover">
                                 Mi historia
-                            </Link>
+                            </HashLink>
                         </li>
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" to="/about/#values">
                                 Mis valores
-                            </Link>
+                            </HashLink>
                         </li>
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" to="/about/#about-me">
                                 Quién soy
-                            </Link>
+                            </HashLink>
                         </li>
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" to="/about/#faq">
                                 Preguntas frecuentes
-                            </Link>
+                            </HashLink>
                         </li>
                     </ul>
                 </Col>
@@ -57,19 +58,19 @@ const Footer = () => {
                     <h4 className="text-label">Servicios</h4>
                     <ul className="list-unstyled text-body2">
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" to="/courses/#">
                                 Cursos
-                            </Link>
+                            </HashLink>
                         </li>
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" to="/workshops/#">
                                 Talleres
-                            </Link>
+                            </HashLink>
                         </li>
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" to="/conferences/#">
                                 Conferencias
-                            </Link>
+                            </HashLink>
                         </li>
                     </ul>
                 </Col>
@@ -77,28 +78,28 @@ const Footer = () => {
                     <h4 className="text-label">Contacto</h4>
                     <ul className="list-unstyled text-body2">
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" target="_blank" to="https://www.instagram.com/panambicoaching/">
                                 Instagram
-                            </Link>
+                            </HashLink>
                         </li>
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" target="_blank" to="https://www.facebook.com/panambicoaching">
                                 Facebook
-                            </Link>
+                            </HashLink>
                         </li>
                         <li>
-                            <Link className="text-body2" to="#">
+                            <HashLink className="text-body2" target="_blank" to="https://open.spotify.com/show/1dTEILdq7RUYMYeBoP8ek9">
                                 Spotify
-                            </Link>
+                            </HashLink>
                         </li>
                     </ul>
                 </Col>
             </Row>
             <Row className="logo-copy-row">
                 <picture>
-                    <img src={footerLogo} alt="" />
+                    <img src={footerLogo} alt="Isotipo de Panambí Coaching, en footer" loading="lazy" />
                 </picture>
-                <small className="text-body2" >© Copyright 2023 - Panambi Coaching</small>
+                <small className="text-body2">© Copyright 2023 - Panambi Coaching</small>
             </Row>
         </footer>
     );

@@ -9,7 +9,7 @@ import "./styles.scss";
 
 const AboutUsCover = () => {
   return (
-    <section className={`container-fluid panambi-about-us`}>
+    <section className={`container-fluid panambi-about-us`} id="about-cover">
       <div className="container-md">
         <Row>
           <Col className="col-12">

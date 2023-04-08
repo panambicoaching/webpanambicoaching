@@ -6,7 +6,7 @@ import AppButton from "../components/AppButton";
 
 const HomePage = () => {
     const ctaTitle = "¿Te has puesto a pensar cuántas emociones te llevas a tu hogar luego de un día de trabajo?";
-    const ctaButton = <AppButton variant={"regular"} as={"link"} design={"primary"} text={"Volemos juntos"} />;
+    const ctaButton = <AppButton variant={"regular"} as={"link"} design={"primary"} text={"Volemos juntos"} to={"/contact/#"} />;
     const ctaTitleStyle = { typo: "text-headline", color: "primary" }
     const featuresTitle = "Mis servicios";
     const featuresText = "Te ayudamos a superar aquellos obstáculos que parecen estancarte y potenciarte hacia un futuro prometedor.";

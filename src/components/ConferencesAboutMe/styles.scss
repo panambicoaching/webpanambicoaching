@@ -1,0 +1,50 @@
+section.conferences-me {
+    background: var(--background-01);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
+    @media (min-width:576px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @media (min-width:992px) {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+
+    h2 {
+        margin-bottom: 24px;
+
+        @media (min-width:576px) {
+            margin-bottom: 32px;
+        }
+
+        @media (min-width:992px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    p:last-child {
+        margin-bottom: 40px;
+    }
+
+    .row:last-child .col:last-child {
+        text-align: center;
+
+        @media (min-width:576px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        @media (min-width:1200px) {
+           justify-content: end;
+        }
+
+        @media (max-width:575.98px) {
+            padding: 0;
+        }
+    }
+}
+

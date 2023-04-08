@@ -44,18 +44,6 @@ div.card.transparent {
         }
 }
 
-.home-list div.card {
-        @media (min-width: 576px) {
-            height: 100%!important;
-        }
-}
-
-@media (min-width: 576px) and (max-width:767.98px) {
-    .row> .col>* {
-        padding: 0;
-    }
-}
-
 div.card.white-rounded {
     background-color: transparent;
     text-align: center;
@@ -81,3 +69,10 @@ div.card.white-rounded {
         margin-bottom: 16px;
     }
 }
+
+.home-list div.card {
+        @media (min-width: 576px) {
+            height: 100%!important;
+        }
+}
+

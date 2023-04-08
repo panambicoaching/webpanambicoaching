@@ -39,7 +39,7 @@ const items = [
 
 const MyValuesList = () => {
   return (
-    <section className={`container-fluid panambi-my-values`}>
+    <section className={`container-fluid panambi-my-values`} id="values">
       <div className="container-md">
         <h2>Mis valores</h2>
         <Row>
