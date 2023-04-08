@@ -8,6 +8,7 @@ nav.navbar {
     &>.container {
         margin: 0;
         max-width: none;
+        padding: 0;
     }
 
     .navbar-nav {
@@ -84,7 +85,7 @@ nav.navbar {
 
 
     // Mobile Menu changes to full height
-    @media (max-width: 575.9px) {
+    @media (max-width: 575.98px) {
         .navbar-collapse {
             position: fixed;
             top: 64px;

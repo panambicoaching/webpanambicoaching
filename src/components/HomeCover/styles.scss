@@ -1,7 +1,49 @@
-/* section > div {
-    gap: 60px;
+@import "../../assets/scss/_gradients.scss";
 
-    @media (max-width: 575.98px) {
-    gap: 40px;
-  }
-} */
+section.home-cover {
+    background: map-get($gradients, header-01);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
+    @media (min-width:576px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @media (min-width:992px) {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+
+    .text-container {
+            gap: 24px;
+            margin-bottom: 32px;
+
+            @media (min-width:576px) {
+                gap: 32px;
+                margin-bottom: 92px;
+            }
+
+            @media (min-width:992px) {
+                gap: 40px;
+                margin-bottom: 120px;
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+
+    &>.container {
+        padding: 0;
+
+        .row {
+            gap: 40px;
+
+            @media (min-width:576px) {
+                gap: 0;
+            }
+        }
+
+    }
+}

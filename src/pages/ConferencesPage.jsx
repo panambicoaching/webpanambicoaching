@@ -1,5 +1,5 @@
 import ConferencesCover from "../components/ConferencesCover";
-import ItemsList from "../components/ItemsList";
+import PanambiFeatures from "../components/PanambiFeatures";
 import ConferencesAboutMe from "../components/ConferencesAboutMe";
 import AppButton from "../components/AppButton";
 import CallToAction from "../components/CallToAction";
@@ -9,10 +9,13 @@ const ConferencesPage = () => {
     const ctaStyle = {typo: "text-headline", color: "primary"};
     const ctaText = "Contactame para conocer más sobre tu evento y compartirte mi propuesta diferenciadora como speaker.";
     const ctaButton = <AppButton variant={"regular"} as={"link"} design={"primary"} text={"Volemos juntos"} />;
+    const featuresTitle = "¿Por qué elegirme para tu próximo evento?";
+    const cardsNames = ["entrepreneur", "motivational", "author"];
+
     return (
         <div>
             <ConferencesCover />
-            <ItemsList cardsNames={["entrepreneur", "motivational", "author"]} cardsAreLinks={false} />
+            <PanambiFeatures itemsNames={cardsNames} cardsAreLinks={false} sectionTitle={featuresTitle}/>
             <ConferencesAboutMe />
             <CallToAction title={ctaTitle} titleStyle={ctaStyle} text={ctaText} buttonComp={ctaButton} />
         </div>

@@ -1,0 +1,56 @@
+section.hello-cover {
+    background: var(--background-01);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
+    @media (min-width:576px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @media (min-width:992px) {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+
+    .text-col {
+        @media (max-width:575.98px) {
+            margin-bottom: 40px;
+        }
+    }
+
+    .text-container {
+        gap: 24px;
+        margin-bottom: 32px;
+
+        @media (min-width:576px) {
+            gap: 32px;
+            margin-bottom: 92px;
+        }
+
+        @media (min-width:992px) {
+            gap: 40px;
+            margin-bottom: 120px;
+        }
+
+        .icon-container {
+            gap: 8px;
+
+            @media (min-width:992px) {
+                gap: 16px;
+            }
+            
+            img {
+                width: 24px;
+
+                @media (min-width:576px) {
+                    width: 48px;
+                }
+
+                @media (min-width:992px) {
+                    width: 64px;
+                }
+            }
+        }
+    }
+}
