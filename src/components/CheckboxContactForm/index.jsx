@@ -54,8 +54,8 @@ const CheckboxContactForm = ({variant}) => {
         <div className="d-flex flex-column col-12 col-sm-6">
             {checkboxes[variant].map((checkbox, index) => {
                 return (
-                    <label>
-                        <input type="checkbox" name={checkbox} key={`input-${index}`}/>
+                    <label key={`label-${index}`}>
+                        <input type="checkbox" name={checkbox} key={`input-${index}`} />
                         {checkbox}
                     </label>
                 );

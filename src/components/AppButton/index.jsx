@@ -1,6 +1,6 @@
 import "./styles.scss";
 
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import { Button } from "semantic-ui-react";
 
 // variant prop available values -> "icon" ; "regular"
@@ -9,7 +9,7 @@ import { Button } from "semantic-ui-react";
 const AppButton = ({ variant, as, design, to, text, StartIcon, EndIcon, target, onClickFn, type, form, disabled }) => {
     if (as === "link") {
         return (
-            <Button as={Link} to={to} className={`panambi-btn ${design}-btn`} target={target ? target : "_self"} disabled={disabled}>
+            <Button as={HashLink} to={to} className={`panambi-btn ${design}-btn`} target={target ? target : "_self"} disabled={disabled}>
                 {variant === "icon" && (StartIcon || EndIcon)}
 
                 {variant === "regular" && (StartIcon || null)}

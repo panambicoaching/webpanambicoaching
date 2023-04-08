@@ -15,17 +15,6 @@ nav.navbar {
 
         .dropdown-toggle{
 
-            &.show {
-                color: var(--primary);
-
-                &::after {
-                    border-bottom: 0.3em solid;
-                    border-right: 0.3em solid transparent;
-                    border-top: none;
-                    border-left: 0.3em solid transparent;
-                }
-            }
-
             &::after {
                 display: inline-block;
                 margin-left: 0.255em;
@@ -37,6 +26,18 @@ nav.navbar {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
+            }
+
+            &.show {
+                color: var(--primary);
+
+                &::after {
+                    border-bottom: 0.3em solid;
+                    border-right: 0.3em solid transparent;
+                    border-top: none;
+                    border-left: 0.3em solid transparent;
+                    top: 24px;
+                }
             }
         }
 

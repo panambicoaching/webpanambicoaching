@@ -1,0 +1,62 @@
+@import "../../assets/scss/_gradients.scss";
+
+section.conferences-cover {
+    background: map-get($gradients, header-03);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
+    @media (min-width:576px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @media (min-width:992px) {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+
+    .col:first-child {
+        margin-bottom: 40px;
+
+        @media (min-width:576px) {
+            margin-bottom: 0;
+        }
+    }
+
+    .col:last-child {
+        text-align: center;
+
+        @media (min-width:576px) {
+            text-align: end;
+        }
+
+        @media (max-width:575.98px) {
+            padding: 0;
+        }
+    }
+
+    .text-container {
+        gap: 24px;
+        margin-bottom: 24px;
+
+        .headline-container {
+            p {
+                margin-bottom: 8px;
+            }
+        }
+
+        @media (min-width:576px) {
+            gap: 32px;
+            margin-bottom: 80px;
+        }
+
+        @media (min-width:992px) {
+            gap: 40px;
+            margin-bottom: 120px;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}

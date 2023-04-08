@@ -1,31 +1,27 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
+import { useState } from "react";
+import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import navBarLogoSm from "../../assets/img/navbar/navbar-logo-small.svg";
 import navBarLogoL from "../../assets/img/navbar/navbar-logo-large.svg";
 import "./styles.scss";
-import { useState } from "react";
 
 const NavBar = () => {
-
     const [expanded, setExpanded] = useState(false);
 
     const handleLinkClick = () => {
         setExpanded(false);
     };
 
-      const handleDropdownClick = (e) => {
-          e.stopPropagation();
-      };
+    const handleDropdownClick = (e) => {
+        e.stopPropagation();
+    };
     return (
         <Navbar expanded={expanded} expand="sm" className="sticky-top">
             <Container>
-                <Navbar.Brand as={Link} to="/">
+                <Navbar.Brand as={HashLink} to="/#" onClick={handleLinkClick}>
                     <picture>
                         <source media="(min-width: 576px)" srcSet={navBarLogoL} />
-                        <img srcSet={navBarLogoSm} alt="" />
+                        <img srcSet={navBarLogoSm} alt="Logo de Panambí Coaching"/>
                     </picture>
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)}>
@@ -35,21 +31,21 @@ const NavBar = () => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
-                        <Nav.Link className="text-button" as={Link} to="/about" onClick={handleLinkClick}>
+                        <Nav.Link className="text-button" as={HashLink} to="/about/#" onClick={handleLinkClick}>
                             Acerca de
                         </Nav.Link>
                         <NavDropdown className="text-button" title="Servicios" id="basic-nav-dropdown" onClick={handleDropdownClick}>
-                            <NavDropdown.Item className="text-button" as={Link} to="/courses" onClick={handleLinkClick}>
+                            <NavDropdown.Item className="text-button" as={HashLink} to="/courses/#" onClick={handleLinkClick}>
                                 Cursos
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-button" as={Link} to="/workshops" onClick={handleLinkClick}>
+                            <NavDropdown.Item className="text-button" as={HashLink} to="/workshops/#" onClick={handleLinkClick}>
                                 Talleres
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-button" as={Link} to="/conferences" onClick={handleLinkClick}>
+                            <NavDropdown.Item className="text-button" as={HashLink} to="/conferences/#" onClick={handleLinkClick}>
                                 Conferencias
                             </NavDropdown.Item>
                         </NavDropdown>
-                        <Nav.Link className="text-button" as={Link} to="/contact" onClick={handleLinkClick}>
+                        <Nav.Link className="text-button" as={HashLink} to="/contact/#" onClick={handleLinkClick}>
                             Contactame
                         </Nav.Link>
                     </Nav>

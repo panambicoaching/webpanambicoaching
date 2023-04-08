@@ -1,5 +1,5 @@
 import "./styles.scss";
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
 import Icon from "../Icon";
 import AppButton from "../AppButton";
 import CarlaQuienSoyLg from "../../assets/img/home/carla-quien-soy-large.webp";
@@ -9,8 +9,8 @@ import CarlaQuienSoySm from "../../assets/img/home/carla-quien-soy-small.webp";
 
 const Hello = () => {
     return (
-        <section className="hello-cover container-fluid">
-            <Container>
+        <section className="hello container-fluid" id="hello">
+            <div className="container-md">
                 <Row>
                     <Col className="col-12 col-sm-5 col-lg-6 d-flex align-items-center justify-content-center justify-content-sm-start order-2 order-sm-1">
                         <picture>
@@ -18,8 +18,9 @@ const Hello = () => {
                                 src={CarlaQuienSoySm}
                                 srcSet={`${CarlaQuienSoySm} 304w, ${CarlaQuienSoyMd} 273w, ${CarlaQuienSoyLg} 448w`}
                                 sizes="(max-width: 576px) 304px, (max-width: 1200px) 273px, 448px"
-                                alt=""
-                            />{" "}
+                                alt="Imagen de carla en sección 'Quién soy'."
+                                loading="lazy"
+                            />
                         </picture>
                     </Col>
                     <Col className="col-12 col-sm-7 col-lg-6 order-1 order-sm-2 text-col">
@@ -50,10 +51,10 @@ const Hello = () => {
                                 <Icon name="access_consciousness"></Icon>
                             </div>
                         </div>
-                        <AppButton variant={"regular"} as={"link"} design={"secondary"} to={"/about"} text={"Más sobre mí"} />
+                        <AppButton variant={"regular"} as={"link"} design={"secondary"} to={"/about/#"} text={"Más sobre mí"} />
                     </Col>
                 </Row>
-            </Container>
+            </div>
         </section>
     );
 };

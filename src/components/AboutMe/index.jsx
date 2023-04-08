@@ -10,7 +10,7 @@ import "./styles.scss";
 
 const AboutMe = () => {
   return (
-    <section className={`container-fluid panambi-about-me`}>
+    <section className={`container-fluid panambi-about-me`} id="about-me">
       <div className="container-md">
         <Row>
           <Col className="col-12 col-sm-5 col-lg-6 order-2 order-sm-1 d-flex justify-content-center justify-sm-content-start align-items-center">
@@ -38,7 +38,7 @@ const AboutMe = () => {
               <p>Juntos, armaremos un plan especializado, acorde a tu vida y reavivando la llama de fuego que vive en ti.</p>
               <p>Si eres del mundo aeronáutico ¡mejor aún!</p>
             </article>
-            <AppButton variant={"regular"} as={"link"} design={"primary"} to={"/contact"} text={"Volemos juntos"} />
+            <AppButton variant={"regular"} as={"link"} design={"primary"} to={"/contact/#"} text={"Volemos juntos"} />
           </Col>
         </Row>
       </div> 

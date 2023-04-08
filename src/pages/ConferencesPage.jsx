@@ -8,7 +8,7 @@ const ConferencesPage = () => {
     const ctaTitle = "¡Puedo estar en tu próximo evento!";
     const ctaStyle = {typo: "text-headline", color: "primary"};
     const ctaText = "Contactame para conocer más sobre tu evento y compartirte mi propuesta diferenciadora como speaker.";
-    const ctaButton = <AppButton variant={"regular"} as={"link"} design={"primary"} text={"Volemos juntos"} />;
+    const ctaButton = <AppButton variant={"regular"} as={"link"} design={"primary"} text={"Volemos juntos"} to={"/contact/#"}/>;
     const featuresTitle = "¿Por qué elegirme para tu próximo evento?";
     const cardsNames = ["entrepreneur", "motivational", "author"];
 
