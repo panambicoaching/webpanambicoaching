@@ -1,0 +1,41 @@
+@import "../../assets/scss/_gradients.scss";
+
+.panambi-flag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: flag_animation 5s ease 1s infinite normal forwards;
+  background: map-get($gradients, flag-01);
+  color: var(--white);
+  border-top-right-radius: 8px;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 50% 90%, 0 100%);
+  height: 136px;
+  max-width: 112px;
+  user-select: none;
+  width: 100%;
+
+
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    height: 86px;
+    max-width: 80px;
+    width: 100%;
+  }
+
+  @media (max-width: 575.98px) {
+    height: 40px;
+    border-top-right-radius: unset;
+    margin-right: 16px;
+    max-width: 80px;
+    width: 100%;
+  }
+
+  @keyframes flag_animation {
+    20% { background: map-get($gradients, flag-02); }
+  
+    40% { background: map-get($gradients, flag-03); }
+  
+    60% { background: map-get($gradients, flag-04); }
+  
+    80% { background: map-get($gradients, flag-05); }
+  }
+}
