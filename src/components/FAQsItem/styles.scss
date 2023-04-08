@@ -1,0 +1,89 @@
+@import '../../App.scss';
+
+.panambi-faqs-item {
+  &.accordion-item {
+    margin-bottom: 24px;
+
+    @media (max-width: 991.98px) {
+      margin-bottom: 12px;
+    }
+  }
+
+  .accordion-body,
+  .accordion-button {
+    border-bottom: 1px solid var(--borders);
+    border-radius: 8px;
+    padding: 52px 60px;
+    
+    @media (min-width: 576px) and (max-width: 991.98px) {
+      padding: 32px 40px;
+    }
+  
+    @media (max-width: 575.98px) {
+      padding: 24px 24px;
+    }
+  }
+
+  .accordion-collapse.collapse.show {
+    background-color: transparent;
+  }
+
+  .accordion-body {
+    background-color: var(--white);
+  }
+  
+  .accordion-button {
+    &:not(.collapsed) {
+      background-color: initial;
+      box-shadow: none;
+      color: initial;
+    }
+
+    &:focus {
+      border-color: var(--borders);
+      box-shadow: unset;
+    }
+
+    &::after {
+      background-image: url("https://i.postimg.cc/13hZtBDp/open-large.webp");
+      background-size: initial;
+      height: 48px;
+      width: 48px;
+      
+      @media (min-width: 576px) and (max-width: 991.98px) {
+        background-image: url("https://i.postimg.cc/Nj6vrXxZ/open-medium.webp");
+        height: 32px;
+        width: 32px;
+      }
+      
+
+      @media (max-width: 575.98px) {
+        background-image: url("https://i.postimg.cc/6QBJVQjq/open-small.webp");
+        height: 24px;
+        width: 24px;
+      }
+    }
+
+    &:not(.collapsed)::after {
+      background-image: url("https://i.postimg.cc/hGMF2q6r/close-large.webp");
+      height: 48px;
+      width: 48px;
+      
+      @media (min-width: 576px) and (max-width: 991.98px) {
+        background-image: url("https://i.postimg.cc/sfLzFsXH/close-medium.webp");
+        height: 32px;
+        width: 32px;
+      }
+
+      @media (max-width: 575.98px) {
+        background-image: url("https://i.postimg.cc/9FqhCKwm/close-small.webp");
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}
+
+.accordion-flush .accordion-item {
+  border-radius: 8px; 
+}

@@ -22,7 +22,7 @@ const Manual = () => {
 
                 <img 
                   srcSet={img_large}
-                  alt={`Imagen de la portada del manual de Panambi coaching`} loading="lazy"
+                  alt={`Imagen de la portada del manual de Panambí coaching`} loading="lazy"
                 />
               </picture>
             </figure>
