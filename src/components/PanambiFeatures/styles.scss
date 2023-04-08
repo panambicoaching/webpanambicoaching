@@ -1,0 +1,39 @@
+section.features-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-color: var(--surface);
+
+    h2 {
+        margin-bottom: 24px;
+    }
+
+    p {
+        margin-bottom: 32px;
+    }
+
+    .container {
+        padding: 0;
+    }
+
+    @media (min-width:576px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+
+        h2 {
+            margin-bottom: 32px;
+        }
+
+        p {
+            margin-bottom: 80px;
+        }
+    }
+
+    @media (min-width:992px) {
+        padding-top: 160px;
+        padding-bottom: 160px;
+
+        p {
+            margin-bottom: 120px;
+        }
+    }
+}

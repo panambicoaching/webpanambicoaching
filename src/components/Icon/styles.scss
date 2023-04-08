@@ -1,11 +1,11 @@
 @import "../../App.scss";
 
 .panambi-icon {
-  display: inline-flex;
+    display: inline-flex;
     align-items: center;
     flex-shrink: 0;
     justify-content: center;
-  user-select: none;
+    user-select: none;
 
   // Tipo 1
   &.transparent-icon {

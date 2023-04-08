@@ -1,0 +1,83 @@
+@import "../../assets/scss/_shadows.scss";
+
+a.card-link {
+    text-decoration: none;
+    color: var(--text);
+    text-align: center;
+    width: 100%;
+
+    &:hover {
+        color: var(--text);
+    }
+}
+
+div.card.transparent {
+        text-align: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        border: none!important;
+        box-shadow: map-get($shadows, card-on-white-1);
+        gap: 24px;
+        align-items: center;
+        width: 100%;
+
+        &>* {
+            padding: 0;
+        }
+
+        .card-body {
+            padding: 0 16px;
+            
+            .card-title {
+                margin-bottom: 16px;
+            }
+
+            .card-text {
+                color: var(--text-light)
+            }
+        }
+
+        @media (min-width: 992px) {
+            padding-bottom: 56px;
+            padding-top: 56px;
+            gap: 32px;
+        }
+}
+
+.home-list div.card {
+        @media (min-width: 576px) {
+            height: 100%!important;
+        }
+}
+
+@media (min-width: 576px) and (max-width:767.98px) {
+    .row> .col>* {
+        padding: 0;
+    }
+}
+
+div.card.white-rounded {
+    background-color: transparent;
+    text-align: center;
+    align-items: center;
+    border: none;
+    color: var(--text);
+
+    .card-body {
+        @media (min-width: 576px) and (max-width: 767.98px) {
+            padding: 0 5px;
+        }
+    }
+
+    .card-title {
+        margin-bottom: 4px;
+
+        @media (min-width: 992px) {
+            margin-bottom: 16px;
+        }
+    }
+
+    .white-rounded-icon {
+        margin-bottom: 16px;
+    }
+}

@@ -19,6 +19,7 @@
   --surface: #{meta.inspect($surface)};
   --background-01: #{meta.inspect($background-01)};
   --background-02: #{meta.inspect($background-02)};
+  --background-03: #{meta.inspect($background-03)};
   --header-01: #{meta.inspect($header-01)};
   --borders: #{meta.inspect($borders)};
   --shadow-on-surface: #{meta.inspect($shadow-on-surface)};
@@ -29,18 +30,6 @@
 body {
   @extend .text-body;
   font-family: $panambi-font;
-}
-
-section {
-  padding: 160px 156px;
-
-  @media (min-width: 576px) and (max-width: 991.98px) {
-    padding: 120px 40px;
-  }
-
-  @media (max-width: 575.98px) {
-    padding: 80px 16px;
-  }
 }
 
 button {

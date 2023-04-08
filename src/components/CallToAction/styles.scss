@@ -1,0 +1,42 @@
+section.callToAction {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    @media (min-width:576px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @media (min-width:992px) {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+
+    p {
+        margin-top: 32px;
+
+        @media (min-width:992px) {
+            margin-top: 40px;
+        }
+    }
+
+    a {
+        margin-top: 32px;
+
+        @media (min-width:576px) {
+            margin-top: 92px;
+        }
+
+        @media (min-width:992px) {
+            margin-top: 136px;
+        }
+    }
+
+    .primary-color-text {
+        color: var(--primary);
+    }
+
+    .text-color-text {
+        color: var(--text);
+    }
+}

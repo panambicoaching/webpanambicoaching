@@ -1,0 +1,18 @@
+section.four-bodies{
+    background-color: var(--background-03);
+    padding: 80px 156px;
+
+    @media (min-width: 992px) {
+        padding: 40px;
+    }
+
+    @media (max-width: 991.98px) {
+        padding: 40px 16px;
+    }
+
+    .container {
+        @media (min-width: 576px) {
+            max-width: none;
+        }
+    }
+}
