@@ -53,7 +53,7 @@ const items = [
     "img_small": "https://i.postimg.cc/4yVNBftM/c5-small.webp",
     "modules": 4,
     "duration": 2,
-    "link": "https://lu.ma/unlink_vigente_id5"
+    "link": "https://lu.ma/6j0d4sfo"
   },
   {
     "id": 6,
@@ -64,7 +64,7 @@ const items = [
     "img_small": "https://i.postimg.cc/vB6QZYPB/c6-small.webp",
     "modules": 4,
     "duration": 2,
-    "link": "https://lu.ma/unlink_vigente_id6"
+    "link": "https://lu.ma/1c1sjr08"
   },
   {
     "id": 7,
@@ -75,7 +75,7 @@ const items = [
     "img_small": "https://i.postimg.cc/cL408MDP/c7-small.webp",
     "modules": 4,
     "duration": 2,
-    "link": "https://lu.ma/unlink_vigente_id7"
+    "link": "https://lu.ma/2eyju8j9"
   }
 ];
 

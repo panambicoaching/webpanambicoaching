@@ -101,6 +101,13 @@ section.panambi-spotify-banner {
 		.panambi-btn {
 			margin-top: 48px;
 
+			.panambi-icon {
+				i {
+					height: 24px;
+					width: 24px;
+				}
+			}
+
 			@media (min-width: 576px) and (max-width: 991.98px) {
 				margin-top: 24px;
 			}

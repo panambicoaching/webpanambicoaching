@@ -74,7 +74,9 @@ const iconStorage = {
 const Icon = ({ design, name }) => {
   return (
     <div className={`panambi-icon${design ? ` ${design}-icon` : ""}`}>
-      <img src={iconStorage[name]} alt={name}/>
+      <i style={{ 
+				backgroundImage: `url(${iconStorage[name]})`,
+			}} />
     </div>
   )
 }

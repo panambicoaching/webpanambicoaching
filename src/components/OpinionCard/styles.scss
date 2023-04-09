@@ -49,7 +49,10 @@
 
 		.card-stars {
 			.panambi-icon {
-				img {
+				i {
+					height: 24px;
+					width: 24px;
+
 					@media (max-width: 575.98px) {
 						height: 16px;
 						width: 16px;

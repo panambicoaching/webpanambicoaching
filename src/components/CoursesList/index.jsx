@@ -22,7 +22,7 @@ const courseType = {
 		emptyString: "próximos",
 		filterCond: (dateDiff) => dateDiff > 0,
 		textBtn: "¡Quiero participar!",
-		linkBtn: "https://lu.ma"
+		linkBtn: "https://lu.ma/panambicoaching"
 	}
 }
 
@@ -64,6 +64,7 @@ const CoursesList = ({ items, status }) => {
 							design={"primary"}
 							to={courseType[status].linkBtn}
 							text={courseType[status].textBtn}
+							target={"_blank"}
 						/>
 					</div>
 				</div>

@@ -7,15 +7,24 @@
     justify-content: center;
     user-select: none;
 
+    i {
+      background-size: cover;
+    }
+    
   // Variant 1
   &.transparent-icon {
     background-color: transparent;
     height: 72px;
     width: 72px;
 
-    img {
+    i {
+      background-size: cover;
       height: inherit;
       width: inherit;
+      
+      &::before {
+        content: "";
+      }
     }
   
     @media (max-width: 575.98px) {
@@ -31,18 +40,28 @@
     height: 64px;
     width: 64px;
 
-    img {
+    i {
+      background-size: cover;
       height: 32px;
       width: 32px;
+
+      &::before {
+        content: "";
+      }
     }
 
     @media (min-width: 576px) and (max-width: 991.98px) {
       height: 48px;
       width: 48px;
 
-      img {
+      i {
+        background-size: cover;
         height: 24px;
         width: 24px;
+
+        &::before {
+          content: "";
+        }
       }
     }
   
@@ -50,9 +69,14 @@
       height: 32px;
       width: 32px;
 
-      img {
+      i {
+        background-size: cover;
         height: 16px;
         width: 16px;
+
+        &::before {
+          content: "";
+        }
       }
     }
   }
@@ -62,18 +86,28 @@
     height: 72px;
     width: 72px;
 
-    img {
+    i {
+      background-size: cover;
       height: 34px;
       width: 34px;
+
+      &::before {
+        content: "";
+      }
     }
 
     @media (min-width: 576px) and (max-width: 991.98px) {
       height: 64px;
       width: 64px;
 
-      img {
+      i {
+        background-size: cover;
         height: 30px;
         width: 30px;
+
+        &::before {
+          content: "";
+        }
       }
     }
   
@@ -81,9 +115,14 @@
       height: 48px;
       width: 48px;
 
-      img {
+      i {
+        background-size: cover;
         height: 23px;
         width: 23px;
+
+        &::before {
+          content: "";
+        }
       }
     }
   }
@@ -93,18 +132,28 @@
     height: 48px;
     width: 48px;
 
-    img {
+    i {
+      background-size: cover;
       height: 24px;
       width: 24px;
+
+      &::before {
+        content: "";
+      }
     }
   
     @media (max-width: 575.98px) {
       height: 32px;
       width: 32px;
 
-      img {
+      i {
+        background-size: cover;
         height: 16px;
         width: 16px;
+
+        &::before {
+          content: "";
+        }
       }
     }
   }
