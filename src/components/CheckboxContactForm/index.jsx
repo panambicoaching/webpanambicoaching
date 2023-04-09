@@ -1,37 +1,27 @@
-import { useState } from "react";
 import AppButton from "../AppButton";
 import Icon from "../Icon";
 import "./styles.scss";
 import showAlert from "../../utils/alert";
 import validator from "../../utils/validator";
+import getDocsFirestore from '../../services/getDocsFirestore'
+import { useEffect, useState } from 'react'
 
 // variant prop available values => "workshops" | "courses"
 const CheckboxContactForm = ({ variant }) => {
-    const checkboxes = {
-        workshops: [
-            "Liderazgo",
-            "Motivación",
-            "Influencia - persuasión",
-            "Negociación",
-            "Trabajo en equipo",
-            "Comunicación efectiva",
-            "Toma de decisiones",
-            "Inteligencia emocional",
-            "Gestión del tiempo",
-            "Gestión del estrés",
-            "Actitud mental positiva",
-            "Sensibilización y conscientización",
-            "Gestión de conflictos",
-        ],
-        courses: [
-            "Descubre tus 4 cuerpos y empodérate",
-            "Emoción consciente",
-            "Vuelo emocional",
-            "Equilibrio personal",
-            "Aprende a meditar",
-            "Empodérate despertando tu amor propio",
-        ],
-    };
+    const [items, setItems] = useState([]);
+    const [loaded, setLoaded] = useState(false);
+
+    async function fetchItems() {  
+        let items = await getDocsFirestore(`${variant}`);
+        console.log(items)
+        setItems(items);
+        setLoaded(true);
+    }
+
+    useEffect(() => {
+        setLoaded(false);
+        fetchItems();
+    }, []);
 
     const subjects = {
         workshops: "Consulta sobre talleres",
@@ -119,14 +109,18 @@ const CheckboxContactForm = ({ variant }) => {
         }
     };
 
-    return (
+    const sendIcon = <Icon name={"send"} design="transparent"/>;
+
+    return loaded ? (
         <form onSubmit={submitForm} className="check-form d-flex flex-column flex-sm-row">
             <div className="d-flex flex-column col-12 col-sm-6">
-                {checkboxes[variant].map((checkbox, index) => {
+                {items.map((checkbox, index) => {
+                    if (variant === "courses" && checkbox.id === 1) return null;
+            
                     return (
                         <label key={`label-${index}`} className="checkboxLabel text-body">
-                            <input type="checkbox" name={checkbox} key={`input-${index}`} onChange={handleCheckboxChange} />
-                            {checkbox}
+                            <input type="checkbox" name={checkbox.name} key={`input-${index}`} onChange={handleCheckboxChange} />
+                            {checkbox.name}
                         </label>
                     );
                 })}
@@ -147,9 +141,11 @@ const CheckboxContactForm = ({ variant }) => {
                     {`${messageInputError ? "Este campo es obligatorio" : "Escribinos tu mensaje"}`}
                 </label>
 
-                <AppButton variant={"regular"} as={"handler"} design={"primary"} text={"Enviar"} EndIcon={<Icon name={"send"} />} type={"submit"} />
+                <AppButton variant={"regular"} as={"handler"} design={"primary"} text={"Enviar"} EndIcon={sendIcon} type={"submit"} />
             </div>
         </form>
+    ) : (
+        "Cargando..."
     );
 };
 

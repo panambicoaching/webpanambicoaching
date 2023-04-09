@@ -7,7 +7,7 @@ import './styles.scss'
 
 const CoursePaidCard = ({ item, status }) => {
   let link = null;
-  if(status === "done") link = "/course_contact";
+  if(status === "done") link = "/contact/courses";
   if(status === "next") link = item.link;
 
   return (

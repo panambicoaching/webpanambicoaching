@@ -75,6 +75,8 @@ const ContactUsForm = () => {
         }
     };
 
+    const sendIcon = <Icon name={"send"} design="transparent" />;
+    
     return (
         <>
             <form onSubmit={submitForm} className="us-form d-flex flex-column col-12">
@@ -99,7 +101,7 @@ const ContactUsForm = () => {
                     <textarea id="message" name="Mensaje" placeholder="Mensaje" onChange={(e) => handleChange(e)} />
                     {`${messageInputError ? "Este campo es obligatorio" : "Escribinos tu mensaje"}`}
                 </label>
-                <AppButton variant={"regular"} as={"handler"} design={"primary"} text={"Enviar"} EndIcon={<Icon name={"send"} />} type={"submit"} />
+                <AppButton variant={"regular"} as={"handler"} design={"primary"} text={"Enviar"} EndIcon={sendIcon} type={"submit"} />
             </form>
         </>
     );

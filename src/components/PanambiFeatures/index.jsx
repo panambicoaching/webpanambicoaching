@@ -6,7 +6,7 @@ const PanambiFeatures = ({ itemsNames, cardsAreLinks, sectionTitle, text}) => {
 
     return (
         <section className={`features-section container-fluid`} id={isHomePage ? "features-home" : "features-conferences"}>
-            <div className='container-md'>
+            <div className='container-lg'>
                 <h2 className="text-center text-headline">{sectionTitle}</h2>
                 {text && <p className="text-body text-center">{text}</p>}
                 <ItemsList itemsNames={itemsNames} cardsAreLinks={cardsAreLinks} design={"transparent"} />

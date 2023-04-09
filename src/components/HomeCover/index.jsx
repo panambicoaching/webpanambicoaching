@@ -10,12 +10,12 @@ const HomeCover = () => {
    
     return (
         <section className="home-cover container-fluid" id="home-cover">
-            <div className="container-md">
+            <div className="container-lg">
                 <Row>
                     <Col className="col-12 col-sm-6">
                         <div className="d-flex flex-column text-container">
                             <picture>
-                                <img src={waves} alt="Imagen decorativas, ondas horizontales en rojo y verde" loading="lazy"/>
+                                <img src={waves} alt="Imagen decorativas, ondas horizontales en rojo y verde" loading="lazy" />
                             </picture>
                             <h1 className="text-display">
                                 El arte
@@ -32,10 +32,10 @@ const HomeCover = () => {
                     </Col>
                     <Col className="col-12 col-sm-6 d-flex align-items-center justify-content-center">
                         <picture className="align-self-center">
+                            <source media="(min-width: 576px) and (max-width: 991.98px)" srcSet={`${CarlaHeroMd}`} />
+                            <source media="(max-width: 575.98px)" srcSet={`${CarlaHeroSm}`} />
                             <img
-                                src={CarlaHeroSm}
-                                srcSet={`${CarlaHeroSm} 304w, ${CarlaHeroMd} 337w, ${CarlaHeroLg} 550w`}
-                                sizes="(max-width: 670px) 304px, (max-width: 1200px) 337px, 550px"
+                                src={CarlaHeroLg}
                                 alt="Imagen de Carla en sección 'Home'"
                                 loading="lazy"
                             />

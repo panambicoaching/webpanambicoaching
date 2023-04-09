@@ -8,7 +8,7 @@ import CarlaConferencesLg from "../../assets/img/conferences/carla-conferences-l
 const ConferencesCover = () => {
     return (
         <section className="conferences-cover container-fluid">
-            <div className="container-md">
+            <div className="container-lg">
                 <Row>
                     <Col className="col-12 col-sm-6">
                         <div className="d-flex flex-column text-container">
@@ -25,10 +25,10 @@ const ConferencesCover = () => {
                     </Col>
                     <Col className="col-12 col-sm-6">
                         <picture>
+                            <source media="(min-width: 576px) and (max-width: 991.98px)" srcSet={CarlaConferencesMd} />
+                            <source media="(max-width: 575.98px)" srcSet={CarlaConferencesSm} />
                             <img
-                                src={CarlaConferencesSm}
-                                srcSet={`${CarlaConferencesSm} 304w, ${CarlaConferencesMd} 273w, ${CarlaConferencesLg} 475w`}
-                                sizes="(max-width: 576px) 304px, (max-width: 1200px) 273px, 475px"
+                                src={CarlaConferencesLg}
                                 alt="Imagen de Carla dnado una conferencia."
                                 loading="lazy"
                             />

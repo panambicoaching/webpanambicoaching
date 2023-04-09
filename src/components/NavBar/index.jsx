@@ -1,6 +1,6 @@
 import { HashLink } from "react-router-hash-link";
 import { useState } from "react";
-import { Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar, NavDropdown } from "react-bootstrap";
 import navBarLogoSm from "../../assets/img/navbar/navbar-logo-small.svg";
 import navBarLogoL from "../../assets/img/navbar/navbar-logo-large.svg";
 import "./styles.scss";
@@ -17,7 +17,7 @@ const NavBar = () => {
     };
     return (
         <Navbar expanded={expanded} expand="sm" className="sticky-top">
-            <Container>
+            <div className="container-lg">
                 <Navbar.Brand as={HashLink} to="/#" onClick={handleLinkClick}>
                     <picture>
                         <source media="(min-width: 576px)" srcSet={navBarLogoL} />
@@ -50,7 +50,7 @@ const NavBar = () => {
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
-            </Container>
+            </div>
         </Navbar>
     );
 };

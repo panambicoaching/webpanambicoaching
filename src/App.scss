@@ -55,3 +55,7 @@ h3 {
 h4 {
   @extend .text-label;
 }
+
+img {
+    user-select: none;
+}

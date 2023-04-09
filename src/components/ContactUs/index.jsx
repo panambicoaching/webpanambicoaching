@@ -7,7 +7,7 @@ import "./styles.scss"
 const ContactUs = () => {
     return (
         <section className="container-fluid contact-us">
-            <div className="container-md">
+            <div className="container-lg">
                 <Row>
                     <Col className="col-12 col-sm-6 d-flex flex-column">
                         <div className="text-container d-flex flex-column">

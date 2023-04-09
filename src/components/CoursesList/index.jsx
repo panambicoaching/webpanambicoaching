@@ -14,7 +14,7 @@ const courseType = {
 		emptyString: "grabados",
 		filterCond: (dateDiff) => dateDiff <= 0,
 		textBtn: "Acceder",
-		linkBtn: "/course_contact"
+		linkBtn: "/contact/courses"
 	},
 	next: {
 		header: "Próximamente",

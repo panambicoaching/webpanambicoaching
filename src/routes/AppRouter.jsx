@@ -24,7 +24,7 @@ function AppRouter() {
                 <Route element={<WorkshopsPage />} path="/workshops" />
                 <Route element={<ConferencesPage />} path="/conferences" />
                 <Route element={<ContactPage />} path="/contact" />
-                <Route element={<CourseContactPage />} path="/course_contact" />
+                <Route element={<CourseContactPage />} path="/contact/courses" />
                 <Route element={<Error404Page />} path="/error404" />
                 <Route element={<Error404Page />} path="*" />
             </Routes>
