@@ -13,7 +13,7 @@ const CoursePaidCard = ({ item, status }) => {
   return (
     <Col className="col-6 col-sm-4">
       <div className="panambi-paid-card">
-        <Link to={link}>
+        <Link to={link} target="_blank">
           <figure>
             <picture>
               <source media="(min-width: 576px) and (max-width: 991.98px)"
