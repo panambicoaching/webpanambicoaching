@@ -1,3 +1,4 @@
+@import "../../assets/scss/mixins";
 
 section.panambi-done-courses,
 section.panambi-next-courses {
@@ -5,27 +6,11 @@ section.panambi-next-courses {
 	padding-bottom: 160px;
 
 	h2 {
-		margin-bottom: 40px;
-
-		@media (min-width: 576px) and (max-width: 991.98px) {
-			margin-bottom: 32px;
-		}
-
-		@media (max-width: 575.98px) {
-			margin-bottom: 24px;
-		}
+		@include responsive-margin(40px, 32px, 24px);
 	}
 
 	p {
-		margin-bottom: 80px;
-
-		@media (min-width: 576px) and (max-width: 991.98px) {
-			margin-bottom: 48px;
-		}
-
-		@media (max-width: 575.98px) {
-			margin-bottom: 32px;
-		}
+		@include responsive-margin(80px, 48px, 32px);
 	}
 
 	.courses-list {

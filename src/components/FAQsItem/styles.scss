@@ -1,12 +1,8 @@
-@import '../../App.scss';
+@import "../../assets/scss/mixins";
 
 .panambi-faqs-item {
   &.accordion-item {
-    margin-bottom: 24px;
-
-    @media (max-width: 991.98px) {
-      margin-bottom: 12px;
-    }
+    @include responsive-margin(24px, 12px, 12px);
   }
 
   .accordion-body,

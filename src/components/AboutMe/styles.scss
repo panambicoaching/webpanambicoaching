@@ -1,29 +1,11 @@
+@import "../../assets/scss/mixins";
 
 section.panambi-about-me {
+  @include section-padding(160px, 120px, 80px);
   background-color: var(--background-02);
-  padding-top: 160px;
-  padding-bottom: 160px;
-
-  @media (min-width: 576px) and (max-width: 991.98px) {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  @media (max-width: 575.98px) {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
 
   h2 {
-    margin-bottom: 40px;
-
-    @media (min-width: 576px) and (max-width: 991.98px) {
-      margin-bottom: 32px;
-    }
-  
-    @media (max-width: 575.98px) {
-      margin-bottom: 24px;
-    }
+    @include responsive-margin(40px, 32px, 24px);
   }
 
   img {
@@ -33,11 +15,7 @@ section.panambi-about-me {
   }
 
   .about-me-msj {
-    margin-bottom: 16px;
-
-    @media (max-width: 991.98px) {
-      margin-bottom: 8px;
-    }
+    @include responsive-margin(16px, 8px, 8px);
   }
 
   .panambi-btn {
