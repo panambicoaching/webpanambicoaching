@@ -1,20 +1,10 @@
-@import "../../assets/scss/_gradients.scss";
+@import "../../assets/scss/gradients";
+@import "../../assets/scss/mixins";
 
 section.panambi-my-values {
-  padding-top: 160px;
-  padding-bottom: 160px;
+  @include section-padding(160px, 120px, 80px);
 
-  @media (min-width: 576px) and (max-width: 991.98px) {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  @media (max-width: 575.98px) {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  .row {
+  .values-list {
     row-gap: 40px;
 
     @media (min-width: 576px) and (max-width: 991.98px) {
@@ -27,14 +17,6 @@ section.panambi-my-values {
   }
 
   h2 {
-    margin-bottom: 40px;
-
-    @media (min-width: 576px) and (max-width: 991.98px) {
-      margin-bottom: 32px;
-    }
-
-    @media (max-width: 575.98px) {
-      margin-bottom: 56px;
-    }
+    @include responsive-margin(40px, 32px, 56px);
   }
 }

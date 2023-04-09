@@ -7,6 +7,23 @@
   grid-template-areas: 
     "value_icon value_col_2";
   column-gap: 40px;
+  
+  @media (max-width: 991.98px) {
+    column-gap: 16px;
+    grid-template-areas: 
+      "value_icon value_header"
+      "value_text value_text";
+  }
+
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    grid-template-columns: 48px auto;
+    row-gap: 16px;
+  }
+
+  @media (max-width: 575.98px) {
+    grid-template-columns: 32px auto;
+    row-gap: 8px;
+  }
 
   .value-icon {
     grid-area: value_icon;
@@ -30,22 +47,5 @@
       margin: 0;
       grid-area: value_text;
     }
-  }
-
-  @media (max-width: 991.98px) {
-    column-gap: 16px;
-    grid-template-areas: 
-      "value_icon value_header"
-      "value_text value_text";
-  }
-
-  @media (min-width: 576px) and (max-width: 991.98px) {
-    grid-template-columns: 48px auto;
-    row-gap: 16px;
-  }
-
-  @media (max-width: 575.98px) {
-    grid-template-columns: 32px auto;
-    row-gap: 8px;
   }
 }

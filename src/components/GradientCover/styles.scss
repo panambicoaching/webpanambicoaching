@@ -1,22 +1,12 @@
-@import "../../assets/scss/_gradients.scss";
+@import "../../assets/scss/gradients";
+@import "../../assets/scss/mixins";
 
 section.panambi-gradient-cover {
+  @include section-padding(236px, 120px, 80px);
   background: map-get($gradients, header-02);
   color: var(--white);
-  padding-top: 236px;
-  padding-bottom: 236px;
 
-  @media (min-width: 576px) and (max-width: 991.98px) {
-    padding-top: 120px;
-    padding-bottom: 120px;
-  }
-
-  @media (max-width: 575.98px) {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-
-  .container {
+  .container-lg {
     display: flex;
     column-gap: 80px;
 
@@ -32,11 +22,7 @@ section.panambi-gradient-cover {
 
   .gradient-cover-details {
     h1 {
-      margin-bottom: 32px;
-
-      @media (max-width: 575.98px) {
-        margin-bottom: 24px;
-      }
+      @include responsive-margin(32px, 32px, 24px);
     }
   }
 }

@@ -1,27 +1,20 @@
+@import "../../assets/scss/mixins";
 
 section.panambi-about-us {
+  @include section-padding(160px, 120px, 80px);
   background-color: var(--background-02);
-  padding-top: 160px;
   padding-bottom: 0;
 
   @media (min-width: 576px) and (max-width: 991.98px) {
-    padding-top: 120px;
+    padding-bottom: 0;
   }
 
   @media (max-width: 575.98px) {
-    padding-top: 80px;
+    padding-bottom: 0;
   }
 
   h1 {
-    margin-bottom: 40px;
-
-    @media (min-width: 576px) and (max-width: 991.98px) {
-      margin-bottom: 32px;
-    }
-  
-    @media (max-width: 575.98px) {
-      margin-bottom: 24px;
-    }
+    @include responsive-margin(40px, 32px, 24px);
   }
 
   figure {
@@ -40,11 +33,7 @@ section.panambi-about-us {
   }
 
   article {
-    margin-bottom: 40px;
-
-    @media (min-width: 576px) and (max-width: 991.98px) {
-      margin-bottom: 32px;
-    }
+    @include responsive-margin(40px, 32px, 32px);
 
     p:last-child {
       color: var(--secondary);

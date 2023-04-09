@@ -9,7 +9,7 @@ import NewsletterForm from "../components/NewsletterForm";
 
 const AboutPage = () => {
 
-        const newsnetterForm = <NewsletterForm />
+        const NewsletterForm = <NewsletterForm />;
 		return (
             <>
                 <AboutUsCover />
@@ -17,7 +17,7 @@ const AboutPage = () => {
                 <MyValuesList />
                 <AboutMe />
                 <Manual />
-                <Banner variant="newsletter" component={newsnetterForm} />
+                <Banner variant="newsletter" component={NewsletterForm} />
                 <FAQsList />
             </>
         );

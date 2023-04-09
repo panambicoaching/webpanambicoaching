@@ -1,4 +1,4 @@
-@import "../../App.scss";
+@import "../../assets/scss/extends";
 
 .panambi-icon {
     display: inline-flex;
@@ -7,7 +7,7 @@
     justify-content: center;
     user-select: none;
 
-  // Tipo 1
+  // Variant 1
   &.transparent-icon {
     background-color: transparent;
     height: 72px;
@@ -24,7 +24,7 @@
     }
   }
 
-  // Tipo 2
+  // Variant 2
   &.blue-rounded-icon {
     @extend .rounded;
     background-color: var(--primary);
@@ -57,7 +57,7 @@
     }
   }
 
-  // Tipo 3
+  // Variant 3
   &.white-rounded-icon {
     height: 72px;
     width: 72px;
@@ -88,7 +88,7 @@
     }
   }
 
-  // Tipo 4
+  // Variant 4
   &.benefit-icon {
     height: 48px;
     width: 48px;

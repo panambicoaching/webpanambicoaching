@@ -1,0 +1,29 @@
+
+@mixin section-padding($padding_large, $padding_medium, $padding_small) {
+  padding-top: $padding_large;
+  padding-bottom: $padding_large;
+
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    padding-top: $padding_medium;
+    padding-bottom: $padding_medium;
+  }
+
+  @media (max-width: 575.98px) {
+    padding-top: $padding_small;
+    padding-bottom: $padding_small;
+  }
+}
+
+
+@mixin responsive-margin($margin_large, $margin_medium, $margin_small) {
+  margin-bottom: $margin_large;
+
+  @media (min-width: 576px) and (max-width: 991.98px) {
+    margin-bottom: $margin_medium;
+  }
+
+  @media (max-width: 575.98px) {
+    margin-bottom: $margin_small;
+  }
+  }
+    

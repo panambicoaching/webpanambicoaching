@@ -1,4 +1,4 @@
-@import "../../assets/scss/_shadows.scss";
+@import "../../assets/scss/shadows";
 
 .panambi-paid-card {
 	background-color: var(--white);
@@ -17,12 +17,12 @@
 
 	figure {
 		margin: 0;
-	}
 
-	.card-img {
-		border-top-left-radius: 8px;
-		border-top-right-radius: 8px;
-		width: 100%;
+		.card-img {
+			border-top-left-radius: 8px;
+			border-top-right-radius: 8px;
+			width: 100%;
+		}
 	}
 
 	.card-body {

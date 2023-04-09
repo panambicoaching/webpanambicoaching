@@ -1,7 +1,7 @@
-import "./styles.scss";
-
 import { HashLink } from "react-router-hash-link";
 import { Button } from "semantic-ui-react";
+
+import "./styles.scss";
 
 // variant prop available values -> "icon" ; "regular"
 // as prop available values -> "link" ; "handler"
