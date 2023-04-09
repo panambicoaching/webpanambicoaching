@@ -8,7 +8,7 @@ const CallToAction = ({title, titleStyle, text, buttonComp}) => {
         <section className="callToAction">
             <Container className="text-center">
                 <h2 className={`text-center ${titleStyle.typo} ${titleStyle.color}-color-text`}>{title}</h2>
-                {text ? <p>{text}</p> : null}
+                {text ? <p className="text-body">{text}</p> : null}
                 {buttonComp}
             </Container>
         </section>

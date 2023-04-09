@@ -11,15 +11,15 @@ const ContactUs = () => {
                 <Row>
                     <Col className="col-12 col-sm-6 d-flex flex-column">
                         <div className="text-container d-flex flex-column">
-                            <h1>
+                            <h1 className="text-display">
                                 Contactate
                                 <br />
                                 conmigo
                             </h1>
-                            <p>Si querés saber más sobre alguno de mis servicios, dejame un mensaje, estaré encantada de contactarme con vos.</p>
+                            <p className="text-body">Si querés saber más sobre alguno de mis servicios, dejame un mensaje, estaré encantada de contactarme con vos.</p>
                         </div>
                         <div className="d-flex flex-column">
-                            <h4>Seguime en</h4>
+                            <h3 className="text-label">Seguime en</h3>
                             <div className="icon-container d-flex">
                                 <AppButton
                                     as={"link"}

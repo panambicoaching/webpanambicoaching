@@ -53,13 +53,14 @@ form.check-form {
         resize: none;
     }
 
-    label[class = "checkboxLabel"] {
+    label.checkboxLabel {
         display: flex;
         gap: 12px;
         align-items: center;
+        
     }
 
-    label:not(label[class = "checkboxLabel"]) {
+    label:not(.checkboxLabel) {
         gap: 4px;
         display: flex;
         flex-direction: column;

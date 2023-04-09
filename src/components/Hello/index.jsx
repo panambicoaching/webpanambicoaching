@@ -26,20 +26,20 @@ const Hello = () => {
                     <Col className="col-12 col-sm-7 col-lg-6 order-1 order-sm-2 text-col">
                         <div className="d-flex flex-column text-container">
                             <div>
-                                <p>¿Quién soy?</p>
+                                <p className="text-label">¿Quién soy?</p>
                                 <h1 className="text-headline">Hola, soy Carla</h1>
                             </div>
                             <div className="body-container">
                                 <article>
-                                    <p className=".text-body">
+                                    <p className="text-body">
                                         Soy controladora de Tránsito Aéreo, Coach Ontológico Profesional Internacional y estudiante de la Licenciatura en
                                         Recursos Humanos en el Instituto Universitario Aeronáútico.
                                     </p>
-                                    <p className=".text-body">
+                                    <p className="text-body">
                                         Como vos y muchas personas más, tuve que traspasar mis propias barreras para poder desarrollarme en lo que me gustaba, e
                                         ir tras mis sueños.
                                     </p>
-                                    <p className=".text-body">
+                                    <p className="text-body">
                                         Actualmente trabajo en unificar mis conocimientos para la creación de una nueva rama dentro del Coaching, especializado
                                         en el apasionante mundo de la Aviación.
                                     </p>

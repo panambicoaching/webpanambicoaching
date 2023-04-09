@@ -1,9 +1,9 @@
 import { useState } from "react";
 import AppButton from "../AppButton";
 import Icon from "../Icon";
-import Swal from "sweetalert2";
-import panambiLogo from "../../assets/icons/panambi-logo.svg";
 import "./styles.scss";
+import showAlert from "../../utils/alert";
+import validator from "../../utils/validator";
 
 // variant prop available values => "workshops" | "courses"
 const CheckboxContactForm = ({ variant }) => {
@@ -43,66 +43,21 @@ const CheckboxContactForm = ({ variant }) => {
         courses: "xnqygkbe",
     };
 
-    const [email, setEmail] = useState("");
     const [emailInputError, setEmailInputError] = useState(false);
 
-    const [firstName, setFirstName] = useState("");
     const [firstNameInputError, setFirstNameInputError] = useState(false);
 
-    const [message, setMessage] = useState("");
     const [messageInputError, setMessageInputError] = useState(false);
 
     const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
 
-    const validateEmail = (email) => {
-        if (!email) {
-            setEmailInputError(true);
-            return false;
-        }
-
-        if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{3,}$/.test(email)) {
-            setEmailInputError(true);
-            return false;
-        }
-
-        setEmailInputError(false);
-        return true;
-    };
-
-    const validateFirstName = (firstName) => {
-        if (!firstName) {
-            setFirstNameInputError(true);
-            return false;
-        }
-
-        if (!/^[a-zA-Z]+$/g.test(firstName)) {
-            setFirstNameInputError(true);
-            return false;
-        }
-
-        setFirstNameInputError(false);
-        return true;
-    };
-
-    const validateMessage = (message) => {
-        if (!message) {
-            setMessageInputError(true);
-            return false;
-        }
-
-        setMessageInputError(false);
-        return true;
-    };
-
     const validations = {
-        email: validateEmail,
-        firstName: validateFirstName,
-        message: validateMessage,
+        email: validator.validateEmail,
+        firstName: validator.validateFirstName,
+        message: validator.validateMessage,
     };
 
-    const handleChange = (e, set) => {
-        set(e.target.value);
-
+    const handleChange = (e) => {
         if (e.target.parentNode.classList.contains("labelError")) {
             validations[e.target.id](e.target.value);
         }
@@ -119,44 +74,19 @@ const CheckboxContactForm = ({ variant }) => {
         }
     };
 
-    const showAlert = (success) => {
-
-        if (success) {
-            Swal.fire({
-                title: "¡Gracias por tu mensaje!",
-                text: "En breve me contactaré con vos.",
-                iconHtml: `<img src="${panambiLogo}" alt="Logo de panambí"/>`,
-                confirmButtonText: "Cerrar",
-                customClass: {
-                    container: "alert-container",
-                    icon: "alert-icon",
-                    confirmButton: "success-alert-button alert-button",
-                    text: "alert-text",
-                    title: "alert-title",
-                }
-            });
-        } else {
-             Swal.fire({
-                title: "Oops...",
-                text: "Algo salió mal. Por favor, intentá nuevamente.",
-                icon: "error",
-                confirmButtonText: "Cerrar",
-                customClass: {
-                    container: "alert-container",
-                    icon: "alert-icon",
-                    confirmButton: "error-alert-button alert-button",
-                    text: "alert-text",
-                    title: "alert-title",
-                    }
-             });
-        }
-       
-    };
-
     const submitForm = async (e) => {
         e.preventDefault();
 
-        if (!validateEmail(email) || !validateFirstName(firstName) || !validateMessage(message)) {
+        const formData = new FormData(e.target);
+        const email = formData.get("Email");
+        const firstName = formData.get("Nombre");
+        const message = formData.get("Mensaje");
+
+        if (
+            !validator.validateEmail(email, setEmailInputError) ||
+            !validator.validateFirstName(firstName, setFirstNameInputError) ||
+            !validator.validateMessage(message, setMessageInputError)
+        ) {
             return;
         }
 
@@ -194,7 +124,7 @@ const CheckboxContactForm = ({ variant }) => {
             <div className="d-flex flex-column col-12 col-sm-6">
                 {checkboxes[variant].map((checkbox, index) => {
                     return (
-                        <label key={`label-${index}`} className="checkboxLabel">
+                        <label key={`label-${index}`} className="checkboxLabel text-body">
                             <input type="checkbox" name={checkbox} key={`input-${index}`} onChange={handleCheckboxChange} />
                             {checkbox}
                         </label>
@@ -202,18 +132,18 @@ const CheckboxContactForm = ({ variant }) => {
                 })}
             </div>
             <div className="d-flex flex-column col-12 col-sm-6">
-                <label htmlFor="firstName" className={`text-body ${firstNameInputError? "labelError" : ""}`}>
-                    <input id="firstName" type="text" name="Nombre" placeholder="Nombre" onChange={(e) => handleChange(e, setFirstName)} />
+                <label htmlFor="firstName" className={`text-body2 ${firstNameInputError ? "labelError" : ""}`}>
+                    <input id="firstName" type="text" name="Nombre" placeholder="Nombre" onChange={(e) => handleChange(e)} className="text-body" />
                     {`${firstNameInputError ? "Ingresa un nombre válido" : "Ingresá tu nombre"}`}
                 </label>
 
-                <label htmlFor="email" className={`text-body ${emailInputError? "labelError" : ""}`}>
-                    <input id="email" type="email" name="Email" placeholder="Email" onChange={(e) => handleChange(e, setEmail)} />
+                <label htmlFor="email" className={`text-body2 ${emailInputError ? "labelError" : ""}`}>
+                    <input id="email" type="email" name="Email" placeholder="Email" onChange={(e) => handleChange(e)} className="text-body" />
                     {`${emailInputError ? "Ingresa un email válido" : "Ingresá tu email"}`}
                 </label>
 
-                <label htmlFor="message" className={`text-body ${messageInputError? "labelError" : ""}`}>
-                    <textarea id="message" name="Message" placeholder="Mensaje" onChange={(e) => handleChange(e, setMessage)} />
+                <label htmlFor="message" className={`text-body2 ${messageInputError ? "labelError" : ""}`}>
+                    <textarea id="message" name="Message" placeholder="Mensaje" onChange={(e) => handleChange(e)} className="text-body" />
                     {`${messageInputError ? "Este campo es obligatorio" : "Escribinos tu mensaje"}`}
                 </label>
 

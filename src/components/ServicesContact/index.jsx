@@ -20,8 +20,8 @@ const ServicesContact = ({variant}) => {
             <div className="container-md">
                 <Row>
                     <Col className="col-12 d-flex flex-column">
-                        <h2>{title[variant]}</h2>
-                        <p>{textBody[variant]}</p>
+                        <h2 className="text-headline">{title[variant]}</h2>
+                        <p className="text-body">{textBody[variant]}</p>
                     </Col>
                     <Col className="col-12 d-flex flex-column">
                         <CheckboxContactForm variant={variant} />
