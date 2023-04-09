@@ -1,6 +1,6 @@
 @use 'sass:meta';
-@import 'assets/scss/colors.scss';
-@import 'assets/scss/typography.scss';
+@import 'assets/scss/colors';
+@import 'assets/scss/typography';
 
 :root {  
   --primary: #{meta.inspect($primary)};
