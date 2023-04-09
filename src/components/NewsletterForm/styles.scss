@@ -1,0 +1,55 @@
+$primary-button-purple: #DF66EA;
+
+form.newsletter-form {
+    margin-top: 24px;
+    gap: 24px;
+
+    @media (min-width: 576px) {
+        gap: 16px;
+    }
+
+    @media (min-wdith: 992px) {
+        margin-top: 48px;
+    }
+
+
+    label.labelError {
+        
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+        position: relative;
+
+        div {
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(300%);
+            color: var(--white);
+            
+        }
+
+        input {
+            border: 1px solid var(--error);
+        
+            &:focus {
+                outline: none;
+                outline: 1px solid var(--error);
+            }
+        }
+    }
+
+    input {
+        padding: 12px 24px;
+        border: 1px solid var(--borders);
+        border-radius: 50px;
+        flex-grow: 1;
+
+        &:focus {
+            outline: none;
+            outline: 1px solid $primary-button-purple;
+        }
+    }
+}

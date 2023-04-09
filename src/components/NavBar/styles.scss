@@ -12,6 +12,11 @@ nav.navbar {
     }
 
     .navbar-nav {
+        .nav-link, .nav-item {
+            &:hover {
+                color: var(--primary); 
+            }
+        }
 
         .dropdown-toggle{
 
@@ -53,7 +58,6 @@ nav.navbar {
             padding: 12px 32px;
         }
         
-
 
         .dropdown-item:hover {
             background-color: transparent;
