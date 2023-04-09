@@ -1,0 +1,78 @@
+@import './gradients';
+@import './shadows';
+
+.alert-container {
+    .alert-icon {
+        border: none;
+        width: 6em;
+        height: 6em;
+
+        img {
+            @media (min-width: 576px) {                    
+                width: 57px;
+                height: 72px;
+            }
+
+            @media (min-width: 992px) {
+                width: 95px;
+                height: 95px;
+            }
+        }
+    }
+
+    .alert-title {
+        color: var(--text);
+    }
+
+    .alert-text {
+        color: var(--text-light)
+    }
+
+    .alert-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        user-select: none;
+        border-radius: 50px;
+        min-width: 196px;
+        padding: 16px 20px;
+        text-decoration: none;
+
+        &:active {
+            background: map-get($gradients, primary-button-pressed);
+            color: var(--white);
+            border: none;
+        }
+
+        &:hover {
+            box-shadow: map-get($shadows, btn-primary);
+            background-image: none!important;
+        }
+
+        @media (max-width: 991.98px) {
+            padding: 12px 20px;
+        }
+
+        @media (min-width: 576px) and (max-width: 991.98px) {
+            min-width: 177px;
+        }
+
+        @media (max-width: 575.98px) {
+            min-width: 100%;
+        }
+    }
+
+    .swal2-confirm.success-alert-button {
+        @extend .panambi-btn;
+        background: map-get($gradients, primary-button);
+        color: var(--white);
+    }
+
+    .swal2-confirm.error-alert-button {
+        @extend .panambi-btn;
+        background: initial;
+        background-color: var(--white);
+        border: 1px solid var(--accent-2);
+        color: var(--accent);
+    }
+}

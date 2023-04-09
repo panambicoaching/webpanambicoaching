@@ -1,0 +1,44 @@
+section.services-contact {
+    background: var(--surface);
+    padding-top: 80px;
+    padding-bottom: 80px;
+    
+    @media (min-width:576px) {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+
+    @media (min-width:992px) {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
+
+    .row {
+        gap: 32px;
+
+        @media (min-width:576px) {
+            gap: 80px;
+        }
+
+        @media (min-width: 992px) {
+            gap: 120px;
+        }
+    }
+
+    .col:first-child {
+        gap: 32px;
+
+
+        div:last-child {
+            gap: 16px;
+
+            @media (min-width:576px) {
+                gap: 32px;
+            }
+
+            @media (min-width:992px) {
+                gap: 40px;
+            }
+        }
+    }
+}

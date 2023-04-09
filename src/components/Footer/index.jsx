@@ -13,17 +13,17 @@ const Footer = () => {
                     <h4 className="text-label">Inicio</h4>
                     <ul className="list-unstyled text-body2">
                         <li>
-                            <HashLink className="text-body2" to="/#home-cover">
+                            <HashLink to="/#home-cover">
                                 Panambí
                             </HashLink>
                         </li>
                         <li>
-                            <HashLink className="text-body2" to="/#features-home">
+                            <HashLink to="/#features-home">
                                 Mis servicios
                             </HashLink>
                         </li>
                         <li>
-                            <HashLink className="text-body2" to="/#hello">
+                            <HashLink to="/#hello">
                                 Quién soy
                             </HashLink>
                         </li>
@@ -33,22 +33,22 @@ const Footer = () => {
                     <h4 className="text-label">Acerca de</h4>
                     <ul className="list-unstyled text-body2">
                         <li>
-                            <HashLink className="text-body2" to="/about/#about-cover">
+                            <HashLink to="/about/#about-cover">
                                 Mi historia
                             </HashLink>
                         </li>
                         <li>
-                            <HashLink className="text-body2" to="/about/#values">
+                            <HashLink to="/about/#values">
                                 Mis valores
                             </HashLink>
                         </li>
                         <li>
-                            <HashLink className="text-body2" to="/about/#about-me">
+                            <HashLink to="/about/#about-me">
                                 Quién soy
                             </HashLink>
                         </li>
                         <li>
-                            <HashLink className="text-body2" to="/about/#faq">
+                            <HashLink to="/about/#faq">
                                 Preguntas frecuentes
                             </HashLink>
                         </li>
@@ -58,17 +58,17 @@ const Footer = () => {
                     <h4 className="text-label">Servicios</h4>
                     <ul className="list-unstyled text-body2">
                         <li>
-                            <HashLink className="text-body2" to="/courses/#">
+                            <HashLink to="/courses/#">
                                 Cursos
                             </HashLink>
                         </li>
                         <li>
-                            <HashLink className="text-body2" to="/workshops/#">
+                            <HashLink to="/workshops/#">
                                 Talleres
                             </HashLink>
                         </li>
                         <li>
-                            <HashLink className="text-body2" to="/conferences/#">
+                            <HashLink to="/conferences/#">
                                 Conferencias
                             </HashLink>
                         </li>
@@ -78,17 +78,17 @@ const Footer = () => {
                     <h4 className="text-label">Contacto</h4>
                     <ul className="list-unstyled text-body2">
                         <li>
-                            <HashLink className="text-body2" target="_blank" to="https://www.instagram.com/panambicoaching/">
+                            <HashLink target="_blank" to="https://www.instagram.com/panambicoaching/">
                                 Instagram
                             </HashLink>
                         </li>
                         <li>
-                            <HashLink className="text-body2" target="_blank" to="https://www.facebook.com/panambicoaching">
+                            <HashLink target="_blank" to="https://www.facebook.com/panambicoaching">
                                 Facebook
                             </HashLink>
                         </li>
                         <li>
-                            <HashLink className="text-body2" target="_blank" to="https://open.spotify.com/show/1dTEILdq7RUYMYeBoP8ek9">
+                            <HashLink target="_blank" to="https://open.spotify.com/show/1dTEILdq7RUYMYeBoP8ek9">
                                 Spotify
                             </HashLink>
                         </li>

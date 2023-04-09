@@ -1,0 +1,95 @@
+@import '../../assets/scss/alert';
+$primary-button-purple: #DF66EA;
+form.check-form {
+
+    gap: 40px;
+
+    @media (min-width: 576px) {
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        
+        &:first-child {
+            gap: 14px;
+        }
+
+        &:last-child {
+            gap: 24px;
+        }
+    }
+
+    input[type="checkbox"] {
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 1px solid var(--text);
+        border-radius: 3px;
+        outline: none;
+        transition: background 50ms;
+
+        &:checked {
+            background: url(../../assets/icons/checkbox-checked.svg) no-repeat center center;
+        }
+    }
+
+    input:not(input[type = "checkbox"]), textarea {
+        border: 1px solid var(--background-03);
+        border-radius: 4px;
+        padding: 16px;
+
+        &:focus {
+            outline: none;
+            outline: 1px solid $primary-button-purple;
+        }
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    label.checkboxLabel {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        
+    }
+
+    label:not(.checkboxLabel) {
+        gap: 4px;
+        display: flex;
+        flex-direction: column;
+
+        &:focus-within {
+            color: var(--accent)!important;
+        }
+
+        &.labelError {
+            display: flex;
+            flex-direction: column;
+            color: var(--error)!important;
+
+            input {
+                border: 1px solid var(--error);
+            
+                &:focus {
+                    outline: none;
+                    outline: 1px solid var(--error);
+                }
+            }
+        }
+    }
+
+    .panambi-btn.primary-btn {
+        max-width: fit-content;
+        align-self: end;
+        margin-top: 24px;
+    }
+}
+
+    

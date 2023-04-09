@@ -1,80 +1,29 @@
-import { useState } from "react"; 
+import { useState } from "react";
 import AppButton from "../AppButton";
 import Icon from "../Icon";
 import "./styles.scss";
+import showAlert from "../../utils/alert";
+import validator from "../../utils/validator";
 
 const ContactUsForm = () => {
     const formID = "xdovwrwo";
 
-    const [email, setEmail] = useState("");
     const [emailInputError, setEmailInputError] = useState(false);
 
-    const [firstName, setFirstName] = useState("");
     const [firstNameInputError, setFirstNameInputError] = useState(false);
 
-    const [subject, setSubject] = useState("");
     const [subjectInputError, setSubjectInputError] = useState(false);
 
-    const [message, setMessage] = useState("");
-    const [messageInputError, setMessageInputError] = useState(false);    
-
-    const validateEmail = (email) => {
-        if (!email) {
-            setEmailInputError(true);
-            return false;
-        }
-
-        if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{3,}$/g.test(email)) {
-            setEmailInputError(true);
-            return false;
-        }
-
-        setEmailInputError(false); // sobra?
-        return true;
-    };
-
-    const validateFirstName = (firstName) => {
-        if (!firstName) {
-            setFirstNameInputError(true);
-            return false;
-        }
-
-        if (!/^[a-zA-Z]+$/g.test(firstName)) {
-            setFirstNameInputError(true);
-            return false;
-        }
-
-        return true;
-    }
-
-    const validateSubject = (subject) => {
-        if (!subject) {
-            setSubjectInputError(true);
-            return false;
-        }
-
-        return true;
-    }
-
-    const validateMessage = (message) => {
-        if (!message) {
-            setMessageInputError(true);
-            return false;
-        }
-
-        return true;
-    }
+    const [messageInputError, setMessageInputError] = useState(false);
 
     const validations = {
-        email: validateEmail,
-        firstName: validateFirstName,
-        subject: validateSubject,
-        message: validateMessage,
-    }
+        email: validator.validateEmail,
+        firstName: validator.validateFirstName,
+        subject: validator.validateSubject,
+        message: validator.validateMessage,
+    };
 
-    const handleChange = (e, set) => {
-        set(e.target.value);
-
+    const handleChange = (e) => {
         if (e.target.parentNode.classList.contains("labelError")) {
             validations[e.target.id](e.target.value);
         }
@@ -83,7 +32,18 @@ const ContactUsForm = () => {
     const submitForm = async (e) => {
         e.preventDefault();
 
-        if (!validateEmail(email) || !validateFirstName(firstName) || !validateSubject(subject) || !validateMessage(message)) {
+        const formData = new FormData(e.target);
+        const email = formData.get("Email");
+        const firstName = formData.get("Nombre");
+        const message = formData.get("Mensaje");
+        const subject = formData.get("Asunto");
+
+        if (
+            !validator.validateEmail(email, setEmailInputError) ||
+            !validator.validateFirstName(firstName, setFirstNameInputError) ||
+            !validator.validateSubject(subject, setSubjectInputError) ||
+            !validator.validateMessage(message, setMessageInputError)
+        ) {
             return;
         }
 
@@ -109,36 +69,34 @@ const ContactUsForm = () => {
                 throw new Error("Failed to submit form");
             }
 
-            console.log("Form submitted successfully")
-            // SHOW NOTIFICATIONS
+            showAlert(true);
         } catch (error) {
-            console.error(error);
+            showAlert(false);
         }
     };
 
-    
     return (
         <>
             <form onSubmit={submitForm} className="us-form d-flex flex-column col-12">
-                <label htmlFor="firstName" className={`text-body ${firstNameInputError && "labelError"}`}>
-                    <input id="firstName" type="text" name="Nombre" placeholder="Nombre" onChange={(e) => handleChange(e, setFirstName)} />
+                <label htmlFor="firstName" className={`text-body ${firstNameInputError ? "labelError" : ""}`}>
+                    <input id="firstName" type="text" name="Nombre" placeholder="Nombre" onChange={(e) => handleChange(e)} />
                     {`${firstNameInputError ? "Ingresa un nombre válido" : "Ingresá tu nombre"}`}
                 </label>
 
-                <label htmlFor="email" className={`text-body ${emailInputError && "labelError"}`}>
-                    <input id="email" type="email" name="Email" placeholder="Email" onChange={(e) => handleChange(e, setEmail)} />
+                <label htmlFor="email" className={`text-body ${emailInputError ? "labelError" : ""}`}>
+                    <input id="email" type="email" name="Email" placeholder="Email" onChange={(e) => handleChange(e)} />
                     {`${emailInputError ? "Ingresa un email válido" : "Ingresá tu email"}`}
                 </label>
 
-                <label htmlFor="subject" className={`text-body ${subjectInputError && "labelError"}`}>
-                    <input id="subject" type="text" name="Asunto" placeholder="Asunto" onChange={(e) => handleChange(e, setSubject)} />
+                <label htmlFor="subject" className={`text-body ${subjectInputError ? "labelError" : ""}`}>
+                    <input id="subject" type="text" name="Asunto" placeholder="Asunto" onChange={(e) => handleChange(e)} />
                     {`${subjectInputError ? "Este campo es obligatorio" : "Ingresá un asunto"}`}
                 </label>
 
                 <input name="subject" type="hidden" value={"{{ Asunto }}"} />
 
-                <label htmlFor="message" className={`text-body ${messageInputError && "labelError"}`}>
-                    <textarea id="message" name="Message" placeholder="Mensaje" onChange={(e) => handleChange(e, setMessage)} />
+                <label htmlFor="message" className={`text-body ${messageInputError ? "labelError" : ""}`}>
+                    <textarea id="message" name="Mensaje" placeholder="Mensaje" onChange={(e) => handleChange(e)} />
                     {`${messageInputError ? "Este campo es obligatorio" : "Escribinos tu mensaje"}`}
                 </label>
                 <AppButton variant={"regular"} as={"handler"} design={"primary"} text={"Enviar"} EndIcon={<Icon name={"send"} />} type={"submit"} />

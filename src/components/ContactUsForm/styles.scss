@@ -25,11 +25,11 @@ form.us-form {
 
     label {
         gap: 4px;
-         display: flex;
+        display: flex;
         flex-direction: column;
 
         &:focus-within {
-            color: var(--accent);
+            color: var(--accent)!important;
         }
 
         &.labelError {
@@ -50,6 +50,6 @@ form.us-form {
 
     .panambi-btn.primary-btn {
         max-width: fit-content;
-        align-self: center;
+        align-self: end;
     }
 }
