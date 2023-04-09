@@ -29,7 +29,7 @@ const ContactUsForm = () => {
             return false;
         }
 
-        setEmailInputError(false); // sobra?
+        setEmailInputError(false);
         return true;
     };
 
@@ -44,6 +44,7 @@ const ContactUsForm = () => {
             return false;
         }
 
+        setFirstNameInputError(false);
         return true;
     }
 
@@ -53,6 +54,7 @@ const ContactUsForm = () => {
             return false;
         }
 
+        setSubjectInputError(true);
         return true;
     }
 
@@ -62,6 +64,7 @@ const ContactUsForm = () => {
             return false;
         }
 
+        setMessageInputError(false);
         return true;
     }
 
@@ -120,24 +123,24 @@ const ContactUsForm = () => {
     return (
         <>
             <form onSubmit={submitForm} className="us-form d-flex flex-column col-12">
-                <label htmlFor="firstName" className={`text-body ${firstNameInputError && "labelError"}`}>
+                <label htmlFor="firstName" className={`text-body ${firstNameInputError? "labelError": ""}`}>
                     <input id="firstName" type="text" name="Nombre" placeholder="Nombre" onChange={(e) => handleChange(e, setFirstName)} />
                     {`${firstNameInputError ? "Ingresa un nombre válido" : "Ingresá tu nombre"}`}
                 </label>
 
-                <label htmlFor="email" className={`text-body ${emailInputError && "labelError"}`}>
+                <label htmlFor="email" className={`text-body ${emailInputError? "labelError": ""}`}>
                     <input id="email" type="email" name="Email" placeholder="Email" onChange={(e) => handleChange(e, setEmail)} />
                     {`${emailInputError ? "Ingresa un email válido" : "Ingresá tu email"}`}
                 </label>
 
-                <label htmlFor="subject" className={`text-body ${subjectInputError && "labelError"}`}>
+                <label htmlFor="subject" className={`text-body ${subjectInputError? "labelError": ""}`}>
                     <input id="subject" type="text" name="Asunto" placeholder="Asunto" onChange={(e) => handleChange(e, setSubject)} />
                     {`${subjectInputError ? "Este campo es obligatorio" : "Ingresá un asunto"}`}
                 </label>
 
                 <input name="subject" type="hidden" value={"{{ Asunto }}"} />
 
-                <label htmlFor="message" className={`text-body ${messageInputError && "labelError"}`}>
+                <label htmlFor="message" className={`text-body ${messageInputError? "labelError": ""}`}>
                     <textarea id="message" name="Message" placeholder="Mensaje" onChange={(e) => handleChange(e, setMessage)} />
                     {`${messageInputError ? "Este campo es obligatorio" : "Escribinos tu mensaje"}`}
                 </label>

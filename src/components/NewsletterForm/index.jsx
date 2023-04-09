@@ -13,8 +13,8 @@ const NewsletterForm = () => {
             setEmailError(true);
             return false;
         }
-        // /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/ possible regex with no warnings
-        if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{3,}$/g.test(email)) {
+        
+        if (!/^[\w.-]+@\w+([\.-]?\w+)*(\.\w{2,})+$/.test(email)) {
             setEmailError(true);
             return false;
         }
@@ -70,7 +70,7 @@ const NewsletterForm = () => {
     return (
         <>
             <form onSubmit={submitForm} className="d-flex flex-column flex-sm-row newsletter-form">
-                <label htmlFor="email" className={`text-body ${emailError && "labelError"}`}>
+                <label htmlFor="email" className={`text-body ${emailError? "labelError" : ""}`}>
                     <input id="email" type="email" name="Email" placeholder="Ingresá tu email" onChange={(e) => handleChange(e, setEmail)} />
                     <div>{`${emailError ? "Ingresá un email válido" : ""}`}</div>
                 </label>

@@ -1,4 +1,6 @@
 import CheckboxContactForm from "../CheckboxContactForm";
+import {Row, Col} from "react-bootstrap";
+import "./styles.scss"
 
 // variant prop available values => "workshops" | "courses"
 
@@ -14,12 +16,18 @@ const ServicesContact = ({variant}) => {
     }
 
     return (
-        <section>
-            <div>
-                <h2>{title[variant]}</h2>
-                <p>{textBody[variant]}</p>
+        <section className="container-fluid services-contact">
+            <div className="container-md">
+                <Row>
+                    <Col className="col-12 d-flex flex-column">
+                        <h2>{title[variant]}</h2>
+                        <p>{textBody[variant]}</p>
+                    </Col>
+                    <Col className="col-12 d-flex flex-column">
+                        <CheckboxContactForm variant={variant} />
+                    </Col>
+                </Row>
             </div>
-            <CheckboxContactForm variant={variant}/>
         </section>
     );
 };

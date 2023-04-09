@@ -1,6 +1,8 @@
 import { useState } from "react";
 import AppButton from "../AppButton";
 import Icon from "../Icon";
+import Swal from "sweetalert2";
+import panambiLogo from "../../assets/icons/panambi-logo.svg";
 import "./styles.scss";
 
 // variant prop available values => "workshops" | "courses"
@@ -50,18 +52,20 @@ const CheckboxContactForm = ({ variant }) => {
     const [message, setMessage] = useState("");
     const [messageInputError, setMessageInputError] = useState(false);
 
+    const [selectedCheckboxes, setSelectedCheckboxes] = useState([]);
+
     const validateEmail = (email) => {
         if (!email) {
             setEmailInputError(true);
             return false;
         }
 
-        if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{3,}$/g.test(email)) {
+        if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{3,}$/.test(email)) {
             setEmailInputError(true);
             return false;
         }
 
-        setEmailInputError(false); // sobra?
+        setEmailInputError(false);
         return true;
     };
 
@@ -76,6 +80,7 @@ const CheckboxContactForm = ({ variant }) => {
             return false;
         }
 
+        setFirstNameInputError(false);
         return true;
     };
 
@@ -85,6 +90,7 @@ const CheckboxContactForm = ({ variant }) => {
             return false;
         }
 
+        setMessageInputError(false);
         return true;
     };
 
@@ -102,6 +108,51 @@ const CheckboxContactForm = ({ variant }) => {
         }
     };
 
+    const handleCheckboxChange = (e) => {
+        const checkboxValue = e.target.name;
+        const isChecked = e.target.checked;
+
+        if (isChecked) {
+            setSelectedCheckboxes([...selectedCheckboxes, checkboxValue]);
+        } else {
+            setSelectedCheckboxes(selectedCheckboxes.filter((value) => value !== checkboxValue));
+        }
+    };
+
+    const showAlert = (success) => {
+
+        if (success) {
+            Swal.fire({
+                title: "¡Gracias por tu mensaje!",
+                text: "En breve me contactaré con vos.",
+                iconHtml: `<img src="${panambiLogo}" alt="Logo de panambí"/>`,
+                confirmButtonText: "Cerrar",
+                customClass: {
+                    container: "alert-container",
+                    icon: "alert-icon",
+                    confirmButton: "success-alert-button alert-button",
+                    text: "alert-text",
+                    title: "alert-title",
+                }
+            });
+        } else {
+             Swal.fire({
+                title: "Oops...",
+                text: "Algo salió mal. Por favor, intentá nuevamente.",
+                icon: "error",
+                confirmButtonText: "Cerrar",
+                customClass: {
+                    container: "alert-container",
+                    icon: "alert-icon",
+                    confirmButton: "error-alert-button alert-button",
+                    text: "alert-text",
+                    title: "alert-title",
+                    }
+             });
+        }
+       
+    };
+
     const submitForm = async (e) => {
         e.preventDefault();
 
@@ -114,6 +165,7 @@ const CheckboxContactForm = ({ variant }) => {
                 Email: email,
                 Nombre: firstName,
                 Mensaje: message,
+                Seleccionados: selectedCheckboxes,
                 subject: subjects[variant],
             };
 
@@ -131,37 +183,36 @@ const CheckboxContactForm = ({ variant }) => {
                 throw new Error("Failed to submit form");
             }
 
-            console.log("Form submitted successfully");
-            // SHOW NOTIFICATIONS
+            showAlert(true);
         } catch (error) {
-            console.error(error);
+            showAlert(false);
         }
     };
 
     return (
-        <form onSubmit={submitForm} className="d-flex flex-column flex-sm-row justify-content-between">
+        <form onSubmit={submitForm} className="check-form d-flex flex-column flex-sm-row">
             <div className="d-flex flex-column col-12 col-sm-6">
                 {checkboxes[variant].map((checkbox, index) => {
                     return (
-                        <label key={`label-${index}`}>
-                            <input type="checkbox" name={checkbox} key={`input-${index}`} />
+                        <label key={`label-${index}`} className="checkboxLabel">
+                            <input type="checkbox" name={checkbox} key={`input-${index}`} onChange={handleCheckboxChange} />
                             {checkbox}
                         </label>
                     );
                 })}
             </div>
             <div className="d-flex flex-column col-12 col-sm-6">
-                <label htmlFor="firstName" className={`text-body ${firstNameInputError && "labelError"}`}>
+                <label htmlFor="firstName" className={`text-body ${firstNameInputError? "labelError" : ""}`}>
                     <input id="firstName" type="text" name="Nombre" placeholder="Nombre" onChange={(e) => handleChange(e, setFirstName)} />
                     {`${firstNameInputError ? "Ingresa un nombre válido" : "Ingresá tu nombre"}`}
                 </label>
 
-                <label htmlFor="email" className={`text-body ${emailInputError && "labelError"}`}>
+                <label htmlFor="email" className={`text-body ${emailInputError? "labelError" : ""}`}>
                     <input id="email" type="email" name="Email" placeholder="Email" onChange={(e) => handleChange(e, setEmail)} />
                     {`${emailInputError ? "Ingresa un email válido" : "Ingresá tu email"}`}
                 </label>
 
-                <label htmlFor="message" className={`text-body ${messageInputError && "labelError"}`}>
+                <label htmlFor="message" className={`text-body ${messageInputError? "labelError" : ""}`}>
                     <textarea id="message" name="Message" placeholder="Mensaje" onChange={(e) => handleChange(e, setMessage)} />
                     {`${messageInputError ? "Este campo es obligatorio" : "Escribinos tu mensaje"}`}
                 </label>
