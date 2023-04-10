@@ -23,6 +23,7 @@ form.check-form {
     }
 
     input[type="checkbox"] {
+        flex-shrink: 0;
         appearance: none;
         -webkit-appearance: none;
         -moz-appearance: none;
