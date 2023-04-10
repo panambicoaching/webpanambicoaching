@@ -30,6 +30,8 @@ import tiktok from '../../assets/icons/tiktok.svg'
 import youtube from '../../assets/icons/youtube.svg'
 import duration from '../../assets/icons/duration.svg'
 import star from '../../assets/icons/star.svg'
+import open from '../../assets/icons/open.svg'
+import close from '../../assets/icons/close.svg'
 
 const iconStorage = {
     courses, // Home
@@ -45,10 +47,14 @@ const iconStorage = {
     active_listening,
     resolution,
     loyalty,
+    open,
+    close,
     online, //courses
     access,
     update,
     certificate,
+    duration,
+    star,
     personalized, // workshops
     material,
     entrepreneur, // conferences
@@ -59,9 +65,7 @@ const iconStorage = {
     spotify_a,
     instagram,
     tiktok,
-    youtube,
-    duration, // others
-    star,
+    youtube
 };
 
 // design prop available values -> "transparent" ; "white-rounded" ; "blue-rounded" ; "benefit" 
