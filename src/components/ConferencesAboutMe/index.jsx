@@ -6,7 +6,7 @@ import CarlaConferencesMeLg from "../../assets/img/conferences/carla-conferences
 const ConferencesAboutMe = () => {
     return (
         <section className="conferences-me container-fluid">
-            <div className="container-md">
+            <div className="container-lg">
                 <Row>
                     <Col className="col-12">
                         <h2 className="text-headline text-start">Un poco sobre mí</h2>
@@ -30,8 +30,10 @@ const ConferencesAboutMe = () => {
                     </Col>
                     <Col className="col-12 col-sm-6">
                         <picture>
+                            <source media="(min-width: 576px) and (max-width: 991.98px)" srcSet={CarlaConferencesMeSm} />
+                            <source media="(max-width: 575.98px)" srcSet={CarlaConferencesMeSm} />
                             <img
-                                src={CarlaConferencesMeSm}
+                                src={CarlaConferencesMeLg}
                                 srcSet={`${CarlaConferencesMeSm} 304w, ${CarlaConferencesMeLg} 448w`}
                                 sizes="(max-width: 1200px) 304px, 448px"
                                 alt="Imagen de Carla, de la sección sobre mí en la página de conferencias."

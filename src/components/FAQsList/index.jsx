@@ -38,7 +38,7 @@ const items = [
 
 const FAQsList = () => {
   return (
-    <section className={`container-fluid panambi-faqs`}>
+    <section className={`container-fluid panambi-faqs`} id="faqs">
       <div className="container-lg">
         <h2 className="faqs-header">Preguntas frecuentes</h2>
         <Accordion alwaysOpen flush>

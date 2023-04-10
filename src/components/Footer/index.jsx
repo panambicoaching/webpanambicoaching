@@ -10,47 +10,37 @@ const Footer = () => {
         <footer className="container-fluid">
             <Row>
                 <Col className="col-12 col-sm-3">
-                    <h4 className="text-label">Inicio</h4>
+                    <h4 className="text-label">
+                        <HashLink to="/#">Inicio</HashLink>
+                    </h4>
                     <ul className="list-unstyled text-body2">
                         <li>
-                            <HashLink to="/#home-cover">
-                                Panambí
-                            </HashLink>
+                            <HashLink to="/#home-cover">Panambí</HashLink>
                         </li>
                         <li>
-                            <HashLink to="/#features-home">
-                                Mis servicios
-                            </HashLink>
+                            <HashLink to="/#features-home">Mis servicios</HashLink>
                         </li>
                         <li>
-                            <HashLink to="/#hello">
-                                Quién soy
-                            </HashLink>
+                            <HashLink to="/#hello">Quién soy</HashLink>
                         </li>
                     </ul>
                 </Col>
                 <Col className="col-12 col-sm-3">
-                    <h4 className="text-label">Acerca de</h4>
+                    <h4 className="text-label">
+                        <HashLink to="/about/#">Acerca de</HashLink>
+                    </h4>
                     <ul className="list-unstyled text-body2">
                         <li>
-                            <HashLink to="/about/#about-cover">
-                                Mi historia
-                            </HashLink>
+                            <HashLink to="/about/#about-cover">Mi historia</HashLink>
                         </li>
                         <li>
-                            <HashLink to="/about/#values">
-                                Mis valores
-                            </HashLink>
+                            <HashLink to="/about/#values">Mis valores</HashLink>
                         </li>
                         <li>
-                            <HashLink to="/about/#about-me">
-                                Quién soy
-                            </HashLink>
+                            <HashLink to="/about/#about-me">Quién soy</HashLink>
                         </li>
                         <li>
-                            <HashLink to="/about/#faq">
-                                Preguntas frecuentes
-                            </HashLink>
+                            <HashLink to="/about/#faqs">Preguntas frecuentes</HashLink>
                         </li>
                     </ul>
                 </Col>
@@ -58,24 +48,20 @@ const Footer = () => {
                     <h4 className="text-label">Servicios</h4>
                     <ul className="list-unstyled text-body2">
                         <li>
-                            <HashLink to="/courses/#">
-                                Cursos
-                            </HashLink>
+                            <HashLink to="/courses/#">Cursos</HashLink>
                         </li>
                         <li>
-                            <HashLink to="/workshops/#">
-                                Talleres
-                            </HashLink>
+                            <HashLink to="/workshops/#">Talleres</HashLink>
                         </li>
                         <li>
-                            <HashLink to="/conferences/#">
-                                Conferencias
-                            </HashLink>
+                            <HashLink to="/conferences/#">Conferencias</HashLink>
                         </li>
                     </ul>
                 </Col>
                 <Col className="col-12 col-sm-3">
-                    <h4 className="text-label">Contacto</h4>
+                    <h4 className="text-label">
+                        <HashLink to="/contact/#">Contacto</HashLink>
+                    </h4>
                     <ul className="list-unstyled text-body2">
                         <li>
                             <HashLink target="_blank" to="https://www.instagram.com/panambicoaching/">

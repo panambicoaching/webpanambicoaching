@@ -4,6 +4,8 @@ nav.navbar {
     justify-content: space-between;
     height: 64px;
     background-color: var(--white);
+    user-select: none;
+    
 
     &>.container {
         margin: 0;

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 import Card from 'react-bootstrap/Card'
 import Col from 'react-bootstrap/Col'
 import Icon from "../Icon";
@@ -6,14 +6,21 @@ import Icon from "../Icon";
 import './styles.scss'
 
 const CoursePaidCard = ({ item, status }) => {
-  let link = null;
-  if(status === "done") link = "/course_contact";
-  if(status === "next") link = item.link;
+  const courseType = {
+    done: {
+      link: "/contact/courses/#",
+      target: "_self"
+    },
+    next: {
+      link: item.link,
+      target: "_blank"
+    }
+  }
 
   return (
     <Col className="col-6 col-sm-4">
       <div className="panambi-paid-card">
-        <Link to={link} target="_blank">
+        <HashLink to={courseType[status].link} target={courseType[status].target}>
           <figure>
             <picture>
               <source media="(min-width: 576px) and (max-width: 991.98px)"
@@ -37,7 +44,7 @@ const CoursePaidCard = ({ item, status }) => {
               <div>{item.duration} hs</div>
             </div> 
           </Card.Body>
-        </Link>
+        </HashLink>
       </div>
     </Col>
   );

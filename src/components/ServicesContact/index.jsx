@@ -17,7 +17,7 @@ const ServicesContact = ({variant}) => {
 
     return (
         <section className="container-fluid services-contact">
-            <div className="container-md">
+            <div className="container-lg">
                 <Row>
                     <Col className="col-12 d-flex flex-column">
                         <h2 className="text-headline">{title[variant]}</h2>

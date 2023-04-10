@@ -1,16 +1,24 @@
 import "./styles.scss";
 import { Row, Col } from "react-bootstrap";
-import Icon from "../Icon";
 import AppButton from "../AppButton";
 import CarlaQuienSoyLg from "../../assets/img/home/carla-quien-soy-large.webp";
 import CarlaQuienSoyMd from "../../assets/img/home/carla-quien-soy-medium.webp";
 import CarlaQuienSoySm from "../../assets/img/home/carla-quien-soy-small.webp";
+import InternationalCoachingSm from "../../assets/img/home/international-coaching-small.webp";
+import InternationalCoachingMd from "../../assets/img/home/international-coaching-medium.webp";
+import InternationalCoachingLg from "../../assets/img/home/international-coaching-large.webp";
+import ActaCbaNoaSm from "../../assets/img/home/acta-cba-noa-small.webp";
+import ActaCbaNoaMd from "../../assets/img/home/acta-cba-noa-medium.webp";
+import ActaCbaNoaLg from "../../assets/img/home/acta-cba-noa-large.webp";
+import AccessConsciousnessSm from "../../assets/img/home/access-consciousness-small.webp";
+import AccessConsciousnessMd from "../../assets/img/home/access-consciousness-medium.webp";
+import AccessConsciousnessLg from "../../assets/img/home/access-consciousness-large.webp";
 
 
 const Hello = () => {
     return (
         <section className="hello container-fluid" id="hello">
-            <div className="container-md">
+            <div className="container-lg">
                 <Row>
                     <Col className="col-12 col-sm-5 col-lg-6 d-flex align-items-center justify-content-center justify-content-sm-start order-2 order-sm-1">
                         <picture>
@@ -45,10 +53,30 @@ const Hello = () => {
                                     </p>
                                 </article>
                             </div>
-                            <div className="d-flex icon-container">
-                                <Icon name="international_coaching"></Icon>
-                                <Icon name="acta_cba_noa"></Icon>
-                                <Icon name="access_consciousness"></Icon>
+                            <div className="d-flex stamp-container">
+                                <picture>
+                                    <source media="(min-width: 576px) and (max-width: 991.98px)" srcSet={`${InternationalCoachingMd}`} />
+                                    <source media="(max-width: 575.98px)" srcSet={`${InternationalCoachingSm}`} />
+                                    <img
+                                        src={InternationalCoachingLg}
+                                        alt="Logo de International Association of NLP and Coaching"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                                <picture>
+                                    <source media="(min-width: 576px) and (max-width: 991.98px)" srcSet={`${ActaCbaNoaMd}`} />
+                                    <source media="(max-width: 575.98px)" srcSet={`${ActaCbaNoaSm}`} />
+                                    <img
+                                        src={ActaCbaNoaLg}
+                                        alt="Logo de la Asociación de Controladores y Controladoras de Tránsito Aéreo de Córdoba y Noroeste de la República Argentina"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                                <picture>
+                                    <source media="(min-width: 576px) and (max-width: 991.98px)" srcSet={`${AccessConsciousnessMd}`} />
+                                    <source media="(max-width: 575.98px)" srcSet={`${AccessConsciousnessSm}`} />
+                                    <img src={AccessConsciousnessLg} alt="Logo de Access Consciousness" loading="lazy" />
+                                </picture>
                             </div>
                         </div>
                         <AppButton variant={"regular"} as={"link"} design={"secondary"} to={"/about/#"} text={"Más sobre mí"} />
