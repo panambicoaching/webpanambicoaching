@@ -4,7 +4,7 @@ const validateEmail = (email, setError) => {
         return false;
     }
 
-    if (!/^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/.test(email, setError)) {
+    if (!/^[a-z0-9]+(\.[a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/i.test(email, setError)) {
         setError(true);
         return false;
     }
