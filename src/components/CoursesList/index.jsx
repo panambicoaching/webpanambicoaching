@@ -14,7 +14,8 @@ const courseType = {
 		emptyString: "grabados",
 		filterCond: (dateDiff) => dateDiff <= 0,
 		textBtn: "Acceder",
-		linkBtn: "/contact/courses"
+		linkBtn: "/contact/courses/#",
+		linkBtnTarget: "_self"
 	},
 	next: {
 		header: "Próximamente",
@@ -22,7 +23,8 @@ const courseType = {
 		emptyString: "próximos",
 		filterCond: (dateDiff) => dateDiff > 0,
 		textBtn: "¡Quiero participar!",
-		linkBtn: "https://lu.ma/panambicoaching"
+		linkBtn: "https://lu.ma/panambicoaching",
+		linkBtnTarget: "_blank"
 	}
 }
 
@@ -64,7 +66,7 @@ const CoursesList = ({ items, status }) => {
 							design={"primary"}
 							to={courseType[status].linkBtn}
 							text={courseType[status].textBtn}
-							target={"_blank"}
+							target={courseType[status].linkBtnTarget}
 						/>
 					</div>
 				</div>

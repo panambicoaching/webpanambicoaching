@@ -1,5 +1,5 @@
-import { HashLink } from "react-router-hash-link";
 import { Button } from "semantic-ui-react";
+import { HashLink } from "react-router-hash-link";
 
 import "./styles.scss";
 
