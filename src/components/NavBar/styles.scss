@@ -66,7 +66,7 @@ nav.navbar {
         }
     }
 
-    @media (min-width: 992px) {
+    @media (min-width: 768px) {
         height: 92px;
         padding: 8px 24px;
 
@@ -78,6 +78,7 @@ nav.navbar {
             padding: 16px 0;
             display: flex;
             gap: 16px;
+            flex-direction: row;
 
             .nav-link {
                 padding: 10px;
@@ -92,7 +93,7 @@ nav.navbar {
 
 
     // Mobile Menu changes to full height
-    @media (max-width: 991.98px) {
+    @media (max-width: 767.98px) {
         .navbar-collapse {
             position: fixed;
             top: 64px;
