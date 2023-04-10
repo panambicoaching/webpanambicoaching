@@ -16,7 +16,7 @@ const NavBar = () => {
         e.stopPropagation();
     };
     return (
-        <Navbar expanded={expanded} expand="sm" className="sticky-top">
+        <Navbar expanded={expanded} expand="md" className="sticky-top">
             <div className="container-lg">
                 <Navbar.Brand as={HashLink} to="/#" onClick={handleLinkClick}>
                     <picture>
