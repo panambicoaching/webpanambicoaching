@@ -1,11 +1,11 @@
 import AppButton from "../AppButton";
+import AppSpinner from "../AppSpinner";
 import Icon from "../Icon";
 import "./styles.scss";
 import showAlert from "../../utils/alert";
 import validator from "../../utils/validator";
 import getDocsFirestore from '../../services/getDocsFirestore'
 import { useCallback, useEffect, useState } from 'react'
-import Spinner from 'react-bootstrap/Spinner';
 
 // variant prop available values => "workshops" | "courses"
 const CheckboxContactForm = ({ variant }) => {
@@ -109,45 +109,42 @@ const CheckboxContactForm = ({ variant }) => {
         }
     };
 
-    const sendIcon = <Icon name={"send"} design="transparent"/>;
+    const sendIcon = <Icon name={"send"} />;
 
-    return loaded ? (
-        <form onSubmit={submitForm} className="check-form d-flex flex-column flex-sm-row">
-            <div className="d-flex flex-column col-12 col-sm-6">
-                {items.map((checkbox, index) => {
-                    if (variant === "courses" && checkbox.id === 1) return null;
-            
-                    return (
-                        <label key={`label-${index}`} className="checkboxLabel text-body">
-                            <input type="checkbox" name={checkbox.name} key={`input-${index}`} onChange={handleCheckboxChange} />
-                            {checkbox.name}
-                        </label>
-                    );
-                })}
-            </div>
-            <div className="d-flex flex-column col-12 col-sm-6">
-                <label htmlFor="firstName" className={`text-body2 ${firstNameInputError ? "labelError" : ""}`}>
-                    <input id="firstName" type="text" name="Nombre" placeholder="Nombre" onChange={(e) => handleChange(e)} className="text-body" />
-                    {`${firstNameInputError ? "Ingresa un nombre válido" : "Ingresá tu nombre"}`}
-                </label>
+    return !loaded 
+        ?   <AppSpinner />
+        :   <form onSubmit={submitForm} className="check-form d-flex flex-column flex-sm-row">
+                <div className="d-flex flex-column col-12 col-sm-6">
+                    {items.map((checkbox, index) => {
+                        if (variant === "courses" && checkbox.id === 1) return null;
+                
+                        return (
+                            <label key={`label-${index}`} className="checkboxLabel text-body">
+                                <input type="checkbox" name={checkbox.name} key={`input-${index}`} onChange={handleCheckboxChange} />
+                                {checkbox.name}
+                            </label>
+                        );
+                    })}
+                </div>
+                <div className="d-flex flex-column col-12 col-sm-6">
+                    <label htmlFor="firstName" className={`text-body2 ${firstNameInputError ? "labelError" : ""}`}>
+                        <input id="firstName" type="text" name="Nombre" placeholder="Nombre" onChange={(e) => handleChange(e)} className="text-body" />
+                        {`${firstNameInputError ? "Ingresa un nombre válido" : "Ingresá tu nombre"}`}
+                    </label>
 
-                <label htmlFor="email" className={`text-body2 ${emailInputError ? "labelError" : ""}`}>
-                    <input id="email" type="email" name="Email" placeholder="Email" onChange={(e) => handleChange(e)} className="text-body" />
-                    {`${emailInputError ? "Ingresa un email válido" : "Ingresá tu email"}`}
-                </label>
+                    <label htmlFor="email" className={`text-body2 ${emailInputError ? "labelError" : ""}`}>
+                        <input id="email" type="email" name="Email" placeholder="Email" onChange={(e) => handleChange(e)} className="text-body" />
+                        {`${emailInputError ? "Ingresa un email válido" : "Ingresá tu email"}`}
+                    </label>
 
-                <label htmlFor="message" className={`text-body2 ${messageInputError ? "labelError" : ""}`}>
-                    <textarea id="message" name="Message" placeholder="Mensaje" onChange={(e) => handleChange(e)} className="text-body" />
-                    {`${messageInputError ? "Este campo es obligatorio" : "Escribinos tu mensaje"}`}
-                </label>
+                    <label htmlFor="message" className={`text-body2 ${messageInputError ? "labelError" : ""}`}>
+                        <textarea id="message" name="Message" placeholder="Mensaje" onChange={(e) => handleChange(e)} className="text-body" />
+                        {`${messageInputError ? "Este campo es obligatorio" : "Escribinos tu mensaje"}`}
+                    </label>
 
-                <AppButton variant={"regular"} as={"handler"} design={"primary"} text={"Enviar"} EndIcon={sendIcon} type={"submit"} />
-            </div>
-        </form>
-    ) 
-    :   <Spinner className="panambi-spinner mx-auto" animation="border" role="status">
-            <span className="visually-hidden">Cargando...</span>
-        </Spinner>;
+                    <AppButton variant={"regular"} as={"handler"} design={"primary"} text={"Enviar"} EndIcon={sendIcon} type={"submit"} />
+                </div>
+            </form>
 };
 
 export default CheckboxContactForm;

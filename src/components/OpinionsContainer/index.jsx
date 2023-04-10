@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import OpinionsList from '../OpinionsList'
-import Spinner from 'react-bootstrap/Spinner';
 
 import getDocsFirestore from '../../services/getDocsFirestore'
 
@@ -20,11 +19,7 @@ const OpinionsContainer = () => {
     }, []);
  
     return (
-      loaded 
-        ? <OpinionsList items={items} />
-        : <Spinner className="panambi-spinner mx-auto" animation="border" role="status">
-            <span className="visually-hidden">Cargando...</span>
-          </Spinner>
+      <OpinionsList items={items} loaded={loaded} />
     )
   }
   

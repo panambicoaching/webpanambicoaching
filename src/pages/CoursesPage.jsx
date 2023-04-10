@@ -10,7 +10,7 @@ const BannerBtn = (
     variant={"regular"}
     as={"link"}
     design={"secondary"}
-    to={"https://spotify.com"}
+    to={"https://open.spotify.com/show/1dTEILdq7RUYMYeBoP8ek9"}
     text={"Escuchar ahora"}
     target={"_blank"}
     StartIcon={<Icon name={"spotify_a"} />}

@@ -86,7 +86,6 @@ form.check-form {
     }
 
     .panambi-btn.primary-btn {
-        max-width: fit-content;
         align-self: end;
         margin-top: 24px;
     }
@@ -95,9 +94,6 @@ form.check-form {
         margin-top: 48px;
 
         .panambi-icon {
-            height: 0;
-            width: fit-content;
-
             i {
                 height: 24px;
                 width: 24px;

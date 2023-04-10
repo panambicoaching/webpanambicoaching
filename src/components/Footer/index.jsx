@@ -40,7 +40,7 @@ const Footer = () => {
                             <HashLink to="/about/#about-me">Quién soy</HashLink>
                         </li>
                         <li>
-                            <HashLink to="/about/#faq">Preguntas frecuentes</HashLink>
+                            <HashLink to="/about/#faqs">Preguntas frecuentes</HashLink>
                         </li>
                     </ul>
                 </Col>

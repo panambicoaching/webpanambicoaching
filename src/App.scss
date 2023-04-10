@@ -61,6 +61,8 @@ img {
 }
 
 .panambi-spinner {
+  display: block;
   border-width: 0.2em;
   color: var(--primary-pressed);
+  margin: 0 auto;
 }

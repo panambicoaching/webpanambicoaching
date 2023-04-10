@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import CoursesList from '../CoursesList'
-import Spinner from 'react-bootstrap/Spinner';
 
 import getDocsFirestore from '../../services/getDocsFirestore'
 
@@ -20,11 +19,7 @@ const CoursesContainer = ({ status }) => {
     }, []);
  
     return (
-      loaded
-        ? <CoursesList items={items} status={status} />
-        : <Spinner className="panambi-spinner mx-auto" animation="border" role="status">
-            <span className="visually-hidden">Cargando...</span>
-          </Spinner>
+      <CoursesList items={items} status={status} loaded={loaded} />
     )
   }
   
