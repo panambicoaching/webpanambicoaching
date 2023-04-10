@@ -12,16 +12,16 @@ const CheckboxContactForm = ({ variant }) => {
     const [items, setItems] = useState([]);
     const [loaded, setLoaded] = useState(false);
 
-    const fetchItems = useCallback(async (variant) => {  
+    const fetchItems = useCallback(async () => {  
         let items = await getDocsFirestore(variant);
         setItems(items);
         setLoaded(true);
-    }, []);
+    }, [variant]);
 
     useEffect(() => {
         setLoaded(false);
-        fetchItems(variant);
-    }, [variant, fetchItems]);
+        fetchItems();
+    }, [fetchItems]);
 
     const subjects = {
         workshops: "Consulta sobre talleres",
