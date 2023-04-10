@@ -4,7 +4,7 @@ const validateEmail = (email, setError) => {
         return false;
     }
 
-    if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{3,}$/g.test(email, setError)) {
+    if (!/^[-.\w]+@([-\w]+\.)+[-\w]{3,}$/g.test(email, setError)) {
         setError(true);
         return false;
     }
