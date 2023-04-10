@@ -4,24 +4,23 @@ import "./styles.scss";
 import showAlert from "../../utils/alert";
 import validator from "../../utils/validator";
 import getDocsFirestore from '../../services/getDocsFirestore'
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 
 // variant prop available values => "workshops" | "courses"
 const CheckboxContactForm = ({ variant }) => {
     const [items, setItems] = useState([]);
     const [loaded, setLoaded] = useState(false);
 
-    async function fetchItems() {  
-        let items = await getDocsFirestore(`${variant}`);
-        console.log(items)
+    const fetchItems = useCallback(async (variant) => {  
+        let items = await getDocsFirestore(variant);
         setItems(items);
         setLoaded(true);
-    }
+    }, []);
 
     useEffect(() => {
         setLoaded(false);
-        fetchItems();
-    }, []);
+        fetchItems(variant);
+    }, [variant, fetchItems]);
 
     const subjects = {
         workshops: "Consulta sobre talleres",
