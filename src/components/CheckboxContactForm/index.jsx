@@ -5,6 +5,7 @@ import showAlert from "../../utils/alert";
 import validator from "../../utils/validator";
 import getDocsFirestore from '../../services/getDocsFirestore'
 import { useCallback, useEffect, useState } from 'react'
+import Spinner from 'react-bootstrap/Spinner';
 
 // variant prop available values => "workshops" | "courses"
 const CheckboxContactForm = ({ variant }) => {
@@ -143,9 +144,10 @@ const CheckboxContactForm = ({ variant }) => {
                 <AppButton variant={"regular"} as={"handler"} design={"primary"} text={"Enviar"} EndIcon={sendIcon} type={"submit"} />
             </div>
         </form>
-    ) : (
-        "Cargando..."
-    );
+    ) 
+    :   <Spinner className="panambi-spinner mx-auto" animation="border" role="status">
+            <span className="visually-hidden">Cargando...</span>
+        </Spinner>;
 };
 
 export default CheckboxContactForm;
