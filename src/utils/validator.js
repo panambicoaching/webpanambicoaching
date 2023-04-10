@@ -4,7 +4,7 @@ const validateEmail = (email, setError) => {
         return false;
     }
 
-    if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{3,}$/g.test(email, setError)) {
+    if (!/^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/.test(email, setError)) {
         setError(true);
         return false;
     }
@@ -14,12 +14,14 @@ const validateEmail = (email, setError) => {
 };
 
 const validateFirstName = (firstName, setError) => {
+    firstName = firstName.trim();
+
     if (!firstName) {
         setError(true);
         return false;
     }
 
-    if (!/^[a-zA-Z]+$/g.test(firstName)) {
+    if (!/^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/.test(firstName)) {
         setError(true);
         return false;
     }
@@ -29,6 +31,8 @@ const validateFirstName = (firstName, setError) => {
 };
 
 const validateSubject = (subject, setError) => {
+    subject = subject.trim();
+
     if (!subject) {
         setError(true);
         return false;
@@ -39,7 +43,14 @@ const validateSubject = (subject, setError) => {
 };
 
 const validateMessage = (message, setError) => {
+    message = message.trim();
+
     if (!message) {
+        setError(true);
+        return false;
+    }
+
+    if (!/^.{1,255}$/.test(message)) {
         setError(true);
         return false;
     }
