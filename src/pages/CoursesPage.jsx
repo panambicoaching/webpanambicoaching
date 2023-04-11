@@ -23,7 +23,7 @@ const CoursesPage = () => {
 		return (
       <>
         <Helmet>
-          <title>Cursos de coaching | Panambí coaching</title>
+          <title>Cursos de coaching profesional y especializado | Panambí coaching</title>
           <link href="https://panambicoaching.com/" rel="canonical" />
           <meta
             content="Cursos de coaching profesional presenciales y online, acceso 24/7 con actualizaciones permanentes y certificado de participación. Enfocado a personas que quieran desarrollar estas capacidades de manera personal o en forma grupal dentro de sus entornos laborales o familiares."
