@@ -1,22 +1,13 @@
 import "./styles.scss";
 
-const banneryType = {
-	newsletter: {
-		text: "Recibí un adelanto GRATIS"
-	},
-	spotify: {
-		text: "Escuchá gratis mi Podcast en Spotify"
-	}
-}
-
 // variant prop available values -> "newsletter" ; "spotify"
-const Banner = ({ variant, component }) => {
+const Banner = ({ variant, text, component }) => {
   return (
     <section className={`container-fluid panambi-${variant}-banner`}>
       <div className="container-fluid">
         <div className="banner-content">
           <div className="banner-col-left">
-           <div className="text-display">{banneryType[variant].text}</div>
+           <div className="text-display">{text}</div>
            {component}
           </div>
           <div className="banner-col-right">
