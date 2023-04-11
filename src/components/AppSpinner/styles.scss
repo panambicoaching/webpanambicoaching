@@ -1,7 +1,9 @@
 
 .panambi-spinner {
-  display: block;
-  border-width: 0.2em;
-  color: var(--primary);
-  margin: 0 auto;
+  &.spinner-border {
+    display: block;
+    border-width: 0.2em;
+    color: var(--primary);
+    margin: 0 auto;
+  }
 }
