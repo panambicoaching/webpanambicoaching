@@ -72,9 +72,7 @@
 				margin: 0;
 				text-overflow: ellipsis;
 
-				&::before {
-					content: '"';
-				}
+				&::before,
 				&::after {
 					content: '"';
 				}
