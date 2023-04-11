@@ -9,7 +9,7 @@ const bannerType = {
     text: "Recibí un adelanto GRATIS"
 	},
 	spotify: {
-		component: <AppButton
+		component:  <AppButton
                   variant={"regular"}
                   as={"link"}
                   design={"secondary"}

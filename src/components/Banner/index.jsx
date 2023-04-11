@@ -20,7 +20,7 @@ const Banner = ({ variant, text, component }) => {
                   <img 
                     srcSet={`/img/banners/banner-${variant}-large.webp`}
                     className="banner-img"
-                    alt={`Banner del ${variant} de Panambi coaching`} loading="lazy"
+                    alt={`Banner del ${variant} de Panambí coaching`} loading="lazy"
                   />
             </picture>
           </div>

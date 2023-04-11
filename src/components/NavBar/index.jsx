@@ -16,42 +16,42 @@ const NavBar = () => {
         e.stopPropagation();
     };
     return (
-        <Navbar expanded={expanded} expand="md" className="sticky-top">
-            <div className="container-lg">
-                <Navbar.Brand as={HashLink} to="/#" onClick={handleLinkClick}>
-                    <picture>
-                        <source media="(min-width: 992px)" srcSet={navBarLogoL} />
-                        <img srcSet={navBarLogoSm} alt="Logo de Panambí Coaching"/>
-                    </picture>
-                </Navbar.Brand>
-                <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </Navbar.Toggle>
-                <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="ms-auto">
-                        <Nav.Link className="text-button" as={HashLink} to="/about/#" onClick={handleLinkClick}>
-                            Acerca de
-                        </Nav.Link>
-                        <NavDropdown className="text-button" title="Servicios" id="basic-nav-dropdown" onClick={handleDropdownClick}>
-                            <NavDropdown.Item className="text-button" as={HashLink} to="/courses/#" onClick={handleLinkClick}>
-                                Cursos
-                            </NavDropdown.Item>
-                            <NavDropdown.Item className="text-button" as={HashLink} to="/workshops/#" onClick={handleLinkClick}>
-                                Talleres
-                            </NavDropdown.Item>
-                            <NavDropdown.Item className="text-button" as={HashLink} to="/conferences/#" onClick={handleLinkClick}>
-                                Conferencias
-                            </NavDropdown.Item>
-                        </NavDropdown>
-                        <Nav.Link className="text-button" as={HashLink} to="/contact/#" onClick={handleLinkClick}>
-                            Contactame
-                        </Nav.Link>
-                    </Nav>
-                </Navbar.Collapse>
-            </div>
-        </Navbar>
+        <section className="sticky-top container-fluid panambi-navbar">
+            <Navbar expanded={expanded} expand="md" className="container-lg">
+                    <Navbar.Brand as={HashLink} to="/#" onClick={handleLinkClick}>
+                        <picture>
+                            <source media="(min-width: 992px)" srcSet={navBarLogoL} />
+                            <img srcSet={navBarLogoSm} alt="Logo de Panambí Coaching"/>
+                        </picture>
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(!expanded)} className="d-md-none">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </Navbar.Toggle>
+                    <Navbar.Collapse id="basic-navbar-nav">
+                        <Nav className="ms-auto">
+                            <Nav.Link className="text-button" as={HashLink} to="/about/#" onClick={handleLinkClick}>
+                                Acerca de
+                            </Nav.Link>
+                            <NavDropdown className="text-button" title="Servicios" id="basic-nav-dropdown" onClick={handleDropdownClick}>
+                                <NavDropdown.Item className="text-button" as={HashLink} to="/courses/#" onClick={handleLinkClick}>
+                                    Cursos
+                                </NavDropdown.Item>
+                                <NavDropdown.Item className="text-button" as={HashLink} to="/workshops/#" onClick={handleLinkClick}>
+                                    Talleres
+                                </NavDropdown.Item>
+                                <NavDropdown.Item className="text-button" as={HashLink} to="/conferences/#" onClick={handleLinkClick}>
+                                    Conferencias
+                                </NavDropdown.Item>
+                            </NavDropdown>
+                            <Nav.Link className="text-button" as={HashLink} to="/contact/#" onClick={handleLinkClick}>
+                                Contactame
+                            </Nav.Link>
+                        </Nav>
+                    </Navbar.Collapse>
+            </Navbar>
+        </section>
     );
 };
 

@@ -1,8 +1,10 @@
+@import "../../assets/scss/mixins";
+
 footer {
+    @include section-padding(80px, 40px, 32px);
     background-color: var(--primary-pressed);
     color: var(--white);
-    padding: 32px!important;
-
+    
     .col {
         margin-bottom: 16px;
 
@@ -50,8 +52,6 @@ footer {
     }
 
     @media (min-width: 576px) {
-        padding: 40px!important;
-
         .col {
             margin-bottom: 0;
 
@@ -80,8 +80,6 @@ footer {
     }
 
     @media (min-width: 992px) {
-        padding: 80px 156px!important;
-
         div.row:first-child {
             margin-bottom: 80px;
         }

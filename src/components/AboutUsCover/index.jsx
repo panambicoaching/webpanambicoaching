@@ -18,7 +18,7 @@ const AboutUsCover = () => {
           </Col>
         </Row>
         <Row>
-          <Col className="col-12 col-sm-6 col-lg-6">
+          <Col className="col-12 col-sm-6">
             <article>
               <p>El coaching en aviación busca priorizar al capital humano en un entorno automatizado. La diferencia entre el coaching profesional y un coaching especializado es el manejo del vocabulario, ya que el coach sabe del trabajo del coachee, tiene su mismo vocabulario, es experto en las temáticas abordadas y lo puede acompañar de una manera más rápida, con objetivos claros en su área profesional.</p>
               <p>Mi visión es ofrecer el acompañamiento necesario para superar obstáculos  y potenciar el crecimiento a través del desarrollo de soft skills o habilidades blandas.</p>

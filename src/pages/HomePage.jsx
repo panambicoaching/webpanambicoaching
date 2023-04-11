@@ -15,7 +15,7 @@ const HomePage = () => {
     const cardsNames = ["courses", "workshops", "conferences"];
 
     return (
-        <div>
+        <>
             <Helmet>
                 <title>Panambí coaching | El arte de volar juntos</title>
                 <link href="https://panambicoaching.com/" rel="canonical" />
@@ -32,7 +32,7 @@ const HomePage = () => {
             <PanambiFeatures itemsNames={cardsNames} cardsAreLinks={true} sectionTitle={featuresTitle} text={featuresText}/>
             <Hello />
             <CallToAction title={ctaTitle} titleStyle={ctaTitleStyle} buttonComp={ctaButton} />
-        </div>
+        </>
     );
 }
 

@@ -1,47 +1,36 @@
-@import "../../assets/scss/_gradients.scss";
+@import "../../assets/scss/gradients.scss";
+@import "../../assets/scss/mixins";
 
 section.home-cover {
     background: map-get($gradients, header-01);
-    padding-top: 80px;
-    padding-bottom: 80px;
-    
-    @media (min-width:576px) {
-        padding-top: 120px;
-        padding-bottom: 120px;
-    }
-
-    @media (min-width:992px) {
-        padding-top: 160px;
-        padding-bottom: 160px;
-    }
+    @include section-padding(160px, 120px, 80px);
 
     .text-container {
-            gap: 24px;
+            row-gap: 24px;
             margin-bottom: 32px;
 
             @media (min-width:576px) {
-                gap: 32px;
+                row-gap: 32px;
                 margin-bottom: 92px;
             }
 
             @media (min-width:992px) {
-                gap: 40px;
+                row-gap: 40px;
                 margin-bottom: 120px;
             }
 
             p {
                 margin: 0;
             }
+    }
+
+    .img-home-cover {
+        width: 100%;
+        height: auto;
+        max-width: 550px;
+
+        @media (max-width: 575.98px) {
+            margin-top: 40px;
         }
-
-    &>.container-lg {
-        .row {
-            gap: 40px;
-
-            @media (min-width:576px) {
-                gap: 0;
-            }
-        }
-
     }
 }

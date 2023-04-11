@@ -15,7 +15,7 @@ const HomeCover = () => {
                     <Col className="col-12 col-sm-6">
                         <div className="d-flex flex-column text-container">
                             <picture>
-                                <img src={waves} alt="Imagen decorativas, ondas horizontales en rojo y verde" loading="lazy" />
+                                <img src={waves} alt="" loading="lazy" />
                             </picture>
                             <h1 className="text-display">
                                 El arte
@@ -38,6 +38,7 @@ const HomeCover = () => {
                                 src={CarlaHeroLg}
                                 alt="Imagen de Carla en sección 'Home'"
                                 loading="lazy"
+                                className="img-home-cover"
                             />
                         </picture>
                     </Col>

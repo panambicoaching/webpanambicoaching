@@ -4,7 +4,7 @@ import ServicesContact from "../components/ServicesContact";
 
 const CoursesContactPage = () => {
     return (
-        <div>
+        <>
             <Helmet>
                 <title>Contactame para cursos | Panambí coaching</title>
                 <link href="https://panambicoaching.com/" rel="canonical" />
@@ -18,7 +18,7 @@ const CoursesContactPage = () => {
                 />
             </Helmet>
             <ServicesContact variant={"courses"}/>
-        </div>
+        </>
         
     );
 }
