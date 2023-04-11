@@ -20,7 +20,7 @@ const NavBar = () => {
             <div className="container-lg">
                 <Navbar.Brand as={HashLink} to="/#" onClick={handleLinkClick}>
                     <picture>
-                        <source media="(min-width: 576px)" srcSet={navBarLogoL} />
+                        <source media="(min-width: 992px)" srcSet={navBarLogoL} />
                         <img srcSet={navBarLogoSm} alt="Logo de Panambí Coaching"/>
                     </picture>
                 </Navbar.Brand>
