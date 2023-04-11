@@ -25,7 +25,7 @@ const AboutUsCover = () => {
               <p>Mi metodología se basa en afrontar cada habilidad blanda desde los cuatro cuerpos: el mental, físico, emocional y espiritual, para englobar al ser humano de forma completa.</p>
             </article>
           </Col>
-          <Col className="col-12 col-sm-6 offset-lg-1 col-lg-5 d-flex justify-content-center justify-sm-content-end align-items-end">
+          <Col className="col-12 col-sm-6 offset-lg-1 col-lg-5 d-flex justify-content-center justify-content-sm-end align-items-end">
             <figure>
               <picture>
                 <source media="(min-width: 576px) and (max-width: 991.98px)"

@@ -8,7 +8,15 @@ section.panambi-faqs {
     @include responsive-margin(80px, 32px, 32px);
   }
 
-  .accordion-flush .accordion-item {
-    border-radius: 8px;
+  .accordion-flush {
+    .accordion-item {
+      border-radius: 8px;
+
+      .accordion-button,
+      .accordion-button.collapsed {
+        border-radius: inherit;
+      }
+    }
   }
+  
 }
