@@ -26,19 +26,17 @@ const AboutUsCover = () => {
             </article>
           </Col>
           <Col className="col-12 col-sm-6 offset-lg-1 col-lg-5 d-flex justify-content-center justify-content-sm-end align-items-end">
-            <figure>
-              <picture>
-                <source media="(min-width: 576px) and (max-width: 991.98px)"
-                        srcSet={img_medium} />
-                <source media="(max-width: 575.98px)"
-                        srcSet={img_small} />
+            <picture>
+               <source media="(min-width: 576px) and (max-width: 991.98px)"
+                       srcSet={img_medium} />
+              <source media="(max-width: 575.98px)"
+                      srcSet={img_small} />
 
-                <img 
-                  srcSet={img_large}
-                  alt={`Imagen de Carla, de la sección historia de Panambí coaching`} loading="lazy"
-                />
-              </picture>
-            </figure>
+              <img 
+                srcSet={img_large}
+                alt={`Imagen de Carla, de la sección historia de Panambí coaching`} loading="lazy"
+              />
+            </picture>
           </Col>
         </Row>
       </div> 

@@ -15,14 +15,10 @@
 		}
 	}
 
-	figure {
-		margin: 0;
-
-		.card-img {
-			border-top-left-radius: 8px;
-			border-top-right-radius: 8px;
-			width: 100%;
-		}
+	.card-img {
+		border-top-left-radius: 8px;
+		border-top-right-radius: 8px;
+		width: 100%;
 	}
 
 	.card-body {
