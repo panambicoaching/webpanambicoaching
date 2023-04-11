@@ -15,7 +15,7 @@ const HomeCover = () => {
                     <Col className="col-12 col-sm-6">
                         <div className="d-flex flex-column text-container">
                             <picture>
-                                <img src={waves} alt="Imagen decorativas, ondas horizontales en rojo y verde" loading="lazy" />
+                                <img src={waves} alt="" loading="lazy" />
                             </picture>
                             <h1 className="text-display">
                                 El arte
@@ -30,7 +30,7 @@ const HomeCover = () => {
                         </div>
                         <AppButton variant={"regular"} as={"link"} design={"primary"} to={"/contact/#"} text={"Comencemos"} />
                     </Col>
-                    <Col className="col-12 col-sm-6 d-flex align-items-center justify-content-center">
+                    <Col className="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end align-items-end">
                         <picture className="align-self-center">
                             <source media="(min-width: 576px) and (max-width: 991.98px)" srcSet={`${CarlaHeroMd}`} />
                             <source media="(max-width: 575.98px)" srcSet={`${CarlaHeroSm}`} />
@@ -38,6 +38,7 @@ const HomeCover = () => {
                                 src={CarlaHeroLg}
                                 alt="Imagen de Carla en sección 'Home'"
                                 loading="lazy"
+                                className="img-home-cover"
                             />
                         </picture>
                     </Col>

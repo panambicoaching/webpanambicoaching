@@ -2,12 +2,11 @@ import { Helmet } from 'react-helmet'
 
 import AboutMe from "../components/AboutMe";
 import AboutUsCover from "../components/AboutUsCover";
-import Banner from "../components/Banner";
+import BannerContainer from "../components/BannerContainer";
 import FAQsList from "../components/FAQsList";
+import FourBodies from "../components/FourBodies";
 import Manual from "../components/Manual";
 import MyValuesList from "../components/MyValuesList";
-import FourBodies from "../components/FourBodies";
-import NewsletterForm from "../components/NewsletterForm";
 
 const AboutPage = () => {
   return (
@@ -29,7 +28,7 @@ const AboutPage = () => {
       <MyValuesList />
       <AboutMe />
       <Manual />
-      <Banner variant="newsletter" component={<NewsletterForm />} />
+      <BannerContainer variant="newsletter" />
       <FAQsList />
     </>
   );

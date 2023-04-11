@@ -1,28 +1,11 @@
-section.conferences-me {
-    background: var(--background-01);
-    padding-top: 80px;
-    padding-bottom: 80px;
-    
-    @media (min-width:576px) {
-        padding-top: 120px;
-        padding-bottom: 120px;
-    }
+@import "../../assets/scss/mixins";
 
-    @media (min-width:992px) {
-        padding-top: 160px;
-        padding-bottom: 160px;
-    }
+section.conferences-me {
+    @include section-padding(160px, 120px, 80px);
+    background: var(--background-01);
 
     h2 {
-        margin-bottom: 24px;
-
-        @media (min-width:576px) {
-            margin-bottom: 32px;
-        }
-
-        @media (min-width:992px) {
-            margin-bottom: 40px;
-        }
+        @include responsive-margin(40px, 32px, 24px);
     }
 
     p:last-child {
@@ -44,6 +27,18 @@ section.conferences-me {
 
         @media (max-width:575.98px) {
             padding: 0;
+        }
+    }
+
+    picture {
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 475px;
+        }
+
+        @media (max-width: 575.98px) {
+            margin-top: 40px;
         }
     }
 }

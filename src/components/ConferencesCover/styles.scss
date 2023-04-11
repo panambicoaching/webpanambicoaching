@@ -1,42 +1,12 @@
-@import "../../assets/scss/_gradients.scss";
+@import "../../assets/scss/gradients.scss";
+@import "../../assets/scss/mixins";
 
 section.conferences-cover {
     background: map-get($gradients, header-03);
-    padding-top: 80px;
-    padding-bottom: 80px;
-    
-    @media (min-width:576px) {
-        padding-top: 120px;
-        padding-bottom: 120px;
-    }
-
-    @media (min-width:992px) {
-        padding-top: 160px;
-        padding-bottom: 160px;
-    }
-
-    .col:first-child {
-        margin-bottom: 40px;
-
-        @media (min-width:576px) {
-            margin-bottom: 0;
-        }
-    }
-
-    .col:last-child {
-        text-align: center;
-
-        @media (min-width:576px) {
-            text-align: end;
-        }
-
-        @media (max-width:575.98px) {
-            padding: 0;
-        }
-    }
+    @include section-padding(160px, 120px, 80px);
 
     .text-container {
-        gap: 24px;
+        row-gap: 24px;
         margin-bottom: 24px;
 
         .headline-container {
@@ -46,17 +16,29 @@ section.conferences-cover {
         }
 
         @media (min-width:576px) {
-            gap: 32px;
+            row-gap: 32px;
             margin-bottom: 80px;
         }
 
         @media (min-width:992px) {
-            gap: 40px;
+            row-gap: 40px;
             margin-bottom: 120px;
         }
 
         p {
             margin: 0;
+        }
+    }
+
+    picture {
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 475px;
+        }
+
+        @media (max-width: 575.98px) {
+            margin-top: 40px;
         }
     }
 }

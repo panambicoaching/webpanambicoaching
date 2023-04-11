@@ -57,12 +57,9 @@ h4 {
 }
 
 img {
-    user-select: none;
+  user-select: none;
 }
 
-.panambi-spinner {
-  display: block;
-  border-width: 0.2em;
-  color: var(--primary-pressed);
-  margin: 0 auto;
+.container-lg {
+  padding: 0;
 }

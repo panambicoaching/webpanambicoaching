@@ -28,14 +28,12 @@ const ConferencesAboutMe = () => {
                             sus objetivos y lograr sus sueños es posible.
                         </p>
                     </Col>
-                    <Col className="col-12 col-sm-6">
+                    <Col className="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end align-items-center">
                         <picture>
                             <source media="(min-width: 576px) and (max-width: 991.98px)" srcSet={CarlaConferencesMeSm} />
                             <source media="(max-width: 575.98px)" srcSet={CarlaConferencesMeSm} />
                             <img
                                 src={CarlaConferencesMeLg}
-                                srcSet={`${CarlaConferencesMeSm} 304w, ${CarlaConferencesMeLg} 448w`}
-                                sizes="(max-width: 1200px) 304px, 448px"
                                 alt="Imagen de Carla, de la sección sobre mí en la página de conferencias."
                                 loading="lazy"
                             />
