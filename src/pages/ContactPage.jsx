@@ -9,7 +9,7 @@ const ContactPage = () => {
     return (
         <>
             <Helmet>
-                <title>Panambí coaching | Contactame</title>
+                <title>Contactame | Panambí coaching</title>
                 <link href="https://panambicoaching.com/" rel="canonical" />
                 <meta
                     content="Soy Coach profesional certificada. Brindo cursos, talleres y conferencias de coaching y coaching especializado en aviación para potenciar el crecimiento de las personas a través del desarrollo de soft skills. Mi metodología se basa en afrontar cada habilidad desde los cuatro cuerpos: mental, físico, emocional y espiritual. Responsabilidad, excelencia, confidencialidad, escucha activa, resolución y lealtad son los valores que me destacan."
