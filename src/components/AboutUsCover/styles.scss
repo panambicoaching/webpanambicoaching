@@ -2,7 +2,7 @@
 
 section.panambi-about-us {
   @include section-padding(160px, 120px, 80px);
-  background-color: var(--background-02);
+  background-color: var(--header-01);
   padding-bottom: 0;
 
   @media (min-width: 576px) and (max-width: 991.98px) {

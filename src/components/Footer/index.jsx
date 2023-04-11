@@ -9,7 +9,7 @@ const Footer = () => {
     return (
         <footer className="container-fluid">
             <div className="container-lg">
-                <Row>
+                <Row className="g-0">
                     <Col className="col-12 col-sm-3">
                         <h4 className="text-label">
                             <HashLink to="/#">Inicio</HashLink>
