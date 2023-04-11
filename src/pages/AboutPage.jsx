@@ -13,7 +13,7 @@ const AboutPage = () => {
   return (
     <>
 			<Helmet>
-        <title>Panambí coaching | Acerca de</title>
+        <title>Acerca de | Panambí coaching</title>
         <link href="https://panambicoaching.com/" rel="canonical" />
         <meta
           content="Soy Controladora de tránsito aéreo y Coach profesional certificada. Brindo cursos, talleres y conferencias de coaching y coaching especializado en aviación para potenciar el crecimiento de las personas a través del desarrollo de soft skills. Mi metodología se basa en afrontar cada habilidad desde los cuatro cuerpos: mental, físico, emocional y espiritual. Responsabilidad, excelencia, confidencialidad, escucha activa, resolución y lealtad son los valores que me destacan."

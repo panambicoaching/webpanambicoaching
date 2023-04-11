@@ -17,7 +17,7 @@ const ConferencesPage = () => {
     return (
         <>
             <Helmet>
-                <title>Panambí coaching | Conferencias de coaching</title>
+                <title>Conferencias de coaching | Panambí coaching</title>
                 <link href="https://panambicoaching.com/" rel="canonical" />
                 <meta
                     content="Conferencias de coaching profesional con presentaciones interactivas de 1 hora, 45 minutos de exposición y 15 minutos para dudas del público. Mi objetivo es ayudar a las personas a entender y gestionar sus emociones para aceptarse y aceptar su entorno. Les enseño a desarrollar técnicas de auto-control emocional y de manejo de estrés en situaciones críticas, a lograr objetivos realistas y alcanzables."
