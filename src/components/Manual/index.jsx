@@ -13,19 +13,17 @@ const Manual = () => {
       <div className="container-lg">
         <Row>
           <Col className="col-12 col-sm-5 col-lg-6 order-2 order-sm-1 d-flex justify-content-center justify-sm-content-start">
-            <figure>
-              <picture>
-                <source media="(min-width: 576px) and (max-width: 991.98px)"
-                        srcSet={img_medium} />
-                <source media="(max-width: 575.98px)"
-                        srcSet={img_small} />
+            <picture>
+              <source media="(min-width: 576px) and (max-width: 991.98px)"
+                      srcSet={img_medium} />
+              <source media="(max-width: 575.98px)"
+                      srcSet={img_small} />
 
-                <img 
-                  srcSet={img_large}
-                  alt={`Imagen de la portada del manual de Panambí coaching`} loading="lazy"
-                />
-              </picture>
-            </figure>
+              <img 
+                srcSet={img_large}
+                alt={`Imagen de la portada del manual de Panambí coaching`} loading="lazy"
+              />
+            </picture>
           </Col>
           <Col className="col-12 col-sm-7 col-lg-6 order-1 order-sm-2 d-flex justify-content-center flex-column">
             <div className="manual-msj text-label">Próximamente</div>
