@@ -1,3 +1,5 @@
+@import "../../assets/scss/mixins";
+
 section.contact-us {
     background: var(--surface);
     padding-top: 80px;
@@ -39,17 +41,13 @@ section.contact-us {
         @media (min-width:992px) {
             gap: 120px
         }
+    }
 
-        div:last-child {
-            gap: 16px;
+    h3 {
+        @include responsive-margin(40px, 32px, 16px);
+    }
 
-            @media (min-width:576px) {
-                gap: 32px;
-            }
-
-            @media (min-width:992px) {
-                gap: 40px;
-            }
-        }
+    .icon-container {
+        column-gap: 24px;
     }
 }
