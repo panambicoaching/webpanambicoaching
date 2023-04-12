@@ -1,6 +1,7 @@
 import "./styles.scss";
 import {Row, Col } from "react-bootstrap";
 import CarlaConferencesMeSm from "../../assets/img/conferences/carla-conferences-me-small.webp";
+import CarlaConferencesMeMd from "../../assets/img/conferences/carla-conferences-me-medium.webp";
 import CarlaConferencesMeLg from "../../assets/img/conferences/carla-conferences-me-large.webp";
 
 const ConferencesAboutMe = () => {
@@ -30,7 +31,7 @@ const ConferencesAboutMe = () => {
                     </Col>
                     <Col className="col-12 col-sm-6 d-flex justify-content-center justify-content-sm-end align-items-center">
                         <picture>
-                            <source media="(min-width: 576px) and (max-width: 991.98px)" srcSet={CarlaConferencesMeSm} />
+                            <source media="(min-width: 576px) and (max-width: 991.98px)" srcSet={CarlaConferencesMeMd} />
                             <source media="(max-width: 575.98px)" srcSet={CarlaConferencesMeSm} />
                             <img
                                 src={CarlaConferencesMeLg}
