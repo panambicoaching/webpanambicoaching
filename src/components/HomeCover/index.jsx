@@ -7,7 +7,6 @@ import CarlaHeroMd from "../../assets/img/home/carla-hero-medium.webp";
 import CarlaHeroLg from "../../assets/img/home/carla-hero-large.webp";
 
 const HomeCover = () => {
-   
     return (
         <section className="home-cover container-fluid" id="home-cover">
             <div className="container-lg">
