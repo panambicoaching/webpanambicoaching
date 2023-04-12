@@ -12,22 +12,8 @@ section.conferences-me {
         margin-bottom: 40px;
     }
 
-    .row:last-child .col:last-child {
-        text-align: center;
-
-        @media (min-width:576px) {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        @media (min-width:1200px) {
-           justify-content: end;
-        }
-
-        @media (max-width:575.98px) {
-            padding: 0;
-        }
+    .row:last-child .col:first-child {
+        z-index: 1;
     }
 }
 
