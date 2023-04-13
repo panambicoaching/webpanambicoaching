@@ -5,7 +5,7 @@ import './styles.scss'
 
 // variant prop available values -> "courses" ; "workshops"
 const items = [
-	{variant: "courses", name: "online", text: "100% Online"},
+	  {variant: "courses", name: "online", text: "100% Online"},
     {variant: "courses", name: "access", text: "Acceso 24/7"},
     {variant: "courses", name: "update", text: "Actualizaciones permanentes"},
     {variant: "courses", name: "certificate", text: "Certificado de participación"},
