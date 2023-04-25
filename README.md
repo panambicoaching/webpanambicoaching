@@ -25,7 +25,7 @@
 
 [![panambi-coaching-web.jpg](https://i.postimg.cc/yYdFkrZk/panambi-coaching-web.jpg)](https://postimg.cc/mhvcnjVs)
 
-<h2 align="left">Equipo de diseño y de desarrollo</h2>
+<h2 align="left">2. Equipo de diseño y de desarrollo</h2>
 
 - <a href="https://www.behance.net/e-co" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/behance.svg" alt="Behance de Elizabet Corsaro [Diseñadora UI/UX]" height="30" width="40" /></a> **\[Diseñadora UI/UX\]** *Elizabet Corsaro*.
 - <a href="https://www.behance.net/flv-a" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/behance.svg" alt="Behance de Flavia Almirón [Diseñadora UI/UX]" height="30" width="40" /></a> **\[Diseñadora UI/UX\]** *Flavia Almirón*.
