@@ -10,7 +10,7 @@ const dateOrderAsc = (dateStringA, dateStringB) => {
   let dateA = new Date(dateStringA).getTime();
   let dateB = new Date(dateStringB).getTime();
   
-  return dateA > dateB;
+  return dateA - dateB;
 }
 
 const dates = {
