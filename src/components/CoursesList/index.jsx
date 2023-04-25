@@ -52,6 +52,8 @@ const CoursesList = ({ items, status, loaded }) => {
 														{
 															items
 																.filter(statusFilterFn)
+																.sort((a, b) => dates.dateOrderAsc(a.date, b.date))
+																.sort((a, b) => a.id - b.id)
 																.map((item) => item.id === 1
 																		? <CourseFreeCard key={`course-${item.id}`} item={item} />
 																		: <CoursePaidCard key={`course-${item.id}`} item={item} status={status}/>
