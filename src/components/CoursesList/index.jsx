@@ -29,6 +29,21 @@ const courseType = {
 	}
 }
 
+const getSortedItemsToShow = (itemsArray) => {
+	const index = itemsArray.findIndex(e => e.id === 1);
+	
+	if (index !== -1) {
+		let freeItem = itemsArray[index];
+		let itemsSorted = itemsArray
+												.filter((item) => item.id !== 1)
+												.sort((a, b) => dates.dateOrderAsc(a.date, b.date));
+		
+		return [ freeItem, ...itemsSorted ];
+	}
+
+	return itemsArray.sort((a, b) => dates.dateOrderAsc(a.date, b.date));
+}
+
 const CoursesList = ({ items, status, loaded }) => {
 	const statusFilterFn = (item) => {
 		const dateDiff = dates.dateDiff(item.date);
@@ -50,14 +65,11 @@ const CoursesList = ({ items, status, loaded }) => {
 											items.length > 0
 												? (<>
 														{
-															items
-																.filter(statusFilterFn)
-																.sort((a, b) => dates.dateOrderAsc(a.date, b.date))
-																.sort((a, b) => a.id - b.id)
-																.map((item) => item.id === 1
-																		? <CourseFreeCard key={`course-${item.id}`} item={item} />
-																		: <CoursePaidCard key={`course-${item.id}`} item={item} status={status}/>
-																)
+															getSortedItemsToShow(items.filter(statusFilterFn))
+															.map((item) => item.id === 1
+																	? <CourseFreeCard key={`course-${item.id}`} item={item} />
+																	: <CoursePaidCard key={`course-${item.id}`} item={item} status={status}/>
+															)
 														}
 													</>)
 												: <div className="col-12">
